@@ -5,12 +5,13 @@
 - defaults:
     link:
       relink: true
+      create: true
 
 - clean: ["~"]
 
 - link:
-    # # ---------- Shell ----------
-    # ~/.bashrc: bashrc
+    # ---------- Shell ----------
+    ~/.bashrc: config/bashrc
 
     # # ---------- X / Input ----------
     # ~/.XCompose: XCompose
