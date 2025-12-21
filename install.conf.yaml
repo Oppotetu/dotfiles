@@ -1,0 +1,35 @@
+# Omarchy-safe Dotbot configuration
+# Tracks user overrides only
+# NEVER touches ~/.config/omarchy or ~/.local/share/omarchy
+
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    # # ---------- Shell ----------
+    # ~/.bashrc: bashrc
+
+    # # ---------- X / Input ----------
+    # ~/.XCompose: XCompose
+
+    # ---------- Hyprland ----------
+    ~/.config/hypr: config/hypr
+    # ~/.config/hypr/hyprland.conf: config/hypr/hyprland.conf
+    # ~/.config/hypr/monitors.conf: config/hypr/monitors.conf
+    # ~/.config/hypr/hyprlock.conf: config/hypr/hyprlock.conf
+
+    # # ---------- Waybar ----------
+    # ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
+    # ~/.config/waybar/style.css: config/waybar/style.css
+
+    # # ---------- Launcher ----------
+    # ~/.config/walker/config.toml: config/walker/config.toml
+
+    # # ---------- Terminal ----------
+    # ~/.config/alacritty/alacritty.toml: config/alacritty/alacritty.toml
+
+    # # ---------- UWSM ----------
+    # ~/.config/uwsm/default: config/uwsm/default
