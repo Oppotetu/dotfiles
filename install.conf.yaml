@@ -30,14 +30,14 @@
     ~/.config/hypr/toggle-screen.sh: config/hypr/toggle-screen.sh
 
     # # ---------- Waybar ----------
-    # ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
-    # ~/.config/waybar/style.css: config/waybar/style.css
+    ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
+    ~/.config/waybar/style.css: config/waybar/style.css
 
     # # ---------- Launcher ----------
-    # ~/.config/walker/config.toml: config/walker/config.toml
+    ~/.config/walker/config.toml: config/walker/config.toml
 
     # # ---------- Terminal ----------
     # ~/.config/alacritty/alacritty.toml: config/alacritty/alacritty.toml
 
     # # ---------- UWSM ----------
-    # ~/.config/uwsm/default: config/uwsm/default
+    ~/.config/uwsm/default: config/uwsm/default
