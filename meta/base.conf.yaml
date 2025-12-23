@@ -1,0 +1,27 @@
+# Omarchy-safe Dotbot configuration
+# Tracks user overrides only
+# NEVER touches ~/.config/omarchy or ~/.local/share/omarchy
+
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      stdout: true
+      stderr: true
+      stdin: true
+
+- clean: ["~", "~/.config"]
+
+- link:
+    # ---------- Shell ----------
+    ~/.bashrc: config/bashrc
+    ~/.zshrc: config/zshrc
+
+    # ---------- Git / Toolchain versioning ----------
+    ~/.config/git/config: config/git-config
+    ~/.config/mise/config.toml: config/mise-config.toml
+
+    # ---------- Terminal ----------
+    ~/.config/ghostty/config: config/ghostty-config
+    ~/.config/alacritty/alacritty.toml: config/alacritty.toml
