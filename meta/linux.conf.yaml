@@ -61,4 +61,7 @@
 
 # ---------- Languages ----------
 - description: Install Go
-  command: sudo pacman -S go
+  command: sudo pacman -S --needed go
+
+- description: Install Node
+  command: sudo pacman -S --needed nodejs npm
