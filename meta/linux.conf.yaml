@@ -1,8 +1,21 @@
-# - shell:
-#     - command: sudo pacman -S --needed neovim git
+- shell:
+    - command: echo "Running linux conf"
+
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      stdout: true
+      stderr: true
+      stdin: true
 
 - link:
+    # ---------- Shell ----------
+    ~/.bashrc: config/bashrc
+
     # ~/.XCompose: XCompose
+    ~/.XCompose: config/XCompose
 
     # ---------- Hyprland ----------
     ~/.config/hypr/autostart.conf: config/hypr/autostart.conf
@@ -28,5 +41,24 @@
     ~/.config/uwsm/default: config/uwsm-default
     ~/.config/uwsm/env: config/uwsm-env
 
+    # ---------- Volume / brightness ----------
+    ~/.config/swayosd/config.toml: config/swayosd-config.toml
+    ~/.config/swayosd/style.css: config/swayosd-style.css
+
+    # ---------- Image viewer keybinds ----------
+    ~/.config/imv/config: config/imv-config
+
+- shell:
     # ---------- Keymaps ----------
-    # /etc/keyd/default.conf: config/keyd-default.conf
+    - description: Install keyd config
+  command: |
+    sudo mkdir -p /etc/keyd
+    sudo ln -sf "$PWD/system/keyd-default.conf" /etc/keyd/default.conf
+
+# ---------- Shell formatting ----------
+- description: Install shell formatter
+  command: sudo pacman -S --needed shfmt
+
+# ---------- Languages ----------
+- description: Install Go
+  command: sudo pacman -S go

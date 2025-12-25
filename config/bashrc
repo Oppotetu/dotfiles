@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
@@ -7,6 +9,9 @@ source ~/.local/share/omarchy/default/bash/rc
 
 # Add your own exports, aliases, and functions here.
 open() { xdg-open "$@" >/dev/null; }
+
+alias nvim='NVIM_APPNAME=nvim-oppotetu nvim'
+alias lazy='NVIM_APPNAME=nvim-lazy nvim'
 
 #
 # Make an alias for invoking commands you use constantly

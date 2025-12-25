@@ -1,12 +1,25 @@
-# This apply to all commands that come after setting the defaults.
+- shell:
+    - command: echo "Running linux conf"
+
 - defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      stdout: true
+      stderr: true
+      stdin: true
     brewfile:
       stdout: false
       stderr: false
       include: ["tap", "brew", "cask", "mas"]
       # Optional, if you want to run install command as another user:
-      sudo: brewuser
+      # sudo: brewuser
 
 - brewfile:
     # This accepts the same options as `brew bundle` command:
     file: Brewfile
+
+- link:
+    # ---------- Shell ----------
+    ~/.zshrc: config/zshrc

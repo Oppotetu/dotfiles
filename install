@@ -2,29 +2,34 @@
 
 set -e
 
-BASE_CONFIG="meta/base.conf.yaml"
-OS="$(uname -s)"
-
-case "$OS" in
-  Linux)   OS_CONFIG="meta/linux.conf.yaml" ;;
-  Darwin)  OS_CONFIG="meta/macos.conf.yaml" ;;
-  *)
-    echo "Unsupported OS: $OS"
-    exit 1
-    ;;
-esac
-
-echo "Running Dotbot ($BASE_CONFIG + $OS_CONFIG)"
-
 DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+OS="$(uname -s)"
+
+BASE_ARGS=(
+  -d "$BASEDIR"
+  -c meta/base.conf.yaml
+)
+OS_ARGS=(
+  -d "$BASEDIR"
+)
+
+if [[ "$OS" = "Linux" ]]; then
+  OS_ARGS+=(-c meta/linux.conf.yaml)
+elif [[ "$OS" = "Darwin" ]]; then
+  OS_ARGS+=(-c meta/macos.conf.yaml)
+  OS_ARGS+=(--plugin-dir dotbot-brewfile)
+else
+  echo "Unsupported OS: $OS"
+  exit 1
+fi
 
 cd "${BASEDIR}"
+
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-brewfile \
-  -c "${BASE_CONFIG}" -c "$OS_CONFIG" "${@}"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" "${OS_ARGS[@]}" "${@}"
 
-
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" "${BASE_ARGS[@]}" "${@}"

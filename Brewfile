@@ -4,6 +4,7 @@ brew "git"
 brew "node"
 brew "nvm"
 brew "lua"
+brew "fastfetch"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -12,8 +13,13 @@ brew "curl"
 brew "fzf"
 # Command-line JSON processor
 brew "jq"
+# Shell parser, formatter, and interpreter
+brew "shfmt"
 # Internet file retriever
 brew "wget"
+# Toolchain version manager
+brew "mise"
+
 cask "docker-desktop"
 cask "google-chrome"
 cask "spotify"
