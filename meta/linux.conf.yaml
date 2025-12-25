@@ -1,5 +1,5 @@
 - shell:
-    - command: echo "Running linux conf"
+  - command: echo "Running linux conf"
 
 - defaults:
     link:
@@ -49,19 +49,29 @@
     ~/.config/imv/config: config/imv-config
 
 - shell:
-    # ---------- Keymaps ----------
-    - description: Install keyd config
-  command: |
-    sudo mkdir -p /etc/keyd
-    sudo ln -sf "$PWD/system/keyd-default.conf" /etc/keyd/default.conf
+  #   # ---------- Keymaps ----------
+  # - description: Install keyd config
+  #    command: |
+  #   sudo mkdir -p /etc/keyd
+  #   sudo ln -sf "$PWD/system/keyd-default.conf" /etc/keyd/default.conf
 
-# ---------- Shell formatting ----------
-- description: Install shell formatter
-  command: sudo pacman -S --needed shfmt
+  # # ---------- Shell formatting ----------
+  # - description: Install shell formatter
+  #   command: sudo pacman -S --needed shfmt
 
-# ---------- Languages ----------
-- description: Install Go
-  command: sudo pacman -S --needed go
+  # # ---------- Languages ----------
+  # - description: Install Go
+  #   command: sudo pacman -S --needed go
 
-- description: Install Node
-  command: sudo pacman -S --needed nodejs npm
+  # - description: Install Node
+  #   command: sudo pacman -S --needed nodejs npm
+
+  # ---------- Keymaps ----------
+  - [ sudo mkdir -p /etc/keyd && sudo ln -sf "$PWD/system/keyd-default.conf" /etc/keyd/default.conf, Install keyd config ]
+
+  # ---------- Shell formatting ----------
+  - [ sudo pacman -S --needed shfmt, Install shell formatter ]
+
+  # ---------- Toolchain / languages ----------
+  - [ sudo pacman -S --needed mise, Install Mise ]
+  - [ mise upgrade, Upgrade Mise ]

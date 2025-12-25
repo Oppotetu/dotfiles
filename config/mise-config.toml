@@ -1,7 +1,9 @@
 [tools]
-node = "lts"
+node = "latest"
 zig = "latest"
 zls = "latest"
+go = "latest"
+shfmt = "latest"
 
 [settings]
 gpg_verify = true

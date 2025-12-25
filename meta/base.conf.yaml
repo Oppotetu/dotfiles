@@ -3,7 +3,7 @@
 # NEVER touches ~/.config/omarchy or ~/.local/share/omarchy
 
 - shell:
-    - command: echo "Running base conf"
+  - command: echo "Running base conf"
 
 - defaults:
     link:
@@ -14,7 +14,7 @@
       stderr: true
       stdin: true
 
-- clean: ["~", "~/.config"]
+- clean: [ "~", "~/.config" ]
 
 - link:
     # ---------- Git / Toolchain versioning ----------
@@ -34,10 +34,12 @@
     ~/.config/nvim-lazy: config/nvim-lazy
 
 - shell:
-    - description: Install VS Code extensions
-      command: |
-        if command -v code >/dev/null 2>&1; then
-          while read -r ext; do
-            code --install-extension "$ext" --force
-          done < config/vsc-extensions.txt
-        fi
+  - [ sh scripts/vsc-extensions.sh ]
+
+  - description: Install VS Code extensions
+    command: |
+      if command -v code >/dev/null 2>&1; then
+        while read -r ext; do
+          code --install-extension "$ext" --force
+        done < config/vsc-extensions.txt
+      fi
