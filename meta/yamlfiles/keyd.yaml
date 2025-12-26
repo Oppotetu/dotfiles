@@ -1,0 +1,5 @@
+- link:
+    /etc/keyd/default.conf: config/keyd-default.conf
+
+# - shell:
+#   - [ sudo ./link-system-config.sh "$PWD/system/keyd-default.conf" /etc/keyd/default.conf ]

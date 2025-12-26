@@ -1,0 +1,6 @@
+- link:
+    ~/.config/Code/User/settings.json: config/vsc-settings.json
+    ~/.config/Code/User/keybindings.json: config/vsc-keybindings.json
+
+- shell:
+  - [ sh scripts/vsc-extensions.sh, Install Vscode extensions ]

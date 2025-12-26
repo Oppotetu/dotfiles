@@ -1,0 +1,5 @@
+- link:
+    ~/.config/ghostty/config: config/ghostty-config
+    ~/.config/alacritty/alacritty.toml: config/alacritty.toml
+    ~/.config/starship.toml: config/starship.toml
+    ~/.config/fastfetch/config.jsonc: config/fastfetch-config.jsonc

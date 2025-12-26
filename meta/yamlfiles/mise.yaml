@@ -1,0 +1,6 @@
+- link:
+      ~/.config/mise/config.toml: config/mise-config.toml
+
+- shell:
+    - [ sudo pacman -S --needed mise, Install Mise ]
+    - [ mise upgrade, Upgrade Mise ]
