@@ -29,6 +29,7 @@
     ~/.config/hypr/looknfeel.conf: config/hypr/looknfeel.conf
     ~/.config/hypr/monitors.conf: config/hypr/monitors.conf
     ~/.config/hypr/toggle-screen.sh: config/hypr/toggle-screen.sh
+    ~/.config/hypr/xdph.conf: config/hypr/xdph.conf
 
     # ---------- Waybar ----------
     ~/.config/waybar/config.jsonc: config/waybar-config.jsonc
@@ -67,10 +68,9 @@
   #   command: sudo pacman -S --needed nodejs npm
 
   # ---------- Keymaps ----------
-  - [ sudo mkdir -p /etc/keyd && sudo ln -sf "$PWD/system/keyd-default.conf" /etc/keyd/default.conf, Install keyd config ]
+  # - [ sudo mkdir -p /etc/keyd && sudo ln -sf "$PWD/system/keyd-default.conf" /etc/keyd/default.conf, Install keyd config ]
 
-  # ---------- Shell formatting ----------
-  - [ sudo pacman -S --needed shfmt, Install shell formatter ]
+  - [ sudo ./link-system-config.sh "$PWD/system/keyd-default.conf" /etc/keyd/default.conf ]
 
   # ---------- Toolchain / languages ----------
   - [ sudo pacman -S --needed mise, Install Mise ]
