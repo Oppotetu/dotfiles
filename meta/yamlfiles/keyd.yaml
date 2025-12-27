@@ -1,12 +1,12 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - link:
     /etc/keyd/default.conf: config/keyd-default.conf
 
 - shell:
-    - description: Installing Keyd
-      command: |
-        if [[ "$(uname)" = "Linux" ]]; then
-          sudo pacman -S --needed keyd
-          sudo systemctl enable keyd
-          sudo keyd reload
-          systemctl is-active --quiet keyd || echo "keyd is not active yet"
-        fi
+    - [sudo pacman -S --needed keyd, Installing Keyd]
+    - [sudo systemctl enable keyd, Enabling Keyd]
+    - [sudo keyd reload, Reloading Keyd]

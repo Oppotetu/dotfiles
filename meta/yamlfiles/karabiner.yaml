@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- link:
+    ~/.config/karabiner/karabiner.json: config/karabiner.json
+
+- plugins:
+    - meta/dotbot-brew/
+
+- cask:
+    - karabiner-elements

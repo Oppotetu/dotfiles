@@ -2,9 +2,9 @@
 	path = meta/dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "dotbot-brewfile"]
-	path = meta/dotbot-brewfile
-	url = https://github.com/sobolevn/dotbot-brewfile.git
 [submodule "meta/dotbot-vscode"]
 	path = meta/dotbot-vscode
 	url = https://github.com/rbrauner/dotbot-vscode
+[submodule "meta/dotbot-brew"]
+	path = meta/dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git

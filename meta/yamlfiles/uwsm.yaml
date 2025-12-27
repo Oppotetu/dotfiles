@@ -1,3 +1,8 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - link:
     ~/.config/uwsm/default: config/uwsm-default
     ~/.config/uwsm/env: config/uwsm-env

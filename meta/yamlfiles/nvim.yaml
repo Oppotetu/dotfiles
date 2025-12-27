@@ -1,3 +1,8 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - link:
     ~/.config/nvim-oppotetu: config/nvim-oppotetu
     ~/.config/nvim-lazy: config/nvim-lazy

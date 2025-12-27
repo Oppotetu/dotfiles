@@ -1,0 +1,13 @@
+[user]
+	email = sohaugho@uio.no
+	name = Simon Haughom
+	signingKey = /Users/sohaugho/.ssh/id_ed25519
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = /Users/sohaugho/.ssh/allowed_signers
+
+[commit]
+	gpgsign = true

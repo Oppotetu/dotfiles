@@ -1,0 +1,11 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- link:
+    ~/.config/git/config: config/git-config
+
+- shell:
+    - [sudo pacman -S --needed git, Installing git]
+    - [sudo pacman -S --needed gh, Installing gh]
