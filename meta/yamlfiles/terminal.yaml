@@ -3,3 +3,26 @@
     ~/.config/alacritty/alacritty.toml: config/alacritty.toml
     ~/.config/starship.toml: config/starship.toml
     ~/.config/fastfetch/config.jsonc: config/fastfetch-config.jsonc
+
+- shell:
+    - description: Installing terminal tools (linux)
+      command: |
+        if [ "$(uname)" = "Linux" ]; then
+          sudo pacman -S --needed starship
+          sudo pacman -S --needed fastfetch
+          sudo pacman -S --needed fzf
+          sudo pacman -S --needed jq
+          sudo pacman -S --needed wget
+          sudo pacman -S --needed curl
+        fi
+
+    - description: Install starship on macOS
+      command: |
+        if [ "$(uname)" = "Darwin" ]; then
+          brew install starship
+          brew install fastfetch
+          brew install fzf
+          brew install jq
+          brew install wget
+          brew install curl
+        fi

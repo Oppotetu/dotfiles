@@ -1,0 +1,83 @@
+return {}
+-- return {
+--     "smoka7/multicursors.nvim",
+--     event = "VeryLazy",
+--     dependencies = {
+--         'smoka7/hydra.nvim',
+--     },
+--     -- opts = {},
+--     cmd = { 'MCstart', 'MCvisual', 'MCclear', 'MCpattern', 'MCvisualPattern', 'MCunderCursor' },
+--     keys = {
+--         {
+--             mode = { 'v', 'n' },
+--             '<leader>v',
+--             '<cmd>MCstart<CR>',
+--             desc = 'Create a selection for selected text or word under the cursor',
+--         },
+--         {
+--             mode = { 'n' },
+--             '<leader>s',
+--             '<cmd>MCunderCursor<CR>',
+--             desc = 'Create a selection under cursor',
+--         },
+--     },
+--     config = function()
+--         local normal = require('multicursors.normal_mode')
+--         local utils = require('multicursors.utils')
+--         local extend = require('multicursors.extend_mode')
+--
+--         require('multicursors').setup({
+--             mode_keys = {
+--                 extend = 't',
+--             }, -- set bindings to start these modes
+--             normal_keys = {
+--                 ['<C-c>'] = { method = false, opts = {} },
+--
+--                 ['dd'] = { method = false, opts = {} },
+--                 -- ['D'] = { method = false, opts = {} },
+--                 ['k'] = { method = false, opts = {} },
+--                 ['['] = { method = false, opts = {} },
+--                 [']'] = { method = false, opts = {} },
+--                 ['{'] = { method = false, opts = {} },
+--                 ['}'] = { method = false, opts = {} },
+--                 ['@'] = { method = false, opts = {} },
+--                 ['r'] = { method = false, opts = {} },
+--                 ['y'] = { method = false, opts = {} },
+--                 ['Y'] = { method = false, opts = {} },
+--                 ['yy'] = { method = false, opts = {} },
+--                 ['K'] = { method = false, opts = {} },
+--                 ['z'] = { method = false, opts = {} },
+--                 ['Z'] = { method = false, opts = {} },
+--                 ['.'] = { method = false, opts = {} },
+--                 [','] = { method = false, opts = {} },
+--
+--                 ['j'] = { method = normal.delete, opts = { desc = 'Delete' } },
+--                 ['J'] = { method = normal.delete_end, opts = { desc = 'Delete end' } },
+--                 -- ['jj'] = { method = normal.delete_line, opts = { desc = 'Delete line' } },
+--                 ['e'] = { method = normal.create_up, opts = { desc = 'Create up' } },
+--                 ['d'] = { method = normal.create_down, opts = { desc = 'Create down' } },
+--                 ['E'] = { method = normal.skip_create_up, opts = { desc = 'Skip create down' } },
+--                 ['D'] = { method = normal.skip_create_down, opts = { desc = 'Skip create down' } },
+--             },
+--             insert_keys = {
+--                 ['<C-BS>'] = { method = false, opts = {} },
+--                 ['<C-j>'] = { method = false, opts = {} },
+--                 ['<C-c>'] = { method = false, opts = {} },
+--             },
+--             extend_keys = {
+--                 ['c'] = { method = false, opts = {} },
+--                 ['o'] = { method = false, opts = {} },
+--                 ['O'] = { method = false, opts = {} },
+--                 ['j'] = { method = false, opts = {} },
+--                 ['k'] = { method = false, opts = {} },
+--                 ['l'] = { method = false, opts = {} },
+--
+--                 ['e'] = { method = extend.k_method, opts = { desc = 'Char up' } },
+--                 ['d'] = { method = extend.j_method, opts = { desc = 'Char down' } },
+--                 ['s'] = { method = extend.h_method, opts = { desc = 'Char left' } },
+--                 ['f'] = { method = extend.l_method, opts = { desc = 'Char right' } },
+--                 ['h'] = { method = extend.e_method, opts = { desc = 'End of word' } },
+--             },
+--         })
+--     end
+-- }

@@ -1,0 +1,22 @@
+return {
+    -- "MunifTanjim/prettier.nvim",
+    -- config = function()
+    --     require('prettier').setup({
+    --         bin = 'prettierd',
+    --         filetypes = {
+    --             'css',
+    --             'html',
+    --             'javascript',
+    --             'javascriptreact',
+    --             'json',
+    --             'markdown',
+    --             'typescript',
+    --             'typescriptreact',
+    --         }
+    --     })
+    --
+    --
+    --     vim.keymap.set({ "n", "v" }, "<leader>f", ":Prettier",
+    --         { desc = "Format file or range (in visual mode)" })
+    -- end
+}

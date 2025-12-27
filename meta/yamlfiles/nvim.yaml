@@ -1,3 +1,16 @@
 - link:
     ~/.config/nvim-oppotetu: config/nvim-oppotetu
     ~/.config/nvim-lazy: config/nvim-lazy
+
+- shell:
+    - description: Installing neovim (linux)
+      command: |
+        if [ "$(uname)" = "Linux" ]; then
+          sudo pacman -S --needed neovim
+        fi
+
+    - description: Installing neovim (mac)
+      command: |
+        if [ "$(uname)" = "Darwin" ]; then
+          brew install neovim
+        fi
