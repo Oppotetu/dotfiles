@@ -1,0 +1,7 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- link:
+    ~/.config/tmux/tmux.conf: config/tmux.conf
