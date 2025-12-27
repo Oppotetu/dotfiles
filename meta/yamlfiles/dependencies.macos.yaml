@@ -1,6 +1,0 @@
-- plugins:
-    - meta/dotbot-brew/
-
-- brew:
-    - raycast
-    - gh

@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- shell:
+    - [sudo pacman -S --needed starship, Installing starship]
+    - [sudo pacman -S --needed fastfetch, Installing fastfetch]
+    - [sudo pacman -S --needed fzf, Installing fzf]
+    - [sudo pacman -S --needed jq, Installing jq]
+    - [sudo pacman -S --needed wget, Installing wget]
+    - [sudo pacman -S --needed curl, Installing curl]
+# ghostty todo
+

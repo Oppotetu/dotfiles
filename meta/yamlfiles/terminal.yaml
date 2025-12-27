@@ -2,15 +2,17 @@
     link:
       relink: true
       create: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - link:
-    ~/.config/ghostty/config: config/ghostty-config
-    ~/.config/alacritty/alacritty.toml: config/alacritty.toml
     ~/.config/starship.toml: config/starship.toml
     ~/.config/fastfetch/config.jsonc: config/fastfetch-config.jsonc
 
 - shell:
-    - description: Installing terminal tools (linux)
+    - description: Installing mise (linux)
       command: |
         if [ "$(uname)" = "Linux" ]; then
           sudo pacman -S --needed starship
@@ -21,7 +23,7 @@
           sudo pacman -S --needed curl
         fi
 
-    - description: Install starship on macOS
+    - description: Installing mise (mac)
       command: |
         if [ "$(uname)" = "Darwin" ]; then
           brew install starship

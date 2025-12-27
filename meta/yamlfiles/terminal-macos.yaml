@@ -1,0 +1,11 @@
+- plugins:
+    - meta/dotbot-brew/
+
+- brew:
+    - starship
+    - fastfetch
+    - fzf
+    - jq
+    - wget
+    - curl
+    # ghostty todo

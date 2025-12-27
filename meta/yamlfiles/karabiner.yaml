@@ -2,12 +2,18 @@
     link:
       relink: true
       create: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - link:
     ~/.config/karabiner/karabiner.json: config/karabiner.json
 
-- plugins:
-    - meta/dotbot-brew/
+- shell:
+    - [brew install --cask karabiner-elements, Installing karabiner-elements]
+# - plugins:
+#     - meta/dotbot-brew/
 
-- cask:
-    - karabiner-elements
+# - cask:
+#     - karabiner-elements
