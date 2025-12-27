@@ -1,20 +1,53 @@
 {
-  "workbench.iconTheme": "vscode-icons",
-  "editor.formatOnSave": true,
-  "git.openRepositoryInParentFolders": "never",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.colorTheme": "Tokyo Night AltSynt",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.editor.wrapTabs": true,
+
+  "explorer.confirmDragAndDrop": false,
 
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+
+  "editor.accessibilitySupport": "off",
+  "editor.lineNumbers": "relative",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
+  },
+  "SQL-Formatter-VSCode.dialect": "postgresql",
+  "SQL-Formatter-VSCode.dataTypeCase": "upper",
+  "SQL-Formatter-VSCode.functionCase": "upper",
+  "SQL-Formatter-VSCode.keywordCase": "upper",
+  "zig.zls.enabled": "on",
+  "svelte.enable-ts-plugin": true,
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "emmet.showExpandedAbbreviation": "never",
+  "redhat.telemetry.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
 
   "vim.leader": "<space>",
+  // To improve performance
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+
   "vim.handleKeys": {
-    "<C-a>": true,
+    "<C-a>": false,
     "<C-f>": true,
     "<C-s>": true,
     "<Tab>": true,
@@ -48,7 +81,11 @@
     { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] },
 
-    { "before": ["Tab"], "commands": [":nohl"] },
+    { "before": ["<C-f>"], "after": ["<C-e>"] },
+    { "before": ["<C-s>"], "after": ["<C-y>"] },
+    { "before": ["<C-e>"], "after": ["<C-u>"] },
+
+    // { "before": ["Esc"], "commands": [":nohl"] },
     { "before": ["t"], "after": ["o", "<Esc>"], "silent": true },
     { "before": ["D"], "after": ["m", "z", "J", "`", "z"] },
 
@@ -97,6 +134,10 @@
     { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] },
 
+    // { "before": ["<C-e>"], "after": ["<C-s>"] },
+    // { "before": ["<C-y>"], "after": ["<C-f>"] },
+    // { "before": ["<C-e>"], "after": ["<C-u>"] },
+
     { "before": ["D"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["E"], "commands": ["editor.action.moveLinesUpAction"] },
 
@@ -119,27 +160,5 @@
     { "before": ["J"], "after": ["D"] },
     { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] }
-  ],
-
-  // To improve performance
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
-  },
-  "vsicons.dontShowNewVersionMessage": true,
-  "svelte.enable-ts-plugin": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.minimap.enabled": false,
-  "zig.zls.enabled": "on",
-  "remote.autoForwardPortsSource": "hybrid",
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
-  },
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "workbench.colorTheme": "Dark Sea",
-  "editor.lineNumbers": "relative",
-  "explorer.confirmDragAndDrop": false,
-  "[shellscript]": {
-    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
-  },
-  "security.workspace.trust.untrustedFiles": "open"
+  ]
 }

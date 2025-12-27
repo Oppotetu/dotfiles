@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "ctrl+alt+n",
@@ -67,11 +68,6 @@
     "command": "-workbench.action.files.newUntitledFile"
   },
   {
-    "key": "ctrk+m",
-    "command": "extension.vim_down",
-    "when": "editorTextFocus && vim.active && vim.mode == 'Visual'"
-  },
-  {
     "key": "ctrl+n",
     "command": "-extension.vim_ctrl+n",
     "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
@@ -118,7 +114,7 @@
     "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+p",
+    "key": "ctrl+shift+p",
     "command": "workbench.action.showCommands"
   },
   {
@@ -126,39 +122,7 @@
     "command": "-workbench.action.showCommands"
   },
   {
-    "key": "tab",
-    "command": "vim.remap",
-    "when": "editorTextFocus && !hasNextTabstop && !inSnippetMode vim.mode == 'Insert' || vim.mode == 'Visual' || vim.mode == 'VisualBlock' || vim.mode == 'VisualLine' || vim.mode == 'Replace' || vim.mode == 'OperatorPending'",
-    "args": {
-      "after": ["<Esc>"]
-    }
-  },
-  // {
-  //   "key": "ctrl+s",
-  //   "command": "vim.remap",
-  //   "when": "editorTextFocus && vim.mode == 'Normal' || vim.mode == 'Visual'",
-  //   "args": {
-  //     "after": ["<C-y>", "<C-y>", "<C-y>"]
-  //   }
-  // },
-  // {
-  //   "key": "ctrl+f",
-  //   "command": "vim.remap",
-  //   "when": "editorTextFocus && vim.mode == 'Normal' || vim.mode == 'Visual'",
-  //   "args": {
-  //     "after": ["<C-e>", "<C-e>", "<C-e>"]
-  //   }
-  // },
-  // {
-  //   "key": "ctrl+e",
-  //   "command": "vim.remap",
-  //   "when": "editorTextFocus && vim.mode == 'Normal' || vim.mode == 'Visual'",
-  //   "args": {
-  //     "after": ["<C-u>"]
-  //   }
-  // },
-  {
-    "key": "alt+k",
+    "key": "ctrl+k",
     "command": "workbench.action.focusAboveGroup"
   },
   {
@@ -166,7 +130,7 @@
     "command": "-workbench.action.focusAboveGroup"
   },
   {
-    "key": "alt+j",
+    "key": "ctrl+j",
     "command": "workbench.action.focusBelowGroup"
   },
   {
@@ -174,7 +138,7 @@
     "command": "-workbench.action.focusBelowGroup"
   },
   {
-    "key": "alt+h",
+    "key": "ctrl+h",
     "command": "workbench.action.focusLeftGroup"
   },
   {
@@ -182,7 +146,7 @@
     "command": "-workbench.action.focusLeftGroup"
   },
   {
-    "key": "alt+l",
+    "key": "ctrl+l",
     "command": "workbench.action.focusRightGroup"
   },
   {
@@ -191,7 +155,7 @@
   },
 
   {
-    "key": "alt+oem_3",
+    "key": "alt+[Semicolon]",
     "command": "workbench.action.togglePanel"
   },
   {
@@ -221,16 +185,6 @@
     "command": "-surround-advanced.replace-surround"
   },
   {
-    "key": "ctrl+d",
-    "command": "workbench.action.quickOpenNavigateNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.quickOpenNavigatePrevious",
-    "when": "inQuickOpen"
-  },
-  {
     "key": "ctrl+g",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
@@ -241,18 +195,8 @@
     "when": "editorFocus"
   },
   {
-    "key": "ctrl+d",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
-  {
     "key": "ctrl+down",
     "command": "-selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
   },
   {
@@ -261,19 +205,9 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
   },
   {
-    "key": "ctrl+d",
-    "command": "search.action.focusNextSearchResult",
-    "when": "inSearchEditor && searchViewletFocus"
-  },
-  {
     "key": "f4",
     "command": "-search.action.focusNextSearchResult",
     "when": "hasSearchResult || inSearchEditor"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "search.action.focusPreviousSearchResult",
-    "when": "inSearchEditor && searchViewletFocus"
   },
   {
     "key": "shift+f4",
@@ -305,43 +239,31 @@
     "when": "editorFocus"
   },
   {
-    "key": "alt+p",
-    "command": "workbench.action.quickOpen"
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
   },
   {
     "key": "ctrl+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
     "command": "-workbench.action.quickOpen"
   },
-
   {
-    "key": "tab",
-    "command": "jumpToNextSnippetPlaceholder",
-    "when": "hasNextTabstop && inSnippetMode && textInputFocus"
+    "key": "ctrl+h",
+    "command": "-deleteLeft",
+    "when": "textInputFocus"
   },
   {
-    "key": "shift+tab",
-    "command": "jumpToPrevSnippetPlaceholder",
-    "when": "editorTextFocus && hasSnippetTabstop"
+    "key": "ctrl+k",
+    "command": "-deleteAllRight",
+    "when": "textInputFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+alt+l",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus",
-    "args": {
-      "name": "Console log",
-      "langId": "javascript",
-      "snippet": "console.log('${2:${TM_SELECTED_TEXT}}', ${1:${TM_SELECTED_TEXT}});"
-    }
-  },
-  {
-    "key": "ctrl+alt+k",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus",
-    "args": {
-      "name": "Effect log",
-      "langId": "javascriptreact",
-      "snippet": "React.useEffect(() => {\n\tconsole.log('${2:${TM_SELECTED_TEXT}}', ${1:${TM_SELECTED_TEXT}});\n}, [${1:${TM_SELECTED_TEXT}}]);"
-    }
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
     "key": "ctrl+alt+s",
@@ -364,7 +286,7 @@
     }
   },
   {
-    "key": "ctrl+alt+p",
+    "key": "ctrl+alt+o",
     "command": "editor.action.insertSnippet",
     "when": "editorTextFocus",
     "args": {
@@ -374,9 +296,43 @@
     }
   },
   {
-    "key": "ctrl+e",
-    "command": "-extension.vim_ctrl+e",
-    "when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl"
+    "key": "ctrl+alt+l",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "name": "Console log",
+      "langId": "javascript",
+      "snippet": "console.log('${1:${TM_SELECTED_TEXT}}: ', ${1:${TM_SELECTED_TEXT}});"
+    }
+  },
+  {
+    "key": "ctrl+alt+o",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "name": "Console log only string",
+      "langId": "javascript",
+      "snippet": "console.log('${1:${TM_SELECTED_TEXT}}');"
+    }
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "name": "Effect log",
+      "langId": "javascriptreact",
+      "snippet": "useEffect(() => {\n\tconsole.log('${1:${TM_SELECTED_TEXT}}', ${1:${TM_SELECTED_TEXT}});\n}, [${1:${TM_SELECTED_TEXT}}]);"
+    }
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-extension.vim_ctrl+y",
+    "when": "editorTextFocus && vim.active && vim.use<C-y> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "extension.vim_ctrl+y"
   },
   {
     "key": "ctrl+f",
@@ -386,16 +342,6 @@
   {
     "key": "ctrl+e",
     "command": "-scrollerPower.smallDown",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "scrollerPower.mediumUp",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "-scrollerPower.mediumUp",
     "when": "editorTextFocus"
   },
   {
@@ -409,8 +355,37 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "ctrl+e",
+    "command": "scrollerPower.mediumUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-scrollerPower.mediumUp",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "ctrl+d",
     "command": "-extension.vim_ctrl+d",
     "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+cmd+i",
+    "command": "-workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
+  },
+  {
+    "key": "ctrl+cmd+i",
+    "command": "-workbench.action.chat.open",
+    "when": "!chatSetupDisabled && !chatSetupHidden"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.chat.open"
   }
 ]

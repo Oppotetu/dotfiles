@@ -1,0 +1,325 @@
+diff --git a/config/vsc-settings.json b/config/vsc-settings.json
+index cda7306..8538733 100644
+--- a/config/vsc-settings.json
++++ b/config/vsc-settings.json
+@@ -1,145 +1,175 @@
+-{
+-  "workbench.iconTheme": "vscode-icons",
+-  "editor.formatOnSave": true,
+-  "git.openRepositoryInParentFolders": "never",
+-  "workbench.editor.wrapTabs": true,
+-
+-  "vim.useSystemClipboard": true,
+-  "vim.useCtrlKeys": true,
+-  "vim.hlsearch": true,
+-  "[jsonc]": {
+-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+-  },
+-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+-
+-  "vim.leader": "<space>",
+-  "vim.handleKeys": {
+-    "<C-a>": true,
+-    "<C-f>": true,
+-    "<C-s>": true,
+-    "<Tab>": true,
+-
+-    "<M-e>": false,
+-    "<C-n>": false,
+-    "<C-m>": false,
+-
+-    "<C-g>": false,
+-    "<C-w>": false,
+-    "<C-p>": false,
+-    "<C-j>": false,
+-    "<C-k>": false,
+-    "<C-h>": false,
+-    "<C-l>": false,
+-    "<C-u>": false
+-  },
+-
+-  "vim.surround": false,
+-  "vim.normalModeKeyBindingsNonRecursive": [
+-    { "before": ["s"], "after": ["h"] },
+-    { "before": ["d"], "after": ["j"] },
+-    { "before": ["e"], "after": ["k"] },
+-    { "before": ["f"], "after": ["l"] },
+-    { "before": ["k"], "after": ["s"] },
+-    { "before": ["j"], "after": ["d"] },
+-    { "before": ["h"], "after": ["e"] },
+-    { "before": ["l"], "after": ["f"] },
+-    { "before": ["K"], "after": ["S"] },
+-    { "before": ["J"], "after": ["D"] },
+-    { "before": ["H"], "after": ["E"] },
+-    { "before": ["L"], "after": ["F"] },
+-
+-    { "before": ["Tab"], "commands": [":nohl"] },
+-    { "before": ["t"], "after": ["o", "<Esc>"], "silent": true },
+-    { "before": ["D"], "after": ["m", "z", "J", "`", "z"] },
+-
+-    {
+-      "before": ["<leader>", "o", "i"],
+-      "commands": ["workbench.action.splitEditor"],
+-      "silent": true
+-    },
+-    {
+-      "before": ["<leader>", "o", "p"],
+-      "commands": ["workbench.action.splitEditorDown"],
+-      "silent": true
+-    },
+-    {
+-      "before": ["<leader>", "w"],
+-      "commands": ["workbench.action.files.save"]
+-    },
+-    {
+-      "before": ["<leader>", "e", "q"],
+-      "commands": ["workbench.action.closeActiveEditor"],
+-      "silent": true
+-    },
+-    {
+-      "before": ["<leader>", "p", "f"],
+-      "commands": ["workbench.action.quickOpen"],
+-      "silent": true
+-    },
+-    {
+-      "before": ["<leader>", "p", "s"],
+-      "commands": ["workbench.action.findInFiles"],
+-      "silent": true
+-    }
+-  ],
+-
+-  "vim.visualModeKeyBindingsNonRecursive": [
+-    { "before": ["s"], "after": ["h"] },
+-    { "before": ["d"], "after": ["j"] },
+-    { "before": ["e"], "after": ["k"] },
+-    { "before": ["f"], "after": ["l"] },
+-    { "before": ["k"], "after": ["s"] },
+-    { "before": ["j"], "after": ["d"] },
+-    { "before": ["h"], "after": ["e"] },
+-    { "before": ["l"], "after": ["f"] },
+-    { "before": ["K"], "after": ["S"] },
+-    { "before": ["J"], "after": ["D"] },
+-    { "before": ["H"], "after": ["E"] },
+-    { "before": ["L"], "after": ["F"] },
+-
+-    { "before": ["D"], "commands": ["editor.action.moveLinesDownAction"] },
+-    { "before": ["E"], "commands": ["editor.action.moveLinesUpAction"] },
+-
+-    { "before": ["x"], "commands": ["surround-advanced.remove-surround"] },
+-    { "before": ["n"], "commands": ["surround-advanced.surround"] },
+-    { "before": ["m"], "commands": ["surround-advanced.replace-surround"] },
+-    { "before": ["<"], "commands": ["extension.surroundWithTag"] }
+-  ],
+-
+-  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+-    { "before": ["s"], "after": ["h"] },
+-    { "before": ["d"], "after": ["j"] },
+-    { "before": ["e"], "after": ["k"] },
+-    { "before": ["f"], "after": ["l"] },
+-    { "before": ["k"], "after": ["s"] },
+-    { "before": ["j"], "after": ["d"] },
+-    { "before": ["h"], "after": ["e"] },
+-    { "before": ["l"], "after": ["f"] },
+-    { "before": ["K"], "after": ["S"] },
+-    { "before": ["J"], "after": ["D"] },
+-    { "before": ["H"], "after": ["E"] },
+-    { "before": ["L"], "after": ["F"] }
+-  ],
+-
+-  // To improve performance
+-  "extensions.experimental.affinity": {
+-    "vscodevim.vim": 1
+-  },
+-  "vsicons.dontShowNewVersionMessage": true,
+-  "svelte.enable-ts-plugin": true,
+-  "typescript.updateImportsOnFileMove.enabled": "always",
+-  "editor.minimap.enabled": false,
+-  "zig.zls.enabled": "on",
+-  "remote.autoForwardPortsSource": "hybrid",
+-  "[astro]": {
+-    "editor.defaultFormatter": "astro-build.astro-vscode"
+-  },
+-  "workbench.secondarySideBar.defaultVisibility": "hidden",
+-  "workbench.colorTheme": "Dark Sea",
+-  "editor.lineNumbers": "relative",
+-  "explorer.confirmDragAndDrop": false,
+-  "[shellscript]": {
+-    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+-  },
+-  "security.workspace.trust.untrustedFiles": "open"
+-}
++{
++  "editor.accessibilitySupport": "off",
++  "terminal.integrated.env.osx": {
++    "FIG_NEW_SESSION": "1"
++  },
++  "workbench.colorTheme": "Tokyo Night AltSynt",
++  "workbench.iconTheme": "material-icon-theme",
++  "git.openRepositoryInParentFolders": "never",
++  "workbench.editor.wrapTabs": true,
++
++  "vim.useSystemClipboard": true,
++  "vim.useCtrlKeys": true,
++  "vim.hlsearch": true,
++  "[jsonc]": {
++    "editor.defaultFormatter": "esbenp.prettier-vscode"
++  },
++  "editor.defaultFormatter": "esbenp.prettier-vscode",
++  "scrollkey.line1": 5,
++  "scrollkey.line2": 30,
++  "scrollkey.line3": 60,
++  "extension.smoothscroll.linesToScroll": 20,
++  "extension.smoothscroll.usePercent": true,
++  "extension.smoothscroll.totalDelay": 100,
++
++  "vim.leader": "<space>",
++  // To improve performance
++  "extensions.experimental.affinity": {
++    "vscodevim.vim": 1
++  },
++  "vim.handleKeys": {
++    "<C-a>": false,
++    "<C-f>": true,
++    "<C-s>": true,
++    "<Tab>": true,
++
++    "<M-e>": false,
++    "<C-n>": false,
++    "<C-m>": false,
++
++    "<C-g>": false,
++    "<C-w>": false,
++    "<C-p>": false,
++    "<C-j>": false,
++    "<C-k>": false,
++    "<C-h>": false,
++    "<C-l>": false,
++    "<C-u>": false
++  },
++
++  "vim.surround": false,
++
++  "vim.normalModeKeyBindingsNonRecursive": [
++    { "before": ["s"], "after": ["h"] },
++    { "before": ["d"], "after": ["j"] },
++    { "before": ["e"], "after": ["k"] },
++    { "before": ["f"], "after": ["l"] },
++    { "before": ["k"], "after": ["s"] },
++    { "before": ["j"], "after": ["d"] },
++    { "before": ["h"], "after": ["e"] },
++    { "before": ["l"], "after": ["f"] },
++    { "before": ["K"], "after": ["S"] },
++    { "before": ["J"], "after": ["D"] },
++    { "before": ["H"], "after": ["E"] },
++    { "before": ["L"], "after": ["F"] },
++
++    { "before": ["<C-f>"], "after": ["<C-e>"] },
++    { "before": ["<C-s>"], "after": ["<C-y>"] },
++    { "before": ["<C-e>"], "after": ["<C-u>"] },
++
++    // { "before": ["Tab"], "commands": [":nohl"] },
++    { "before": ["t"], "after": ["o", "<Esc>"], "silent": true },
++    { "before": ["D"], "after": ["m", "z", "J", "`", "z"] },
++
++    // {
++    //   "before": ["<C-e>"],
++    //   "after": ["pageUp"],
++    //   "silent": true
++    // },
++
++    {
++      "before": ["<leader>", "o", "i"],
++      "commands": ["workbench.action.splitEditor"],
++      "silent": true
++    },
++    {
++      "before": ["<leader>", "o", "p"],
++      "commands": ["workbench.action.splitEditorDown"],
++      "silent": true
++    },
++    {
++      "before": ["<leader>", "w"],
++      "commands": ["workbench.action.files.save"]
++    },
++    {
++      "before": ["<leader>", "e", "q"],
++      "commands": ["workbench.action.closeActiveEditor"],
++      "silent": true
++    },
++    {
++      "before": ["<leader>", "p", "f"],
++      "commands": ["workbench.action.quickOpen"],
++      "silent": true
++    },
++    {
++      "before": ["<leader>", "p", "s"],
++      "commands": ["workbench.action.findInFiles"],
++      "silent": true
++    }
++  ],
++
++  "vim.visualModeKeyBindingsNonRecursive": [
++    { "before": ["s"], "after": ["h"] },
++    { "before": ["d"], "after": ["j"] },
++    { "before": ["e"], "after": ["k"] },
++    { "before": ["f"], "after": ["l"] },
++    { "before": ["k"], "after": ["s"] },
++    { "before": ["j"], "after": ["d"] },
++    { "before": ["h"], "after": ["e"] },
++    { "before": ["l"], "after": ["f"] },
++    { "before": ["K"], "after": ["S"] },
++    { "before": ["J"], "after": ["D"] },
++    { "before": ["H"], "after": ["E"] },
++    { "before": ["L"], "after": ["F"] },
++
++    { "before": ["<C-e>"], "after": ["<C-s>"] },
++    { "before": ["<C-y>"], "after": ["<C-f>"] },
++    { "before": ["<C-e>"], "after": ["<C-u>"] },
++
++    { "before": ["D"], "commands": ["editor.action.moveLinesDownAction"] },
++    { "before": ["E"], "commands": ["editor.action.moveLinesUpAction"] },
++
++    { "before": ["x"], "commands": ["surround-advanced.remove-surround"] },
++    { "before": ["n"], "commands": ["surround-advanced.surround"] },
++    { "before": ["m"], "commands": ["surround-advanced.replace-surround"] },
++    { "before": ["<"], "commands": ["extension.surroundWithTag"] }
++  ],
++
++  "vim.operatorPendingModeKeyBindingsNonRecursive": [
++    { "before": ["s"], "after": ["h"] },
++    { "before": ["d"], "after": ["j"] },
++    { "before": ["e"], "after": ["k"] },
++    { "before": ["f"], "after": ["l"] },
++    { "before": ["k"], "after": ["s"] },
++    { "before": ["j"], "after": ["d"] },
++    { "before": ["h"], "after": ["e"] },
++    { "before": ["l"], "after": ["f"] },
++    { "before": ["K"], "after": ["S"] },
++    { "before": ["J"], "after": ["D"] },
++    { "before": ["H"], "after": ["E"] },
++    { "before": ["L"], "after": ["F"] }
++  ],
++  "github.copilot.editor.enableAutoCompletions": true,
++  "redhat.telemetry.enabled": false,
++  "[xml]": {
++    "editor.defaultFormatter": "redhat.vscode-xml"
++  },
++  "typescript.updateImportsOnFileMove.enabled": "always",
++  "editor.wordWrap": "on",
++  "editor.minimap.enabled": false,
++  "[shellscript]": {
++    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
++  },
++  "zig.zls.enabled": "on",
++  "dart.flutterSdkPath": "/Users/sohaugho/development/flutter",
++  "[sql]": {
++    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
++  },
++  "SQL-Formatter-VSCode.dialect": "postgresql",
++  "SQL-Formatter-VSCode.dataTypeCase": "upper",
++  "SQL-Formatter-VSCode.functionCase": "upper",
++  "SQL-Formatter-VSCode.keywordCase": "upper",
++  "emmet.showExpandedAbbreviation": "never",
++  "editor.lineNumbers": "relative",
++  "editor.formatOnSave": true
++}
