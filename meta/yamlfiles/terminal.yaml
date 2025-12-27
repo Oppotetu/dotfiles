@@ -12,7 +12,7 @@
     ~/.config/fastfetch/config.jsonc: config/fastfetch-config.jsonc
 
 - shell:
-    - description: Installing mise (linux)
+    - description: Installing command line tools (linux)
       command: |
         if [ "$(uname)" = "Linux" ]; then
           sudo pacman -S --needed starship
@@ -21,9 +21,10 @@
           sudo pacman -S --needed jq
           sudo pacman -S --needed wget
           sudo pacman -S --needed curl
+          sudo pacman -S --needed diff-so-fancy
         fi
 
-    - description: Installing mise (mac)
+    - description: Installing command line tools (mac)
       command: |
         if [ "$(uname)" = "Darwin" ]; then
           brew install starship
@@ -32,4 +33,5 @@
           brew install jq
           brew install wget
           brew install curl
+          brew install diff-so-fancy
         fi

@@ -2,6 +2,23 @@
     link:
       relink: true
       create: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - link:
     ~/.config/tmux/tmux.conf: config/tmux.conf
+
+- shell:
+    - description: Installing tmux (linux)
+      command: |
+        if [ "$(uname)" = "Linux" ]; then
+          sudo pacman -S --needed tmux
+        fi
+
+    - description: Installing tmux (mac)
+      command: |
+        if [ "$(uname)" = "Darwin" ]; then
+          brew install tmux
+        fi
