@@ -1,0 +1,32 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- link:
+    ~/.shellrc-shared: config/shellrc-shared
+
+- link:
+    ~/.bashrc:
+      if: "[ `uname` = Linux ]"
+      path: config/bashrc
+    ~/.zshrc:
+      if: "[ `uname` = Darwin ]"
+      path: config/zshrc
+
+- shell:
+    - description: Sourcing .bashrc (linux)
+      command: |
+        if [ "$(uname)" = "Linux" ]; then
+          source ~/.bashrc
+        fi
+
+    - description: Sourcing .zshrc (mac)
+      command: |
+        if [ "$(uname)" = "Darwin" ]; then
+          source ~/.zshrc
+        fi

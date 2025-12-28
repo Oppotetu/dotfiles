@@ -1,0 +1,14 @@
+
+# ~/.shellrc-shared
+
+# Environment
+export TERM=xterm-256color
+
+# PATH
+export PATH="$PATH:$HOME/Work/scripts/tmux"
+
+# Aliases 
+alias dsf='diff-so-fancy'
+alias nvim='NVIM_APPNAME=nvim-oppotetu nvim'
+alias lazy='NVIM_APPNAME=nvim-lazy nvim'
+

@@ -7,12 +7,12 @@
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 
+# Load shared shell config
+if [ -f "$HOME/.shellrc-shared" ]; then
+    . "$HOME/.shellrc-shared"
+fi
+
 # Add your own exports, aliases, and functions here.
 open() { xdg-open "$@" >/dev/null; }
 
-alias nvim='NVIM_APPNAME=nvim-oppotetu nvim'
-alias lazy='NVIM_APPNAME=nvim-lazy nvim'
-
-#
 # Make an alias for invoking commands you use constantly
-# alias p='python'

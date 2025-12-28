@@ -2,5 +2,9 @@
     link:
       relink: true
       create: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
-- clean: [ "~", "~/.config" ]
+- clean: ["~", "~/.config"]
