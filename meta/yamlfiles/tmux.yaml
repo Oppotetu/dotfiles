@@ -8,7 +8,9 @@
       stderr: true
 
 - link:
-    ~/.config/tmux/tmux.conf: config/tmux.conf
+    ~/.config/tmux/tmux.conf: config/tmux/tmux.conf
+    ~/src/scripts/tmux/tmux-musit.sh: config/tmux/tmux-musit.sh
+    ~/src/scripts/tmux/tmux-nfc.sh: config/tmux/tmux-nfc.sh
 
 - shell:
     - description: Installing tmux (linux)
