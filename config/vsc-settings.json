@@ -2,16 +2,12 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
-  "workbench.colorTheme": "Tokyo Night AltSynt",
+  "workbench.colorTheme": "Ethereal",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.editor.wrapTabs": true,
 
   "explorer.confirmDragAndDrop": false,
-
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
 
   "editor.accessibilitySupport": "off",
   "editor.lineNumbers": "relative",
@@ -40,6 +36,10 @@
   "redhat.telemetry.enabled": false,
   "git.openRepositoryInParentFolders": "never",
 
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
   // To improve performance
   "extensions.experimental.affinity": {

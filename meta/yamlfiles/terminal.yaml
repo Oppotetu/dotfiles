@@ -24,8 +24,7 @@
           sudo pacman -S --needed curl
           sudo pacman -S --needed diff-so-fancy
           sudo pacman -S --needed tldr
-
-
+          sudo pacman -S --needed cmatrix
         fi
 
     - description: Installing command line tools (mac)
@@ -40,4 +39,5 @@
           brew install curl
           brew install diff-so-fancy
           brew install tlrc
+          brew install cmatrix
         fi
