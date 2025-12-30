@@ -19,9 +19,13 @@
           sudo pacman -S --needed fastfetch
           sudo pacman -S --needed fzf
           sudo pacman -S --needed jq
+          sudo pacman -S --needed yq
           sudo pacman -S --needed wget
           sudo pacman -S --needed curl
           sudo pacman -S --needed diff-so-fancy
+          sudo pacman -S --needed tldr
+
+
         fi
 
     - description: Installing command line tools (mac)
@@ -31,7 +35,9 @@
           brew install fastfetch
           brew install fzf
           brew install jq
+          brew install yq
           brew install wget
           brew install curl
           brew install diff-so-fancy
+          brew install tlrc
         fi

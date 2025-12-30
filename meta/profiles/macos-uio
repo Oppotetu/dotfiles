@@ -1,6 +1,8 @@
-zsh
+shell
+brew
+dependencies-macos
 git
+karabiner
 mise
 nvim
 terminal
-karabiner

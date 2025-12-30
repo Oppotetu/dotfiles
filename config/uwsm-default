@@ -1,7 +1,7 @@
 # Changes require a restart to take effect.
 
 # Default terminal. Install other terminals via Install > Terminal
-export TERMINAL=xdg-terminal-exec
+export TERMINAL=ghostty
 
 # Default editor
 export EDITOR=code
