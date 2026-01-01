@@ -1,7 +1,11 @@
 - defaults:
     link:
-      create: true
       relink: true
+      create: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - link:
     ~/.config/Code/User/settings.json::
@@ -16,6 +20,19 @@
     "~/Library/Application Support/Code/User/keybindings.json":
       if: "[ `uname` = Darwin ]"
       path: config/vsc-keybindings.json
+
+- shell:
+    - description: Installing mise (linux)
+      command: |
+        if [ "$(uname)" = "Linux" ]; then
+          yay -S --needed visual-studio-code-bin
+        fi
+
+    - description: Installing mise (mac)
+      command: |
+        if [ "$(uname)" = "Darwin" ]; then
+          brew install --cask visual-studio-code
+        fi
 
 - plugins:
     - meta/dotbot-vscode/
