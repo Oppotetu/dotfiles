@@ -2,6 +2,7 @@
     link:
       relink: true
       create: true
+      force: true
 
 - link:
     ~/.config/uwsm/default: config/uwsm-default
