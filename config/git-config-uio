@@ -11,3 +11,5 @@
 
 [commit]
 	gpgsign = true
+[core]
+	editor = nvim

@@ -2,7 +2,7 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
-  "workbench.colorTheme": "Matte Black",
+  "workbench.colorTheme": "Gruvbox Light Hard",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.editor.wrapTabs": true,
