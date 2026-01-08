@@ -26,6 +26,7 @@
           sudo pacman -S --needed diff-so-fancy
           sudo pacman -S --needed tldr
           sudo pacman -S --needed cmatrix
+          sudo pacman -S --needed shellcheck
         fi
 
     - description: Installing command line tools (mac)
@@ -41,4 +42,5 @@
           brew install diff-so-fancy
           brew install tlrc
           brew install cmatrix
+          brew install shellcheck
         fi
