@@ -63,7 +63,8 @@
     "<C-k>": false,
     "<C-h>": false,
     "<C-l>": false,
-    "<C-u>": false
+    "<C-u>": false,
+    "<C-b>": false
   },
 
   "vim.surround": false,
