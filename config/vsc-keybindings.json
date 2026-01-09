@@ -387,5 +387,13 @@
   {
     "key": "ctrl+i",
     "command": "workbench.action.chat.open"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeActiveEditor"
   }
 ]
