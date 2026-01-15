@@ -2,7 +2,7 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
-  "workbench.colorTheme": "Gruvbox Light Hard",
+  "workbench.colorTheme": "Kanagawa",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.editor.wrapTabs": true,
@@ -89,6 +89,9 @@
     // { "before": ["Esc"], "commands": [":nohl"] },
     { "before": ["t"], "after": ["o", "<Esc>"], "silent": true },
     { "before": ["D"], "after": ["m", "z", "J", "`", "z"] },
+
+    { "before": ["<leader>", "a", "e"], "after": ["g", "g", "V", "G"] },
+    { "before": ["<leader>", "a", "y"], "after": ["g", "g", "V", "G", "y"] },
 
     {
       "before": ["<leader>", "o", "i"],

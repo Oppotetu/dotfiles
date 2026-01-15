@@ -215,7 +215,7 @@
     "when": "hasSearchResult || inSearchEditor"
   },
   {
-    "key": "ctrl+9",
+    "key": "alt+j",
     "command": "editor.action.marker.next",
     "when": "editorFocus"
   },
@@ -229,7 +229,7 @@
     "command": "-workbench.action.focusEighthEditorGroup"
   },
   {
-    "key": "ctrl+8",
+    "key": "alt+k",
     "command": "editor.action.marker.prev",
     "when": "editorFocus"
   },
