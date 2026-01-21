@@ -2,6 +2,7 @@
     link:
       relink: true
       create: true
+      force: true
     shell:
       stdin: true
       stdout: true
@@ -13,4 +14,5 @@
 - shell:
     - [sudo pacman -S --needed keyd, Installing Keyd]
     - [sudo systemctl enable keyd, Enabling Keyd]
-    - [sudo keyd reload, Reloading Keyd]
+    - [sudo systemctl start keyd, Starting Keyd]
+    # - [sudo keyd reload, Reloading Keyd]
