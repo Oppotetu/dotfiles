@@ -13,8 +13,3 @@
 
 - shell:
     - [brew install --cask karabiner-elements, Installing karabiner-elements]
-# - plugins:
-#     - meta/dotbot-brew/
-
-# - cask:
-#     - karabiner-elements
