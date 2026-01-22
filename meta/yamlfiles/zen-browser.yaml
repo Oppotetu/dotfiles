@@ -1,0 +1,8 @@
+- defaults:
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- shell:
+    - [yay -S --needed zen-browser-bin, Install zen browser]

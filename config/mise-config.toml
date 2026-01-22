@@ -3,7 +3,7 @@ node = "latest"
 zig = "latest"
 zls = "latest"
 go = "latest"
-lua = "latest"
+# lua = "latest"
 shfmt = "latest"
 
 [settings]

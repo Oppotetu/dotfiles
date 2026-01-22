@@ -9,10 +9,10 @@
       stderr: true
 
 - link:
-    ~/.config/Code/User/settings.json::
+    ~/.config/Code/User/settings.json:
       if: "[ `uname` = Linux ]"
       path: config/vsc-settings.json
-    ~/.config/Code/User/keybindings.json::
+    ~/.config/Code/User/keybindings.json:
       if: "[ `uname` = Linux ]"
       path: config/vsc-keybindings.json
     "~/Library/Application Support/Code/User/settings.json":
@@ -23,13 +23,13 @@
       path: config/vsc-keybindings.json
 
 - shell:
-    - description: Installing mise (linux)
+    - description: Installing vsc (linux)
       command: |
         if [ "$(uname)" = "Linux" ]; then
           yay -S --needed visual-studio-code-bin
         fi
 
-    - description: Installing mise (mac)
+    - description: Installing vsc (mac)
       command: |
         if [ "$(uname)" = "Darwin" ]; then
           brew install --cask visual-studio-code
