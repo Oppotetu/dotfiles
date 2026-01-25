@@ -3,30 +3,14 @@
       relink: true
       create: true
       force: true
-    shell:
-      stdin: true
-      stdout: true
-      stderr: true
 
 - link:
     ~/.config/git/config:
-      if: '[ `uname` = Linux ]'
+      if: "[ `uname` = Linux ]"
       path: config/git-config
     ~/.config/git/config:
-      if: '[ `uname` = Darwin ]'
+      if: "[ `uname` = Darwin ]"
       path: config/git-config-uio
 
-- shell:
-    - description: Installing git/gh (linux)
-      command: |
-        if [ "$(uname)" = "Linux" ]; then
-          sudo pacman -S --needed git
-          sudo pacman -S --needed github-cli
-        fi
-
-    - description: Installing git/gh (mac)
-      command: |
-        if [ "$(uname)" = "Darwin" ]; then
-          brew install git
-          brew install gh
-        fi
+- link:
+    ~/.config/git/config: config/git-config

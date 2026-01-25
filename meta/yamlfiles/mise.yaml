@@ -12,17 +12,5 @@
     ~/.config/mise/config.toml: config/mise-config.toml
 
 - shell:
-    - description: Installing mise (linux)
-      command: |
-        if [ "$(uname)" = "Linux" ]; then
-          sudo pacman -S --needed mise
-        fi
-
-    - description: Installing mise (mac)
-      command: |
-        if [ "$(uname)" = "Darwin" ]; then
-          brew install mise
-        fi
-
     - description: Upgrade mise
       command: mise upgrade
