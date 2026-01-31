@@ -25,7 +25,6 @@
         if [ "$(uname)" = "Linux" ]; then
           source ~/.bashrc
         fi
-
     - description: Sourcing .zshrc (mac)
       command: |
         if [ "$(uname)" = "Darwin" ]; then

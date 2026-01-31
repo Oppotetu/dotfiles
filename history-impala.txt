@@ -1,0 +1,309 @@
+    1  ls
+    2  ls 
+    3  ls -la
+    4  mkdir .dotfiles
+    5  cd .dotfiles
+    6  ls
+    7  cd 
+    8  cd .config/
+    9  ls
+   10  ls -la
+   11  cd plasma-org.kde.plasma.desktop-appletsrc
+   12  cat plasma-org.kde.plasma.desktop-appletsrc 
+   13  rustup
+   14  git 
+   15  clear
+   16  sudo dnf install chromium
+   17  sudo dnf install fedora-workstation-repositories   
+   18  sudo dnf config-manager setopt google-chrome.enabled=1   
+   19  dnf repolist | grep chrome   
+   20  sudo dnf install google-chrome-stable   
+   21  history 
+   22  plasmapkg2 -t kwinscript -i krohnkite.kwinscript # installing new script
+   23  kpackagetool6 -t kwinscript -i krohnkite.kwinscript # installing new script
+   24  kwriteconfig6 --file kdeglobals --group General --key TerminalApplication ghostty
+   25  kwriteconfig6 --file kdeglobals --group General --key TerminalService ghostty.desktop
+   26  kpackagetool6 -t kwinscript -i krohnkite.kwinscript
+   27  kpackagetool6 --type=KWin/Script --install krohnkite.kwinscript
+   28  kpackagetool6 -t KWin/Script --install krohnkite.kwinscript
+   29  kpackagetool6 --type KWin/Script --i krohnkite.kwinscript
+   30  git clone https://github.com/esjeon/krohnkite.git ~/Downloads/
+   31  git clone https://github.com/esjeon/krohnkite.git ~/Downloads/krohnkite
+   32  kpackagetool6 --type=KWin/Script --install ~/Downloads/krohnkite
+   33  kpackagetool6 --type=KWin/Script --upgrade ~/Downloads/krohnkite
+   34  kpackagetool6 --type KWin/Script --install ~/Downloads/krohnkite
+   35  rm -rf /home/oppotetu/.local/share/kwin/scripts/krohnkite/
+   36  kpackagetool6 --type KWin/Script --install ~/Downloads/krohnkite
+   37  kpackagetool6 --type KWin/Script --upgrade ~/Downloads/krohnkite
+   38  ls ~/.local/share/kwin/scripts/
+   39  sudo dnf install kf6-kpackage
+   40  kpackagetool6 --list | grep colorizer
+   41  kpackagetool6 --install plasma-panel-colorizer
+   42  kwriteconfig6 --file kwinrc --group Plugins --key krohnkiteEnabled true
+   43  ls -la 
+   44  ls .config/kwinrc
+   45  cd .config/
+   46  cat kwinrc
+   47  setsid kwin_x11 --replace &
+   48  [200~setsid kwin_x11 --replace &
+   49  setsid kwin_wayland --replace &
+   50  kpackagetool6 -t KWin/Script -s krohnkite
+   51  cd Downloads/
+   52  kpackagetool6 -t KWin/Script -s krohnkite-0.9.9.2-1d7fd74
+   53  go-task
+   54  npm 
+   55  node 
+   56  mise ls
+   57  node 
+   58  go
+   59  mise ls --current
+   60  cd ..
+   61  cat .bashrc 
+   62  sudo dnf install go-task
+   63  cd Downloads/
+   64  ls
+   65  rm -rf krohnkite
+   66  rm -rf krohnkite-0.9.9.2-1d7fd74
+   67  rm krohnkite-0.9.9.2-1d7fd74.kwinscript 
+   68  ls
+   69  git clone https://codeberg.org/anametologin/Krohnkite.git 
+   70  ls
+   71  cd Krohnkite/
+   72  go-task install
+   73  mise ls
+   74  npm
+   75  node 
+   76  which mise
+   77  mise doctor
+   78  mise activate
+   79  mise doctor
+   80  which mise
+   81  echo 'eval "$(mise activate bash)"' >> ~/.bashrc
+   82  mise doctor
+   83  source
+   84  source ~/.bashrc
+   85  mise doctor
+   86  sudo dnf upgrade mise
+   87  mise doctor
+   88  npm 
+   89  ls
+   90  go-task install
+   91  cd
+   92  cd .local/share/kwin/
+   93  cd scripts/
+   94  ls
+   95  rm -rf krohnkite/
+   96  ls
+   97  cd
+   98  cd Downloads/
+   99  cd Krohnkite/
+  100  go-task install
+  101  kpackagetool6 -t KWin/Script -l | grep krohnkite
+  102  history
+  103  kwriteconfig6 --file kwinrc --group Plugins --key krohnkiteEnabled
+  104  kwriteconfig6 --file kwinrc --group Plugins --key krohnkiteEnabled true
+  105  cd
+  106  cd .config/
+  107  cat kwinrc 
+  108  cd
+  109  ls .local/
+  110  cd ~/.local/src/krohnkite
+  111  cd -p ~/.local/src/krohnkite
+  112  git clone https://codeberg.org/anametologin/Krohnkite.git ~/.local/src/krohnkite
+  113  cd ~/.local/src/krohnkite
+  114  qdbus6 org.kde.KWin /KWin supportInformation | grep -i krohnkite
+  115  qdbus org.kde.KWin /KWin supportInformation | grep -i krohnkite
+  116  cd
+  117  cd .config/tmux/
+  118  ls
+  119  cat tmux.conf 
+  120  sudo dnf install -y neovim
+  121  nvim .
+  122  [200~qdbus6 org.kde.KWin /KWin supportInformation | grep -i krohnkite
+  123  qdbus6 org.kde.KWin /KWin supportInformation | grep -i krohnkite
+  124  qdbus org.kde.KWin /KWin supportInformation | grep -i krohnkite
+  125  cd .dotfiles/
+  126  ./install-standalone kwin
+  127  ls config/
+  128  ls -la config/
+  129  chmod +x config/kwin.sh 
+  130  ls -la config/
+  131  ./install-standalone kwin
+  132  sudo dnf install -y tmux
+  133  ./install-standalone tmux
+  134  tmux new -s jan
+  135  run '~/.local/share/tmux/plugins/tpm/tpm'
+  136  tmux source ~/.config/tmux/tmux.conf
+  137  ~/.local/share/tmux/plugins/tpm/tpm
+  138  ls .local/share/tmux/plugins/tpm/
+  139  cd 
+  140  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  141  .dotfiles/install-standalone tmux
+  142  cd .dot
+  143  cd .dotfiles/
+  144  nvim .
+  145  cd 
+  146  cd .config/
+  147  cat tmux/tmux.conf 
+  148  tmux source ~/.tmux.conf
+  149  tmux source ~/.config/tmux/tmux.config
+  150  ls tmux/tmux.conf 
+  151  cd 
+  152  tmux source ~/.config/tmux/tmux.config
+  153   source ~/.config/tmux/tmux.config
+  154  cd .dotfiles/
+  155  ./install-standalone tmux
+  156  tmux source ~/.config/tmux/tmux.conf
+  157  cd
+  158  ls -la
+  159  ls .tmux
+  160  cd .config/
+  161  ls 
+  162  ls -la
+  163  ls tmux/
+  164  cd ..
+  165  ls
+  166  ls .local/
+  167  ls .local/src/
+  168  cd .local/
+  169  ls bin/
+  170  ls bin/konsave 
+  171  ls bin/
+  172  cd bin/
+  173  cd ko
+  174  cat konsave 
+  175  cd ..
+  176  ls share/
+  177  ls state/
+  178  git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm
+  179  cd
+  180  cd .dotfiles/
+  181  ./install-standalone tmux
+  182  tmux attach
+  183  tmux new -s jan
+  184  tmux new -s ja
+  185  ls
+  186  lspci | grep VGA
+  187  dnf list intel-ucode
+  188      sudo dnf install         microcode_ctl         vulkan-intel         intel-media-driver         libva-intel-driver         intel-gpu-tools
+  189  sudo dnf install vulkan-loader
+  190      sudo dnf install         microcode_ctl         vulkan-loader         intel-media-driver         libva-intel-driver         intel-gpu-tools
+  191      sudo dnf install         microcode_ctl         vulkan-loader         intel-media-driver         intel-gpu-tools
+  192  sudo dnf install sway swaylock swayidle     waybar wofi grim slurp wl-clipboard     xdg-desktop-portal-wlr
+  193  cp /etc/sway/config ~/.config/sway/config
+  194  cp --parents /etc/sway/config ~/.config/sway/config
+  195  cp --parents /etc/sway/config ~/.config/sway
+  196  mkdir ~/.config/sway
+  197  cp /etc/sway/config ~/.config/sway/config
+  198  tmux new -s jann
+  199  systemctl status display-manager
+  200  ls /usr/share/wayland-sessions/
+  201  cat /etc/sddm.conf
+  202  nvim /etc/sddm.conf
+  203  sudo nvim /etc/sddm.conf
+  204  sudo systemctl restart sddm
+  205  sway
+  206  cd .dotfiles/
+  207  ./install-standalone sway
+  208  cd .config/
+  209  ls
+  210  cd sway/
+  211  ls
+  212  cat config 
+  213  ls /etc/sway/
+  214  open google-chrome
+  215  google-chrome
+  216  ls
+  217  cd .dotfiles/
+  218  code .
+  219  tmux new -s jan
+  220  google-chrome
+  221  code .dotfiles/
+  222  ls
+  223  ls Work/
+  224  ls
+  225  cd .dotfiles/
+  226  code 
+  227  nmcli radio wifi on
+  228  nmcli device wifi list
+  229  nmcli device wifi connect Telia-2797E6 password 88arytt8qsbnvgd3
+  230  nmcli device wifi connect 2C:FB:0F:27:97:EA password 88arytt8qsbnvgd3
+  231  nmcli dev wifi list
+  232  nmcli dev wifi list -a
+  233  nmcli dev wifi connect Telia-2797E6 -a password 88arytt8qsbnvgd3
+  234  nmtui
+  235  cd .dot
+  236  cd .dotfiles/
+  237  code .
+  238  man sway-input
+  239  localectl list-x11-keymap-layouts | grep nb
+  240  sudo dnf install xkeyboard-config
+  241  localectl list-x11-keymap-layouts | grep nb
+  242  code .
+  243  cd
+  244  cd Downloads/
+  245  ls
+  246  ls fontawesome-free-7.1.0-desktop
+  247  sudo dnf install fontawesome-fonts-all
+  248  ls 
+  249  nmtui
+  250  sudo dnf install NetworkManager
+  251  nmtui
+  252  sudo dnf install NetworkManager-tui
+  253  nmtui
+  254  nm
+  255  network-manager
+  256  cd
+  257  nvim .bashrc 
+  258  nmtui
+  259  cd .dotfiles/
+  260  code .
+  261  tmux new -s jan
+  262  sudo dnf install rust cargo
+  263  cargo install impala
+  264  impala
+  265  nmtui
+  266  impala
+  267  sudo dnf install iwd
+  268  sudo systemctl enable iwd
+  269  sudo systemctl start iwd
+  270  impala
+  271  nmtui
+  272  impala
+  273  nmtui
+  274  ls
+  275  impala
+  276  systemctl status iws.service
+  277  systemctl status iws
+  278  sudo systemctl enable iws
+  279  sudo dnf install iwd
+  280  sudo systemctl enable --now iwd
+  281  systemctl status iwd
+  282  impala
+  283  sudo systemctl start iwd
+  284  impala
+  285  systemctl status wpa_supplicant
+  286  systemctl status connman
+  287  sudo systemctl disable --now wpa_supplicant
+  288  impala
+  289  systemctl status iwd
+  290  impala
+  291  systemctl status connman
+  292  sudo dnf install connman
+  293  impala
+  294  cd /etc/NetworkManager/
+  295  ls
+  296  cd conf.d/
+  297  ls
+  298  sudo nvim wifi_backend.conf
+  299  sudo systemctl restart NetworkManager
+  300  iwctl device list
+  301  impala
+  302  iwctl device list
+  303  impala
+  304  history
+  305  cd 
+  306  ls -la 
+  307  cd .dotfiles/
+  308  ls
+  309  history > history-impala.txt

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e 
+set -e
 
 yay -S --noconfirm --needed google-chrome
 mkdir Work
@@ -8,3 +8,7 @@ mkdir .dotfiles
 yay -S --needed visual-studio-code-bin
 
 sudo pacman -S --needed mise
+
+sudo pacman -S --needed tmux
+
+sudo pacman -S --needed neovim

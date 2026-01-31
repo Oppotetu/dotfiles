@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+# - link:
+#     ~/.config/mise/config.toml: config/mise-config.toml
+
+- shell:
+    - description: Configuring KWin keybinds
+      command: config/kwin.sh

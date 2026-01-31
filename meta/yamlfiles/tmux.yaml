@@ -2,6 +2,7 @@
     link:
       relink: true
       create: true
+      force: true
     shell:
       stdin: true
       stdout: true
@@ -9,18 +10,23 @@
 
 - link:
     ~/.config/tmux/tmux.conf: config/tmux/tmux.conf
-    ~/src/scripts/tmux/tmux-musit.sh: config/tmux/tmux-musit.sh
-    ~/src/scripts/tmux/tmux-nfc.sh: config/tmux/tmux-nfc.sh
+    ~/.local/bin/tmux/tmux-musit.sh: config/tmux/tmux-musit.sh
+    ~/.local/bin/tmux/tmux-nfc.sh: config/tmux/tmux-nfc.sh
 
 - shell:
-    - description: Installing tmux (linux)
-      command: |
-        if [ "$(uname)" = "Linux" ]; then
-          sudo pacman -S --needed tmux
-        fi
+    - description: Create plugins dir
+      command: mkdir -p ~/.local/share/tmux/plugins
 
-    - description: Installing tmux (mac)
+    - description: Clone tmux-vim-navigator
       command: |
-        if [ "$(uname)" = "Darwin" ]; then
-          brew install tmux
-        fi
+        [[ -d ~/.local/share/tmux/plugins/vim-tmux-navigator ]] ||
+        git clone https://github.com/christoomey/vim-tmux-navigator.git ~/.local/share/tmux/plugins/vim-tmux-navigator
+
+    - description: Update tmux plugins
+      command: |
+        for d in ~/.local/share/tmux/plugins/*; do
+          [[ -d "$d/.git" ]] && git -C "$d" pull --ff-only
+        done
+
+    - description: Sourcing tmux
+      command: tmux source ~/.config/tmux/tmux.conf

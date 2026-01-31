@@ -12,5 +12,3 @@
       if: "[ `uname` = Darwin ]"
       path: config/git-config-uio
 
-- link:
-    ~/.config/git/config: config/git-config
