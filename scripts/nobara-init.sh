@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+mkdir Work
+mkdir .dotfiles
+
 # browser
 sudo dnf install -y fedora-workstation-repositories
 sudo dnf config-manager setopt google-chrome.enabled=1
