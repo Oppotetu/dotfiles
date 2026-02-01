@@ -1,0 +1,9 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+
+- link:
+    ~/.config/waybar/config.jsonc: config/waybar/omarchy/config.jsonc
+    ~/.config/waybar/style.css: config/waybar/omarchy/style.css
