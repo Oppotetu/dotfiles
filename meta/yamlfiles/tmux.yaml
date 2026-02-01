@@ -27,6 +27,3 @@
         for d in ~/.local/share/tmux/plugins/*; do
           [[ -d "$d/.git" ]] && git -C "$d" pull --ff-only
         done
-
-    - description: Sourcing tmux
-      command: tmux source ~/.config/tmux/tmux.conf

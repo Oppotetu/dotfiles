@@ -16,6 +16,5 @@
     ~/.local/bin/ostt-float: config/ostt/ostt-float
     ~/.local/bin/ostt-en: config/ostt/ostt-en
     ~/.local/bin/ostt-nb: config/ostt/ostt-nb
-
-- shell:
-    - [yay -S --needed ostt]
+# - shell:
+#     - [yay -S --needed ostt]

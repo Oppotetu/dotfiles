@@ -15,3 +15,15 @@ brew install --cask visual-studio-code
 brew install tmux
 
 brew install neovim
+
+brew install starship
+brew install fastfetch
+brew install fzf
+brew install jq
+brew install yq
+brew install wget
+brew install curl
+brew install diff-so-fancy
+brew install tlrc
+brew install cmatrix
+brew install shellcheck

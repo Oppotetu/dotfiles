@@ -10,9 +10,8 @@
 
 - link:
     /etc/keyd/default.conf: config/keyd-default.conf
-
-- shell:
-    - [sudo pacman -S --needed keyd, Installing Keyd]
-    - [sudo systemctl enable keyd, Enabling Keyd]
-    - [sudo systemctl start keyd, Starting Keyd]
-    # - [sudo keyd reload, Reloading Keyd]
+# - shell:
+# - [sudo pacman -S --needed keyd, Installing Keyd]
+# - [sudo systemctl enable keyd, Enabling Keyd]
+# - [sudo systemctl start keyd, Starting Keyd]
+# - [sudo keyd reload, Reloading Keyd]

@@ -1,80 +1,32 @@
 #!/bin/bash
 set -e
 
-mkdir Work
-mkdir .dotfiles
-
-yay -S --noconfirm --needed google-chrome
-
-yay -S --needed visual-studio-code-bin
-
-sudo pacman -S --needed mise
-
-sudo pacman -S --needed tmux
-
-sudo pacman -S --needed neovim
+mkdir -p ~/Work
+mkdir -p ~/Downloads
+mkdir -p ~/Documents
+mkdir -p ~/Photos
 
 #######################################
-# browser
+# yay
 #######################################
 
-# Google Chrome
-yay -S --needed --noconfirm google-chrome
+yay -S --needed --noconfirm \
+    google-chrome visual-studio-code-bin \
+    joycond-git
+
+# ostt
 
 #######################################
-# mise
+# pacman
 #######################################
 
-sudo pacman -S --needed --noconfirm mise
-
-# echo 'eval "$(mise activate bash)"' >>~/.bashrc
-# source ~/.bashrc
-
-~/.dotfiles/install-standalone mise
-
-#######################################
-# Visual Studio Code
-#######################################
-
-yay -S --needed --noconfirm visual-studio-code-bin
-
-#######################################
-# ghostty
-#######################################
-
-sudo pacman -S --needed --noconfirm ghostty
-
-#######################################
-# tmux
-#######################################
-
-sudo pacman -S --needed --noconfirm tmux
-
-#######################################
-# neovim
-#######################################
-
-sudo pacman -S --needed --noconfirm neovim
-
-#######################################
-# impala
-#######################################
-
-sudo pacman -S --needed --noconfirm impala
-
-#######################################
-# iwd
-#######################################
-
-# sudo pacman -S --needed --noconfirm iwd
-# sudo systemctl enable iwd
-# sudo systemctl start iwd
-
-#######################################
-# spotify
-#######################################
-
-sudo pacman -S --needed --noconfirm spotify-launcher
+sudo pacman -S --needed --noconfirm \
+    mise tmux neovim github-cli fzf jq yq \
+    starship fastfetch wget curl tldr \
+    diff-so-fancy cmatrix spellcheck \
+    impala bluetui swayosd keyd \
+    steam spotify-launcher \
+    otf-font-awesome
 
 #######################################
 # sway + GPU bits
@@ -91,17 +43,12 @@ else
     echo "Not Intel"
 fi
 
-sudo pacman -S --needed --noconfirm \
-    sway swaylock swayidle swaybg \
-    waybar wofi grim slurp wl-clipboard \
-    xdg-desktop-portal-wlr \
-    ttf-font-awesome
-
 #######################################
-# cleanup
+# Enable services
 #######################################
 
-sudo pacman -Rns --noconfirm $(pacman -Qtdq) || true
-sudo pacman -Sc --noconfirm
+
+sudo systemctl enable keyd
+sudo systemctl start keyd
 
 echo "Setup complete 🚀"

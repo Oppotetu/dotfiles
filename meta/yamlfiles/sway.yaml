@@ -3,10 +3,12 @@
       relink: true
       create: true
       force: true
-    shell:
-      stdin: true
-      stdout: true
-      stderr: true
 
 - link:
-    ~/.config/sway/config: config/sway-config
+    ~/.config/sway/config: config/sway/config
+    ~/.config/sway/config.d/application_defaults: config/sway/config.d/application_defaults
+    ~/.config/sway/config.d/autostart_applications: config/sway/config.d/autostart_applications
+    ~/.config/sway/config.d/default: config/sway/config.d/default
+    ~/.config/sway/config.d/input: config/sway/config.d/input
+    ~/.config/sway/config.d/output: config/sway/config.d/output
+    ~/.config/sway/config.d/theme: config/sway/config.d/theme
