@@ -19,6 +19,8 @@ set $menu nwg-drawer
 # Power Menu
 set $powermenu ~/.config/sway/scripts/power_menu.sh
 
+mouse_warping container
+
 ### Key bindings
 #
 # Basics:
@@ -100,16 +102,16 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
         $mod+19 workspace number 10
 
         # Move focused container to workspace
-        $mod+Shift+10 move container to workspace number 1
-        $mod+Shift+11 move container to workspace number 2
-        $mod+Shift+12 move container to workspace number 3
-        $mod+Shift+13 move container to workspace number 4
-        $mod+Shift+14 move container to workspace number 5
-        $mod+Shift+15 move container to workspace number 6
-        $mod+Shift+16 move container to workspace number 7
-        $mod+Shift+17 move container to workspace number 8
-        $mod+Shift+18 move container to workspace number 9
-        $mod+Shift+19 move container to workspace number 10
+        $mod+Shift+10 move container to workspace number 1; workspace number 1
+        $mod+Shift+11 move container to workspace number 2; workspace number 2
+        $mod+Shift+12 move container to workspace number 3; workspace number 3
+        $mod+Shift+13 move container to workspace number 4; workspace number 4
+        $mod+Shift+14 move container to workspace number 5; workspace number 5
+        $mod+Shift+15 move container to workspace number 6; workspace number 6
+        $mod+Shift+16 move container to workspace number 7; workspace number 7
+        $mod+Shift+17 move container to workspace number 8; workspace number 8
+        $mod+Shift+18 move container to workspace number 9; workspace number 9
+        $mod+Shift+19 move container to workspace number 10; workspace number 10
     }
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
@@ -183,19 +185,24 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
 # Media Keys
 #
     bindsym {
-        # Volume
-        XF86AudioRaiseVolume exec pamixer -ui 2
-        XF86AudioLowerVolume exec pamixer -ud 2
-        XF86AudioMute exec pamixer --toggle-mute
+        XF86AudioRaiseVolume exec ~/.local/bin/mako-vol-up.sh
+        XF86AudioLowerVolume exec ~/.local/bin/mako-vol-down.sh
+        XF86AudioMute exec ~/.local/bin/mako-vol-mute.sh
+
+        XF86MonBrightnessUp exec ~/.local/bin/mako-bright-up.sh
+        XF86MonBrightnessDown exec ~/.local/bin/mako-bright-down.sh
+
+        # Caps_Lock exec ~/.local/bin/mako-caps-toggle.sh
+        XF86AudioMicMute exec ~/.local/bin/mako-mic-toggle.sh
 
         # Player
         XF86AudioPlay exec playerctl play-pause
         XF86AudioNext exec playerctl next
         XF86AudioPrev exec playerctl previous
 
-        # Backlight
-        XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
-        XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
+        # # Backlight
+        # XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
+        # XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
     }
 
 #
@@ -205,7 +212,7 @@ set $powermenu ~/.config/sway/scripts/power_menu.sh
     bindsym $mod+n exec thunar
 
     # Launch the browser
-    bindsym $mod+o exec firefox
+    bindsym $mod+o exec google-chrome
 
     # Launch the clipboard manager
     bindsym $mod+Ctrl+v exec cliphist list | fuzzel -d -w 90 -l 30 -p "Select an entry to copy it to your clipboard buffer:"| cliphist decode | wl-copy

@@ -51,4 +51,6 @@ fi
 sudo systemctl enable keyd
 sudo systemctl start keyd
 
+
+
 echo "Setup complete 🚀"

@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- link:
+    ~/.config/mako/config: config/mako/config
+    ~/.local/bin/mako-vol-up.sh: config/mako/vol-up.sh
+    ~/.local/bin/mako-vol-down.sh: config/mako/vol-down.sh
+    ~/.local/bin/mako-vol-mute.sh: config/mako/vol-mute.sh
+    ~/.local/bin/mako-bright-up.sh: config/mako/bright-up.sh
+    ~/.local/bin/mako-bright-down.sh: config/mako/bright-down.sh
+    ~/.local/bin/mako-caps-toggle.sh: config/mako/caps-toggle.sh
+    ~/.local/bin/mako-mic-toggle.sh: config/mako/mic-toggle.sh
+
+- shell:
+    - [makoctl reload, Reloading mako]
