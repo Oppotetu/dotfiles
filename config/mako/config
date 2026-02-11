@@ -8,6 +8,7 @@ layer=overlay
 # Layout
 margin=10
 padding=10
+width=400
 max-visible=3
 
 # Colors
@@ -22,4 +23,4 @@ icons=1
 max-icon-size=64
 
 # Timing
-default-timeout=3000
+default-timeout=6000

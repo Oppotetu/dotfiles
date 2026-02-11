@@ -1,0 +1,13 @@
+[Default Applications]
+application/zip=userapp-unzip-6LO6J3.desktop
+image/png=oculante.desktop
+image/jpeg=oculante.desktop
+image/webp=oculante.desktop
+image/gif=oculante.desktop
+image/bmp=oculante.desktop
+image/tiff=oculante.desktop
+image/svg+xml=oculante.desktop
+
+[Added Associations]
+application/zip=userapp-unzip-6LO6J3.desktop;
+

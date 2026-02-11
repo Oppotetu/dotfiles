@@ -2,8 +2,8 @@
 exec_always ~/.config/sway/scripts/import-gsettings
 
 # Set inner/outer gaps
-gaps inner 10 
-gaps outer 10 
+gaps inner 5 
+gaps outer 5 
 
 # Hide titlebar on windows:
 default_border pixel 1
@@ -15,7 +15,10 @@ font pango:Noto Sans Regular 10
 smart_borders on
 
 # Set wallpaper:
-exec ~/.azotebg
+# exec ~/.azotebg
+exec_always swaybg -i ~/Photos/Wallpapers/vision-03.png -m fill
+
+
 
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"

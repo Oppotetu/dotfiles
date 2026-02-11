@@ -12,9 +12,7 @@ mkdir -p ~/Photos
 
 yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
-    joycond-git
-
-# ostt
+    zoom joycond-git way-displays
 
 #######################################
 # pacman
@@ -25,7 +23,7 @@ sudo pacman -S --needed --noconfirm \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix spellcheck \
     impala bluetui swayosd keyd \
-    steam spotify-launcher \
+    steam spotify-launcher oculante \
     otf-font-awesome
 
 #######################################
@@ -51,6 +49,8 @@ fi
 sudo systemctl enable keyd
 sudo systemctl start keyd
 
+# way-displays: Add yourself to the input group to monitor events
+sudo usermod -a -G input "${USER}"
 
 
 echo "Setup complete 🚀"
