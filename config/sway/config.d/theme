@@ -16,7 +16,7 @@ smart_borders on
 
 # Set wallpaper:
 # exec ~/.azotebg
-exec_always swaybg -i ~/Photos/Wallpapers/vision-03.png -m fill
+exec_always swaybg -i ~/Photos/Wallpapers/biosphere-06.png -m fill
 
 
 

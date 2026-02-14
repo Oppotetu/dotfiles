@@ -1,8 +1,13 @@
+base
 shell
 sway
+mako
+mimeapps
 mise
 nvim
-swayosd
+swayosd-eos
 terminal
+tmux
 vscode
+way-displays
 waybar

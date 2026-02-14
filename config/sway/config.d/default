@@ -31,6 +31,12 @@ mouse_warping container
     # Open the power menu
     bindsym $mod+Shift+e exec $powermenu
 
+    # direct suspend / logout / reboot / shutdown
+    bindsym $mod+Ctrl+q exec systemctl suspend
+    bindsym $mod+Ctrl+Shift+s exec ~/.config/sway/scripts/confirm_action.sh shutdown
+    bindsym $mod+Ctrl+Shift+r exec ~/.config/sway/scripts/confirm_action.sh reboot
+    bindsym $mod+Ctrl+Shift+l exec ~/.config/sway/scripts/confirm_action.sh logout
+
     # Kill focused window
     bindsym $mod+q kill
 
@@ -79,6 +85,8 @@ mouse_warping container
         $mod+Shift+$down move down
         $mod+Shift+$up move up
         $mod+Shift+$right move right
+
+        $mod+ctrl+n move workspace to output left
     }
 
 #
