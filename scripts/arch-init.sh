@@ -13,7 +13,7 @@ mkdir -p ~/Photos
 yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
     zoom joycond-git way-displays greetd-qtgreet \
-    wlrctl
+    wlrctl lazydocker
 
 #######################################
 # pacman

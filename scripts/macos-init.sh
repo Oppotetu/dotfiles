@@ -27,3 +27,4 @@ brew install diff-so-fancy
 brew install tlrc
 brew install cmatrix
 brew install shellcheck
+brew install lazydock
