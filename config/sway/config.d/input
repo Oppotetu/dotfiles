@@ -10,7 +10,8 @@ input type:touchpad {
 }
 
 # Enable numlock by default
-input type:keyboard xkb_numlock enabled
+# input type:keyboard xkb_numlock enabled
+input * xkb_numlock enabled
 
 # Set keyboard layout and variant based on current system settings
 exec_always {

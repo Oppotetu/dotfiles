@@ -60,6 +60,27 @@ mouse_warping container
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    # # Since Sway doesn't have sendshortcut, you'll need to use xdotool or wl-paste/wl-copy
+    # bindsym $mod+c exec xdotool key ctrl+Insert
+    # bindsym $mod+v exec xdotool key shift+Insert
+    # bindsym $mod+x exec xdotool key ctrl+x
+    # bindsym $mod+ctrl+v exec <your-clipboard-manager>
+
+    # # Copy / Paste with wtype
+    # bindsym $mod+c exec wtype -M ctrl insert -m ctrl
+    # bindsym $mod+v exec wtype -M shift insert -m shift
+    # bindsym $mod+x exec wtype -M ctrl x -m ctrl
+    # # bindsym Super+ctrl+v exec <your-clipboard-manager>
+
+    # bindsym $mod+c exec wl-copy "$(wl-paste)"
+    bindsym $mod+c exec sh -c 'wl-paste --primary | wl-copy'
+    bindsym $mod+v exec wlrctl keyboard type insert modifiers SHIFT
+
+
+
+
+
+
 #
 # Moving around:
 #
@@ -129,9 +150,9 @@ mouse_warping container
 #
     # Set how the current window will be split
     # Split the window vertically
-    bindsym $mod+v splitv
-    # Split the window horizontally
-    bindsym $mod+b splith
+    # bindsym $mod+v splitv
+    # # Split the window horizontally
+    # bindsym $mod+b splith
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking

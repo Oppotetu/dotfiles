@@ -12,7 +12,8 @@ mkdir -p ~/Photos
 
 yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
-    zoom joycond-git way-displays
+    zoom joycond-git way-displays greetd-qtgreet \
+    wlrctl
 
 #######################################
 # pacman
@@ -24,7 +25,7 @@ sudo pacman -S --needed --noconfirm \
     diff-so-fancy cmatrix spellcheck \
     impala bluetui swayosd keyd \
     steam spotify-launcher oculante \
-    otf-font-awesome
+    otf-font-awesome sddm libreoffice-fresh
 
 #######################################
 # sway + GPU bits
@@ -45,12 +46,26 @@ fi
 # Enable services
 #######################################
 
-
 sudo systemctl enable keyd
 sudo systemctl start keyd
+sudo systemctl disable greetd
+sudo systemctl enable sddm
+
+
+
+#######################################
+# Various
+#######################################
+
+# nvim: Ensure XDG_CONFIG_HOME preserved in sudo
+if ! sudo test -f /etc/sudoers.d/env_keep_xdg; then
+    echo 'Defaults env_keep += "XDG_CONFIG_HOME"' | sudo EDITOR='tee -a' visudo -f /etc/sudoers.d/env_keep_xdg
+    sudo chmod 0440 /etc/sudoers.d/env_keep_xdg
+fi
 
 # way-displays: Add yourself to the input group to monitor events
 sudo usermod -a -G input "${USER}"
+
 
 
 echo "Setup complete 🚀"

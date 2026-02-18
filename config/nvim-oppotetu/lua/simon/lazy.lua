@@ -15,10 +15,10 @@ require("lazy").setup({ { import = "simon.plugins" }, { import = "simon.plugins.
     -- install = {
     --     colorscheme = { "nightfly" },
     -- },
-    checker = {
-        enabled = false, -- automatically check for plugin updates
-        notify = false,  -- get a notification when new updates are found
-    },
+    -- checker = {
+    --     enabled = false, -- automatically check for plugin updates
+    --     notify = false,  -- get a notification when new updates are found
+    -- },
 })
 
 vim.api.nvim_set_hl(0, "Normal", { guibg = NONE, ctermbg = NONE })

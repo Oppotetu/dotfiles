@@ -3,7 +3,17 @@
       relink: true
       create: true
       force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - link:
-    ~/.config/nvim-oppotetu: config/nvim-oppotetu
-    ~/.config/nvim-lazy: config/nvim-lazy
+    ~/.config/nvim: config/nvim-oppotetu
+
+- shell:
+    - command: |
+        if ! sudo test -f /etc/sudoers.d/env_keep_xdg; then
+          echo 'Defaults env_keep += "XDG_CONFIG_HOME"' | sudo EDITOR='tee -a' visudo -f /etc/sudoers.d/env_keep_xdg
+        fi
+      description: Ensure XDG_CONFIG_HOME preserved in sudo
