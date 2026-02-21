@@ -13,7 +13,9 @@ mkdir -p ~/Photos
 yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
     zoom joycond-git way-displays greetd-qtgreet \
-    wlrctl lazydocker
+    wlrctl lazydocker dotool swaylock-effects-git
+    
+    # swaylock-effects-git
 
 #######################################
 # pacman
@@ -25,7 +27,12 @@ sudo pacman -S --needed --noconfirm \
     diff-so-fancy cmatrix spellcheck \
     impala bluetui swayosd keyd \
     steam spotify-launcher oculante \
-    otf-font-awesome sddm libreoffice-fresh
+    sddm libreoffice-fresh \
+    wtype wezterm \
+    otf-font-awesome ttf-nerd-fonts-symbols-mono
+    
+    #swaylock
+
 
 #######################################
 # sway + GPU bits
@@ -51,8 +58,6 @@ sudo systemctl start keyd
 sudo systemctl disable greetd
 sudo systemctl enable sddm
 
-
-
 #######################################
 # Various
 #######################################
@@ -67,5 +72,10 @@ fi
 sudo usermod -a -G input "${USER}"
 
 
+#######################################
+# Cleanup
+#######################################
+
+sudo pacman -Rns gtklock gtklock-userinfo-module gtklock-powerbar-module
 
 echo "Setup complete 🚀"

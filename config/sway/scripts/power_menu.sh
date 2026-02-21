@@ -10,7 +10,7 @@ confirm_action() {
 
 case $SELECTION in
     *"󰌾 Lock"*)
-        gtklock;;
+        ~/.config/sway/scripts/lock.sh;;
     *"󰤄 Suspend"*)
         systemctl suspend ;;
     *"󰍃 Log out"*)

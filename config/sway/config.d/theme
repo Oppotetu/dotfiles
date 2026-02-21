@@ -25,7 +25,7 @@ smart_borders on
 
 # Set wallpaper:
 # exec ~/.azotebg
-exec_always swaybg -i ~/Photos/Wallpapers/dinos-05.png -m fill
+exec_always swaybg -i ~/Photos/Wallpapers/fever-06.png -m fill
 
 
 # Title format for windows
