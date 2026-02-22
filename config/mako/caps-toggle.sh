@@ -1,21 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Toggle caps lock on Wayland
-# current=$(gdbus call --session \
-#     --dest org.gnome.Shell \
-#     --object-path /org/gnome/Shell \
-#     --method org.gnome.Shell.Eval "global.get_pointer().get_keyboard_state()[2]")
+sleep 0.1
 
-current2=$(swaymsg -t get_inputs | jq -r '.[] | select(.type=="keyboard") | .xkb_active_layout_name')
+if grep -q 1 /sys/class/leds/*::capslock/brightness; then
+    echo "on"
+    state="ON"
+else
+    echo "off"
+    state="OFF"
+fi
 
-echo "$current2"
-
-# current is something like (true,)
-# if [[ $current == *true* ]]; then
-#     state="ON"
-# else
-#     state="OFF"
-# fi
-
-# # Send notification
-# notify-send -h string:x-canonical-private-synchronous:caps "Caps Lock" "$state"
+notify-send \
+  -h string:x-canonical-private-synchronous:capslock \
+  "Caps Lock" "$state"

@@ -21,6 +21,14 @@
   "[shellscript]": {
     "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode",
   },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua",
+    "editor.formatOnSave": true,
+  },
+  "Lua.format.defaultConfig": {
+    "indent_style": "space",
+    "indent_size": "2",
+  },
   "[sql]": {
     "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc",
   },
@@ -165,4 +173,5 @@
     { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] },
   ],
+  "editor.tabSize": 2,
 }

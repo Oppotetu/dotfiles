@@ -12,4 +12,4 @@
     /etc/keyd/default.conf: config/keyd-default.conf
 
 - shell:
-    - [sudo keyd reload, Reloading Keyd]
+    - [keyd reload, Reloading Keyd]

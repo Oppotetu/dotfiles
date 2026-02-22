@@ -129,6 +129,16 @@ mouse_warping container
     # We just use 1-10 as the default.
 
 #
+# Chrome
+#
+    # # Ctrl+m → next tab
+    # bindsym Ctrl+m exec swaymsg '[app_id="google-chrome"]' exec wtype -M ctrl -P Tab -m ctrl -p Tab 
+    # # Ctrl+n → previous tab
+    # bindsym Ctrl+n exec swaymsg '[app_id="google-chrome"]' exec wtype -M ctrl+shift -P Tab -m ctrl+shift -p Tab
+    # # Ctrl+b → reopen closed tab
+    # bindsym Ctrl+b exec swaymsg '[app_id="google-chrome"]' exec wtype -M ctrl+shift -P t -m ctrl+shift -p t
+
+#
 # Layout stuff:
 #
     # Set how the current window will be split
@@ -212,10 +222,14 @@ mouse_warping container
         XF86AudioNext exec playerctl next
         XF86AudioPrev exec playerctl previous
 
+        # Caps_Lock exec ~/.local/bin/mako-caps-toggle.sh
+
         # # Backlight
         # XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
         # XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
     }
+
+    bindsym --locked Caps_Lock exec ~/.local/bin/mako-caps-toggle.sh
 
 #
 # App shortcuts
@@ -224,7 +238,7 @@ mouse_warping container
     bindsym $mod+n exec thunar
 
     # Launch the browser
-    bindsym $mod+o exec google-chrome
+    bindsym $mod+b exec google-chrome
 
     # Launch the clipboard manager
     bindsym $mod+Ctrl+v exec cliphist list | fuzzel -d -w 90 -l 30 -p "Select an entry to copy it to your clipboard buffer:"| cliphist decode | wl-copy

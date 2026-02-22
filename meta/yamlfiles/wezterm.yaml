@@ -5,4 +5,4 @@
       force: true
 
 - link:
-    ~/.config/wezterm/wezterm.lua: config/wezterm.lua
+    ~/.config/wezterm: config/wezterm

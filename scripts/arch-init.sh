@@ -12,11 +12,9 @@ mkdir -p ~/Photos
 
 yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
-    zoom joycond-git way-displays greetd-qtgreet \
-    wlrctl lazydocker dotool swaylock-effects-git
+    zoom joycond-git way-displays \
+    lazydocker swaylock-effects-git
     
-    # swaylock-effects-git
-
 #######################################
 # pacman
 #######################################
@@ -26,14 +24,11 @@ sudo pacman -S --needed --noconfirm \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix spellcheck \
     impala bluetui swayosd keyd \
-    steam spotify-launcher oculante \
+    steam oculante \
     sddm libreoffice-fresh \
-    wtype wezterm \
+    wtype wezterm spotify_player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono
     
-    #swaylock
-
-
 #######################################
 # sway + GPU bits
 #######################################
@@ -70,12 +65,10 @@ fi
 
 # way-displays: Add yourself to the input group to monitor events
 sudo usermod -a -G input "${USER}"
+# keyd: user should be in the keyd group
+sudo usermod -aG keyd "$USER"
 
+spotify_player authenticate
 
-#######################################
-# Cleanup
-#######################################
-
-sudo pacman -Rns gtklock gtklock-userinfo-module gtklock-powerbar-module
 
 echo "Setup complete 🚀"
