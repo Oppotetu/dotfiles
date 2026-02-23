@@ -21,14 +21,13 @@ return function(config)
     -- Pane
     { key = "p",          mods = "LEADER",      action = act.SplitVertical { domain = "CurrentPaneDomain" } },
     { key = "i",          mods = "LEADER",      action = act.SplitHorizontal { domain = "CurrentPaneDomain" } },
-    { key = "h",          mods = "LEADER",      action = act.ActivatePaneDirection("Left") },
     { key = "h",          mods = "CTRL",        action = act.ActivatePaneDirection("Left") },
     { key = "j",          mods = "CTRL",        action = act.ActivatePaneDirection("Down") },
     { key = "k",          mods = "CTRL",        action = act.ActivatePaneDirection("Up") },
     { key = "l",          mods = "CTRL",        action = act.ActivatePaneDirection("Right") },
     { key = "phys:Space", mods = "LEADER",      action = act.RotatePanes "Clockwise" },
-    { key = "z",          mods = "LEADER",      action = act.TogglePaneZoomState },
-    { key = "x",          mods = "LEADER",      action = act.CloseCurrentPane { confirm = true } },
+    { key = "m",          mods = "LEADER",      action = act.TogglePaneZoomState },
+    { key = "x",          mods = "LEADER",      action = act.CloseCurrentPane { confirm = false } },
     {
       key = '!',
       mods = 'LEADER | SHIFT',

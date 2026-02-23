@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
+local act = wezterm.action
 require("theme")(config)
 require("keymaps")(config)
 
@@ -20,7 +21,6 @@ config.inactive_pane_hsb = {
 
 config.enable_tab_bar = true
 config.tab_bar_at_bottom = true
-
 
 wezterm.on('update-right-status', function(window, pane)
   local name = window:active_key_table()
