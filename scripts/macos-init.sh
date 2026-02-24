@@ -10,9 +10,8 @@ echo 'eval "$(mise activate bash)"' >>~/.bashrc
 source ~/.bashrc
 ~/.dotfiles/install-standalone mise
 
-brew install --cask visual-studio-code
-
-brew install tmux
+brew install --cask visual-studio-code wezterm
+# brew install tmux
 
 brew install neovim
 
