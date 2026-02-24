@@ -13,7 +13,8 @@ mkdir -p ~/Photos
 yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
     zoom joycond-git way-displays \
-    lazydocker swaylock-effects-git
+    lazydocker swaylock-effects-git \
+    wallust-git
     
 #######################################
 # pacman
@@ -24,7 +25,7 @@ sudo pacman -S --needed --noconfirm \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix spellcheck \
     impala bluetui swayosd keyd \
-    steam oculante \
+    steam oculante btop\
     sddm libreoffice-fresh \
     wtype wezterm spotify_player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono

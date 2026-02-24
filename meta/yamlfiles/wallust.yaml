@@ -1,0 +1,10 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+
+- link:
+    ~/.config/wallust/wallust.toml: config/wallust/wallust.toml
+    ~/.config/wallust/templates: config/wallust/templates
+    ~/.local/bin/generateTheme.sh: config/wallust/generateTheme.sh

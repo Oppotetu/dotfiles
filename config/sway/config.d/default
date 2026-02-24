@@ -37,6 +37,9 @@ mouse_warping container
     bindsym $mod+Ctrl+Shift+r exec ~/.config/sway/scripts/confirm_action.sh reboot
     bindsym $mod+Ctrl+Shift+l exec ~/.config/sway/scripts/confirm_action.sh logout
 
+    # change theme
+    bindsym $mod+Ctrl+t exec ~/.local/bin/generateTheme.sh
+
     # Kill focused window
     bindsym $mod+q kill
 
