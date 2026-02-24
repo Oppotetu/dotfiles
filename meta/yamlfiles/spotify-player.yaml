@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+
+- link:
+    ~/.config/spotify-player/app.toml: config/spotify-player-app.toml

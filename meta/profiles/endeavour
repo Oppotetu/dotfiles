@@ -1,11 +1,14 @@
 base
-shell
 sway
+btop
+fuzzel
 mako
 mimeapps
 mise
 nvim
+pavu
 sddm
+spotify-player
 swayosd-eos
 terminal
 tmux

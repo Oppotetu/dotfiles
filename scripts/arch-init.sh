@@ -6,6 +6,8 @@ mkdir -p ~/Downloads
 mkdir -p ~/Documents
 mkdir -p ~/Photos
 
+sudo pacman -Syu
+
 #######################################
 # yay
 #######################################

@@ -4,4 +4,4 @@
 # Cleanup
 #######################################
 
-sudo pacman -Rns greetd greetd-regreet gtklock gtklock-userinfo-module gtklock-powerbar-module
+sudo pacman -Rns greetd-regreet greetd gtklock gtklock-userinfo-module gtklock-powerbar-module

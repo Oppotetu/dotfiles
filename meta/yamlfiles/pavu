@@ -5,4 +5,4 @@
       force: true
 
 - link:
-    ~/.config/foot/foot.ini: config/foot.ini
+    ~/.config/pavucontrol.ini: config/pavucontrol.ini
