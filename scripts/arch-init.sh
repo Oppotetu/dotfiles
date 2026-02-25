@@ -32,7 +32,11 @@ sudo pacman -S --needed --noconfirm \
     steam oculante btop\
     sddm libreoffice-fresh \
     wtype wezterm spotify-player \
-    otf-font-awesome ttf-nerd-fonts-symbols-mono
+    otf-font-awesome ttf-nerd-fonts-symbols-mono \
+    linux-headers nvidia-open-dkms nvidia-utils \
+    nvidia-settings egl-wayland libva-nvidia-driver \
+    nvidia-prime vulkan-tools 
+
     
 #######################################
 # sway + GPU bits
@@ -57,10 +61,14 @@ sudo rfkill unblock bluetooth
 
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
-sudo systemctl enable keyd
-sudo systemctl start keyd
-sudo systemctl disable greetd
-sudo systemctl enable sddm
+sudo systemctl enable keyd.service
+sudo systemctl start keyd.service
+sudo systemctl disable greetd.service
+sudo systemctl enable sddm.service
+sudo systemctl enable nvidia-suspend.service
+sudo systemctl enable nvidia-resume.service
+sudo systemctl enable nvidia-hibernate.service
+sudo systemctl enable nvidia-powerd.service
 sudo systemctl enable iwd.service
 sudo systemctl enable systemd-networkd.service
 sudo systemctl enable systemd-resolved.service
