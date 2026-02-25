@@ -59,7 +59,9 @@
     "format-ethernet": "󰈀 {bandwidthDownBits:>} 󰶡 {bandwidthUpBits:>} 󰶣",
     "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
     "format-disconnected": " Disconnected",
-    "on-click": "footclient -T waybar_nmtui -e nmtui",
+    // "on-click": "footclient -T waybar_nmtui -e nmtui",
+    "on-click": "wezterm start --class floating_impala -- /bin/bash -c 'impala'",
+    // "on-click": "wezterm start --class FloatingImpala --title Impala -e impala",
     "interval": 2,
   },
 
