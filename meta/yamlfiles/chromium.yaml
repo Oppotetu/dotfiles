@@ -1,8 +1,0 @@
-- defaults:
-    shell:
-      stdin: true
-      stdout: true
-      stderr: true
-
-- shell:
-    - [omarchy-install-chromium-google-account, Install chromium google account]
