@@ -12,7 +12,7 @@ export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 export PATH="$PATH:$HOME/Work/scripts/tmux"
 
 # Aliases 
-alias ls='ls -larh --color=auto'
+alias ls='ls -lah --color=auto'
 alias grep='grep --color=auto'
 alias dsf='diff-so-fancy'
 alias nvim='NVIM_APPNAME=nvim-oppotetu nvim'

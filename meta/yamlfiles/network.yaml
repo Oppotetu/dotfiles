@@ -1,0 +1,23 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- link:
+    /etc/systemd/network/25-wireless.network: config/25-wireless.network
+
+- shell:
+    - [sudo systemctl restart systemd-networkd, Restarting systemdn-networkd]
+    - [sudo systemctl restart systemd-resolved, Restarting systemdn-resolved]
+    - [sudo systemctl restart iwd, Restarting iwd]
+    - description: Symlinking stub-resolve.conf if not already linked
+      command: |
+        [ "$(readlink -f /etc/resolv.conf)" = "/run/systemd/resolve/stub-resolv.conf" ] || {
+          sudo rm -f /etc/resolv.conf
+          sudo ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+        }

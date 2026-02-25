@@ -5,10 +5,12 @@
       force: true
 
 - link:
-    ~/.config/git/config:
-      if: "[ `uname` = Linux ]"
-      path: config/git-config
-    ~/.config/git/config:
-      if: "[ `uname` = Darwin ]"
-      path: config/git-config-uio
+    ~/.config/git/config: config/git-config
+# - link:
+#     ~/.config/git/config:
+#       if: "[[ `uname` = Linux ]]"
+#       path: config/git-config
+#     ~/.config/git/config:
+#       if: "[[ `uname` = Darwin ]]"
+#       path: config/git-config-uio
 

@@ -27,11 +27,11 @@ yay -S --needed --noconfirm \
 sudo pacman -S --needed --noconfirm \
     mise tmux neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
-    diff-so-fancy cmatrix spellcheck \
+    diff-so-fancy cmatrix \
     impala bluetui swayosd keyd \
     steam oculante btop\
     sddm libreoffice-fresh \
-    wtype wezterm spotify_player \
+    wtype wezterm spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono
     
 #######################################
@@ -50,13 +50,23 @@ else
 fi
 
 #######################################
-# Enable services
+# Unblock and enable services
 #######################################
 
+sudo rfkill unblock bluetooth
+
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
 sudo systemctl enable keyd
 sudo systemctl start keyd
 sudo systemctl disable greetd
 sudo systemctl enable sddm
+sudo systemctl enable iwd.service
+sudo systemctl enable systemd-networkd.service
+sudo systemctl enable systemd-resolved.service
+
+sudo systemctl disable NetworkManager.service
+sudo systemctl disable NetworkManager-wait-online.service
 
 #######################################
 # Various

@@ -6,3 +6,5 @@
 
 - link:
     ~/.config/swayosd/backend.toml: config/swayosd/backend.toml
+    ~/.config/swayosd/config.toml: config/swayosd/config.toml
+    ~/.config/swayosd/style.css: config/swayosd/style.css
