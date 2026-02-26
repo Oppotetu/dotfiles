@@ -25,11 +25,12 @@ yay -S --needed --noconfirm \
 #######################################
 
 sudo pacman -S --needed --noconfirm \
+    sway mako fuzzel \
     mise tmux neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix \
     impala bluetui swayosd keyd \
-    steam oculante btop\
+    steam oculante btop \
     sddm libreoffice-fresh \
     wtype wezterm spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
@@ -63,7 +64,7 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl enable keyd.service
 sudo systemctl start keyd.service
-sudo systemctl disable greetd.service
+# sudo systemctl disable greetd.service
 sudo systemctl enable sddm.service
 sudo systemctl enable nvidia-suspend.service
 sudo systemctl enable nvidia-resume.service
@@ -73,8 +74,8 @@ sudo systemctl enable iwd.service
 sudo systemctl enable systemd-networkd.service
 sudo systemctl enable systemd-resolved.service
 
-sudo systemctl disable NetworkManager.service
-sudo systemctl disable NetworkManager-wait-online.service
+# sudo systemctl disable NetworkManager.service
+# sudo systemctl disable NetworkManager-wait-online.service
 
 #######################################
 # Various
@@ -91,7 +92,8 @@ sudo usermod -a -G input "${USER}"
 # keyd: user should be in the keyd group
 sudo usermod -aG keyd "$USER"
 
-spotify_player authenticate
+# spotify_player authenticate
+# gh auth login
 
 
 echo "Setup complete 🚀"
