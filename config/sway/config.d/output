@@ -22,6 +22,6 @@ set $env GBM_BACKEND nvidia-drm
 set $env LIBVA_DRIVER_NAME nvidia
 set $env __GLX_VENDOR_LIBRARY_NAME nvidia
 
-exec_always pkill -f way-displays; way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1 &
+# exec_always pkill -f way-displays; way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1 &
 
-# exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1

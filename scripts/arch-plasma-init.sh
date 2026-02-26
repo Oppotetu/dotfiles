@@ -1,3 +1,4 @@
+
 #!/bin/bash
 set -e
 
@@ -16,29 +17,28 @@ sudo pacman -Syu
 
 yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
-    zoom joycond-git way-displays \
-    lazydocker swaylock-effects-git \
-    wallust-git
+    zoom joycond-git \
+    lazydocker \
+    
     
 #######################################
 # pacman
 #######################################
 
 sudo pacman -S --needed --noconfirm \
-    sway mako fuzzel waybar \
     mise tmux neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix \
-    impala bluetui swayosd keyd \
-    steam oculante btop \
-    sddm libreoffice-fresh \
+    keyd steam oculante btop \
+    libreoffice-fresh \
     wtype wezterm spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
-    linux-headers nvidia-open-dkms nvidia-utils \
-    nvidia-settings egl-wayland libva-nvidia-driver \
-    nvidia-prime vulkan-tools 
 
-    
+# nvidia
+    # linux-headers nvidia-open-dkms nvidia-utils \
+    # nvidia-settings egl-wayland libva-nvidia-driver \
+    # nvidia-prime vulkan-tools 
+
 #######################################
 # sway + GPU bits
 #######################################
@@ -58,24 +58,16 @@ fi
 # Unblock and enable services
 #######################################
 
-sudo rfkill unblock bluetooth
+# sudo rfkill unblock bluetooth
 
-sudo systemctl enable bluetooth.service
-sudo systemctl start bluetooth.service
 sudo systemctl enable keyd.service
 sudo systemctl start keyd.service
-# sudo systemctl disable greetd.service
-sudo systemctl enable sddm.service
-sudo systemctl enable nvidia-suspend.service
-sudo systemctl enable nvidia-resume.service
-sudo systemctl enable nvidia-hibernate.service
-sudo systemctl enable nvidia-powerd.service
-sudo systemctl enable iwd.service
-sudo systemctl enable systemd-networkd.service
-sudo systemctl enable systemd-resolved.service
 
-# sudo systemctl disable NetworkManager.service
-# sudo systemctl disable NetworkManager-wait-online.service
+# nvidia: 
+# sudo systemctl enable nvidia-suspend.service
+# sudo systemctl enable nvidia-resume.service
+# sudo systemctl enable nvidia-hibernate.service
+# sudo systemctl enable nvidia-powerd.service
 
 #######################################
 # Various
