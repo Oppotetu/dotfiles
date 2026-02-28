@@ -12,7 +12,6 @@ config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
 config.font_size = 11
--- config.color_scheme = 'Earthsong'
 config.window_background_opacity = 0.93
 config.inactive_pane_hsb = {
   saturation = 0.24,
@@ -29,6 +28,9 @@ wezterm.on('update-right-status', function(window, pane)
   end
   window:set_right_status(name or '')
 end)
+
+
+
 
 
 

@@ -78,8 +78,8 @@
   "vim.surround": false,
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["s"], "after": ["h"] },
-    { "before": ["d"], "after": ["j"] },
-    { "before": ["e"], "after": ["k"] },
+    { "before": ["d"], "after": ["g", "j"] },
+    { "before": ["e"], "after": ["g", "k"] },
     { "before": ["f"], "after": ["l"] },
     { "before": ["k"], "after": ["s"] },
     { "before": ["j"], "after": ["d"] },
@@ -134,8 +134,8 @@
 
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["s"], "after": ["h"] },
-    { "before": ["d"], "after": ["j"] },
-    { "before": ["e"], "after": ["k"] },
+    { "before": ["d"], "after": ["g", "j"] },
+    { "before": ["e"], "after": ["g", "k"] },
     { "before": ["f"], "after": ["l"] },
     { "before": ["k"], "after": ["s"] },
     { "before": ["j"], "after": ["d"] },

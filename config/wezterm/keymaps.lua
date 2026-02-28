@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
+require 'unimus-workspace'
+
 return function(config)
   config.leader = { key = "Space", mods = "CTRL" }
 
@@ -43,6 +45,30 @@ return function(config)
         one_shot = false,
       },
     },
+    {
+      key = "m",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.EmitEvent("unimus-workspace"),
+    },
+    -- {
+    --   key = 'w',
+    --   mods = 'CTRL|SHIFT',
+    --   action = wezterm.action.CloseCurrentTab { confirm = true },
+    -- },
+  -- Next tab
+    {
+      key = 'j',
+      mods = 'CTRL|SHIFT',
+      action = wezterm.action.ActivateTabRelative(-1),
+    },
+
+    -- Previous tab
+    {
+      key = 'k',
+      mods = 'CTRL|SHIFT',
+      action = wezterm.action.ActivateTabRelative(1),
+    },
+
   }
 
   config.key_tables = {
