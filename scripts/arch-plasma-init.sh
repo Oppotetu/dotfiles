@@ -18,8 +18,7 @@ sudo pacman -Syu
 yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
     zoom joycond-git \
-    lazydocker \
-    
+    lazydocker xremap-wlroots-bin \
     
 #######################################
 # pacman
@@ -29,7 +28,7 @@ sudo pacman -S --needed --noconfirm \
     mise tmux neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix \
-    keyd steam oculante btop openrct-2 \
+    steam oculante btop openrct-2 \
     libreoffice-fresh \
     wtype wezterm spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \

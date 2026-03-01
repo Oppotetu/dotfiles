@@ -1,0 +1,25 @@
+modmap:
+  - name: Swap Ctrl to CapsLock
+    device:
+      not: ["MoErgo Go60 Left Keyboard"]
+    remap:
+      LeftCtrl: CapsLock
+  - name: CapsLock dual-role
+    device:
+      not: ["MoErgo Go60 Left Keyboard"]
+    remap:
+      CapsLock:
+        held: LeftCtrl
+        alone: Esc
+
+keymap:
+  - name: Chrome tab remaps
+    application:
+      only: [google-chrome, chromium]
+    remap:
+      Ctrl-b: Ctrl-Shift-t
+      Ctrl-Shift-l: Ctrl-Tab
+      Ctrl-Shift-h: Ctrl-Shift-Tab
+      Ctrl-Shift-h: Ctrl-Shift-Tab
+      Ctrl-Shift-p: Alt-left
+      Ctrl-Shift-n: Alt-right

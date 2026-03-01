@@ -16,7 +16,7 @@ exec_always swayidle -w before-sleep ~/.config/sway/scripts/lock.sh
 exec mako
 
 # Start foot server
-exec_always --no-startup-id foot --server
+# exec_always --no-startup-id foot --server
 
 # Autotiling
 exec autotiling
@@ -24,6 +24,9 @@ exec autotiling
 # cliphist
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
+
+# xremap
+exec pgrep -x xremap || xremap ~/.config/xremap/config.yml
      
 # Network Applet
 exec nm-applet --indicator
@@ -38,4 +41,4 @@ exec eos-welcome --startdelay=3
 # exec python3 ~/.config/sway/scripts/swayfader.py
 
 # nwg-drawer
-exec_always nwg-drawer -r -c 7 -is 90 -mb 10 -ml 50 -mr 50 -mt 10
+# exec_always nwg-drawer -r -c 7 -is 90 -mb 10 -ml 50 -mr 50 -mt 10

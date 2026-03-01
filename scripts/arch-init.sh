@@ -18,7 +18,7 @@ yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
     zoom joycond-git way-displays \
     lazydocker swaylock-effects-git \
-    wallust-git
+    wallust-git xremap-wlroots-bin 
     
 #######################################
 # pacman
@@ -29,7 +29,7 @@ sudo pacman -S --needed --noconfirm \
     mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix \
-    impala bluetui swayosd keyd \
+    impala bluetui swayosd \
     steam oculante btop \
     godot scons openrct2 \
     sddm libreoffice-fresh \
@@ -71,8 +71,8 @@ sudo rfkill unblock bluetooth
 
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
-sudo systemctl enable keyd.service
-sudo systemctl start keyd.service
+# sudo systemctl enable keyd.service
+# sudo systemctl start keyd.service
 # sudo systemctl disable greetd.service
 sudo systemctl enable sddm.service
 sudo systemctl enable nvidia-suspend.service

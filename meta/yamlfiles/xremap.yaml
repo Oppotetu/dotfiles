@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- link:
+    ~/.config/xremap/config.yml: config/xremap-config.yml
+
+- shell:
+    - [swaymsg reload, Reloading Sway]
