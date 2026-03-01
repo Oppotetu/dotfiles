@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+
+- link:
+    ~/.local/bin/builtin-screen.sh: config/localbin/builtin-screen.sh

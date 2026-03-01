@@ -29,15 +29,12 @@ sudo pacman -S --needed --noconfirm \
     mise tmux neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix \
-    keyd steam oculante btop \
+    keyd steam oculante btop openrct-2 \
     libreoffice-fresh \
     wtype wezterm spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
 
-# nvidia
-    # linux-headers nvidia-open-dkms nvidia-utils \
-    # nvidia-settings egl-wayland libva-nvidia-driver \
-    # nvidia-prime vulkan-tools 
+
 
 #######################################
 # sway + GPU bits
@@ -60,14 +57,10 @@ fi
 
 # sudo rfkill unblock bluetooth
 
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
 sudo systemctl enable keyd.service
 sudo systemctl start keyd.service
-
-# nvidia: 
-# sudo systemctl enable nvidia-suspend.service
-# sudo systemctl enable nvidia-resume.service
-# sudo systemctl enable nvidia-hibernate.service
-# sudo systemctl enable nvidia-powerd.service
 
 #######################################
 # Various
