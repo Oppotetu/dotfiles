@@ -53,7 +53,7 @@ SCALE:
   - NAME_DESC: "HDMI-A-1"
     SCALE: 1.0
   - NAME_DESC: "DP-1"
-    SCALE: 1.5
+    SCALE: 1.1
 
 ## Override the preferred mode.
 ## WARNING: this may result in an unusable display. See https://github.com/alex-courtis/way-displays#known-issues-with-workarounds

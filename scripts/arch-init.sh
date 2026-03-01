@@ -26,17 +26,26 @@ yay -S --needed --noconfirm \
 
 sudo pacman -S --needed --noconfirm \
     sway mako fuzzel waybar \
-    mise tmux neovim github-cli fzf jq yq \
+    mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix \
     impala bluetui swayosd keyd \
-    steam oculante btop openrct2 \
+    steam oculante btop \
+    godot scons openrct2 \
     sddm libreoffice-fresh \
     wtype wezterm spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
-    linux-headers nvidia-open-dkms nvidia-utils \
-    nvidia-settings egl-wayland libva-nvidia-driver \
-    nvidia-prime vulkan-tools 
+
+    # autotiling brightnessctl cliphist grim slurp swaybg swayidle thunar 
+
+    #? egl-wayland file-roller gvfs pamixer polkit-gnome swappy wayland-protocols wl-clipboard
+    # xdg-desktop-portal-wlr xed xorg-wayland
+
+#  gcc
+
+    # linux-headers nvidia-open-dkms nvidia-utils \
+    # nvidia-settings egl-wayland libva-nvidia-driver \
+    # nvidia-prime vulkan-tools 
 
     
 #######################################
