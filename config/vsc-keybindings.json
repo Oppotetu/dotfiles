@@ -81,7 +81,7 @@
     "command": "-editor.action.toggleTabFocusMode",
   },
   {
-    "key": "alt+k",
+    "key": "ctrl+shift+l",
     "command": "workbench.action.nextEditor",
   },
   {
@@ -89,7 +89,7 @@
     "command": "-workbench.action.nextEditor",
   },
   {
-    "key": "alt+j",
+    "key": "ctrl+shift+h",
     "command": "workbench.action.previousEditor",
   },
   {
@@ -463,5 +463,40 @@
   {
     "key": "ctrl+shift+pagedown",
     "command": "-workbench.action.moveEditorRightInGroup",
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "-workbench.action.replaceInFiles",
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-editor.action.selectHighlights",
+    "when": "editorFocus",
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-selectAllSearchEditorMatches",
+    "when": "inSearchEditor",
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-notebook.selectAllFindMatches",
+    "when": "config.notebook.multiCursor.enabled && notebookFindWidgetFocused || config.notebook.multiCursor.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'",
+  },
+  {
+    "key": "alt+y",
+    "command": "workbench.action.splitEditorLeft",
+  },
+  {
+    "key": "ctrl+k ctrl+[Equal]",
+    "command": "-workbench.action.splitEditorLeft",
+  },
+  {
+    "key": "alt+u",
+    "command": "workbench.action.splitEditorRight",
+  },
+  {
+    "key": "ctrl+k ctrl+[Equal]",
+    "command": "-workbench.action.splitEditorRight",
   },
 ]

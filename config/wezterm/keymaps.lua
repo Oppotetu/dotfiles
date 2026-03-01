@@ -57,14 +57,14 @@ return function(config)
     -- },
   -- Next tab
     {
-      key = 'j',
+      key = 'h',
       mods = 'CTRL|SHIFT',
       action = wezterm.action.ActivateTabRelative(-1),
     },
 
     -- Previous tab
     {
-      key = 'k',
+      key = 'l',
       mods = 'CTRL|SHIFT',
       action = wezterm.action.ActivateTabRelative(1),
     },

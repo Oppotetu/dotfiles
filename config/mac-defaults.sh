@@ -13,7 +13,9 @@ defaults write com.google.Chrome NSUserKeyEquivalents -dict \
     'Bookmark This Tab…' '^d' \
     'Open Location…' '^l' \
     'Back' '$^h' \
-    'Forward' '$^l'
+    'Forward' '$^l' \
+    'Developer Tools' '$^i' \
+    'JavaScript Console' '$^j'
 
 killall "Google Chrome"
 sleep 3
