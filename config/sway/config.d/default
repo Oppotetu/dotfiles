@@ -61,6 +61,13 @@ mouse_warping container
     bindsym $mod+v exec wtype -M shift -P Insert -m shift -p Insert
     bindsym $mod+x exec wtype -M ctrl -P x -m ctrl -p x
 
+    # Spotify player popup
+    bindsym $mod+Ctrl+s exec wezterm start --class floating_spotify spotify_player
+    # Impala popup
+    bindsym $mod+Ctrl+w exec wezterm start --class floating_gazelle gazelle
+    # Bluetui popup
+    bindsym $mod+Ctrl+b exec wezterm start --class floating_bluetui bluetui
+
 #
 # Moving around:
 #

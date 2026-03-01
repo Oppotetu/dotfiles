@@ -18,7 +18,8 @@ yay -S --needed --noconfirm \
     google-chrome visual-studio-code-bin \
     zoom joycond-git way-displays \
     lazydocker swaylock-effects-git \
-    wallust-git xremap-wlroots-bin 
+    wallust-git xremap-wlroots-bin \
+    gazelle-tui
     
 #######################################
 # pacman
@@ -29,7 +30,7 @@ sudo pacman -S --needed --noconfirm \
     mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix \
-    impala bluetui swayosd \
+    bluetui swayosd \
     steam oculante btop \
     godot scons openrct2 \
     sddm libreoffice-fresh \
@@ -79,9 +80,9 @@ sudo systemctl enable nvidia-suspend.service
 sudo systemctl enable nvidia-resume.service
 sudo systemctl enable nvidia-hibernate.service
 sudo systemctl enable nvidia-powerd.service
-sudo systemctl enable iwd.service
-sudo systemctl enable systemd-networkd.service
-sudo systemctl enable systemd-resolved.service
+# sudo systemctl enable iwd.service
+# sudo systemctl enable systemd-networkd.service
+# sudo systemctl enable systemd-resolved.service
 
 # sudo systemctl disable NetworkManager.service
 # sudo systemctl disable NetworkManager-wait-online.service
@@ -99,7 +100,7 @@ fi
 # way-displays: Add yourself to the input group to monitor events
 sudo usermod -a -G input "${USER}"
 # keyd: user should be in the keyd group
-sudo usermod -aG keyd "$USER"
+# sudo usermod -aG keyd "$USER"
 
 # spotify_player authenticate
 # gh auth login

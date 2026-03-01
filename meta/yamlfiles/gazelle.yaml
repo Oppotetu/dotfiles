@@ -1,0 +1,9 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+
+- link:
+    ~/.config/gazelle/config.json: config/gazelle-config.json
+    ~/.config/gazelle/theme.toml: config/gazelle-theme.toml
