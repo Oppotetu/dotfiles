@@ -30,7 +30,7 @@ sudo pacman -S --needed --noconfirm \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix \
     impala bluetui swayosd keyd \
-    steam oculante btop \
+    steam oculante btop openrct2 \
     sddm libreoffice-fresh \
     wtype wezterm spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
