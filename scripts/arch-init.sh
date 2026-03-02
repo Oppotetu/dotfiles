@@ -19,7 +19,7 @@ yay -S --needed --noconfirm \
     zoom joycond-git way-displays \
     lazydocker swaylock-effects-git \
     wallust-git xremap-wlroots-bin \
-    gazelle-tui
+    gazelle-tui insync insync-thunar
     
 #######################################
 # pacman
