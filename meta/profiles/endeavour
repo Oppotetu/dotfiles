@@ -3,7 +3,9 @@ shell
 sway
 btop
 fuzzel
+gazelle
 git
+localbin
 mako
 mimeapps
 mise
@@ -13,6 +15,7 @@ spotify-player
 swayosd
 terminal
 vscode
+wallust
 way-displays
 waybar
 wezterm
