@@ -27,6 +27,9 @@ exec wl-paste --type image --watch cliphist store
 
 # xremap
 exec pgrep -x xremap || xremap ~/.config/xremap/config.yml
+
+# insync
+exec --no-startup-id insync start
      
 # Network Applet
 exec nm-applet --indicator
