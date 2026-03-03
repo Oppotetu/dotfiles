@@ -5,7 +5,8 @@
       force: true
 
 - link:
-    ~/.config/wezterm/wezterm.lua: config/wezterm/wezterm.lua
-    ~/.config/wezterm/colors.lua: config/wezterm/colors.lua
-    ~/.config/wezterm/keymaps.lua: config/wezterm/keymaps.lua
-    ~/.config/wezterm/theme.lua: config/wezterm/theme.lua
+    ~/.config/wezterm: config/wezterm
+    # ~/.config/wezterm/wezterm.lua: config/wezterm/wezterm.lua
+    # ~/.config/wezterm/colors.lua: config/wezterm/colors.lua
+    # ~/.config/wezterm/keymaps.lua: config/wezterm/keymaps.lua
+    # ~/.config/wezterm/theme.lua: config/wezterm/theme.lua

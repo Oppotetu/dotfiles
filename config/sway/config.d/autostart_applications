@@ -26,7 +26,7 @@ exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
 # xremap
-exec pgrep -x xremap || xremap ~/.config/xremap/config.yml
+exec_always pgrep -x xremap || xremap ~/.config/xremap/config.yml
 
 # insync
 exec --no-startup-id insync start

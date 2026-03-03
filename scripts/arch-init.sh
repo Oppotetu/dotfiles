@@ -4,45 +4,40 @@ set -e
 mkdir -p ~/Work
 mkdir -p ~/Downloads
 mkdir -p ~/Documents
-mkdir -p ~/Photos
+mkdir -p ~/Pictures
 
 sudo pacman -Syu
-
-#todo: insync
 
 #######################################
 # yay
 #######################################
 
-yay -S --needed --noconfirm \
+yay -S --needed --noconfirm --disable-download-timeout \
     google-chrome visual-studio-code-bin \
     zoom joycond-git way-displays \
     lazydocker swaylock-effects-git \
     wallust-git xremap-wlroots-bin \
-    gazelle-tui insync insync-thunar
+    gazelle-tui insync 
     
 #######################################
 # pacman
 #######################################
 
-sudo pacman -S --needed --noconfirm \
-    sway mako fuzzel waybar \
+sudo pacman -S --needed --noconfirm --disable-download-timeout \
+    sway mako fuzzel waybar swaybg swayidle sway-contrib \
     mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
-    diff-so-fancy cmatrix \
-    bluetui swayosd \
-    steam oculante btop \
-    godot scons openrct2 \
+    diff-so-fancy cmatrix polkit-gnome \
+    bluetui swayosd autotiling-rs \
+    steam oculante btop brightnessctl \
+    godot scons openrct2 wl-clipboard \
+    cliphist grim slurp swappy pamixer \
+    thunar thunar-volman thunar-archive-plugin file-roller \
     sddm libreoffice-fresh \
+    gvfs gvfs-mtp gvfs-gphoto2 gvfs-afc gvfs-smb gvfs-nfs \
     wtype wezterm spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
-
-    # autotiling brightnessctl cliphist grim slurp swaybg swayidle thunar 
-
-    #? egl-wayland file-roller gvfs pamixer polkit-gnome swappy wayland-protocols wl-clipboard
-    # xdg-desktop-portal-wlr xed xorg-wayland
-
-#  gcc
+    xdg-desktop-portal-wlr xorg-xwayland  
 
     # linux-headers nvidia-open-dkms nvidia-utils \
     # nvidia-settings egl-wayland libva-nvidia-driver \
@@ -76,14 +71,14 @@ sudo systemctl start bluetooth.service
 # sudo systemctl start keyd.service
 # sudo systemctl disable greetd.service
 sudo systemctl enable sddm.service
-sudo systemctl enable nvidia-suspend.service
-sudo systemctl enable nvidia-resume.service
-sudo systemctl enable nvidia-hibernate.service
-sudo systemctl enable nvidia-powerd.service
+sudo systemctl start sddm.service
+# sudo systemctl enable nvidia-suspend.service
+# sudo systemctl enable nvidia-resume.service
+# sudo systemctl enable nvidia-hibernate.service
+# sudo systemctl enable nvidia-powerd.service
 # sudo systemctl enable iwd.service
 # sudo systemctl enable systemd-networkd.service
 # sudo systemctl enable systemd-resolved.service
-
 # sudo systemctl disable NetworkManager.service
 # sudo systemctl disable NetworkManager-wait-online.service
 
