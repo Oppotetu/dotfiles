@@ -5,15 +5,4 @@
       force: true
 
 - link:
-    ~/.config/hypr/autostart.conf: config/hypr/autostart.conf
-    ~/.config/hypr/bindings.conf: config/hypr/bindings.conf
-    ~/.config/hypr/envs.conf: config/hypr/envs.conf
-    ~/.config/hypr/hypridle.conf: config/hypr/hypridle.conf
     ~/.config/hypr/hyprland.conf: config/hypr/hyprland.conf
-    ~/.config/hypr/hyprlock.conf: config/hypr/hyprlock.conf
-    ~/.config/hypr/hyprsunset.conf: config/hypr/hyprsunset.conf
-    ~/.config/hypr/input.conf: config/hypr/input.conf
-    ~/.config/hypr/looknfeel.conf: config/hypr/looknfeel.conf
-    ~/.config/hypr/monitors.conf: config/hypr/monitors.conf
-    ~/.config/hypr/toggle-screen.sh: config/hypr/toggle-screen.sh
-    ~/.config/hypr/xdph.conf: config/hypr/xdph.conf
