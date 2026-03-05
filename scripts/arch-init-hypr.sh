@@ -15,16 +15,16 @@ sudo pacman -Syu
 yay -S --needed --noconfirm --disable-download-timeout \
     google-chrome visual-studio-code-bin \
     zoom joycond-git way-displays \
-    lazydocker \
+    lazydocker wezterm-nightly-bin \
     wallust-git xremap-hypr-bin \
-    gazelle-tui insync 
+    gazelle-tui insync hyprmon-bin
     
 #######################################
 # pacman
 #######################################
 
 sudo pacman -S --needed --noconfirm --disable-download-timeout \
-    hyprland hyprlock hypridle hyprpaper \
+    hyprland hyprlock hypridle hyprpaper hyprpolkitagent \
     mako fuzzel waybar    \
     mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
@@ -36,7 +36,7 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     thunar thunar-volman thunar-archive-plugin file-roller \
     sddm libreoffice-fresh \
     gvfs gvfs-mtp gvfs-gphoto2 gvfs-afc gvfs-smb gvfs-nfs \
-    wtype wezterm spotify-player \
+    wtype spotify-player \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
     xdg-desktop-portal-hyprland xorg-xwayland  
 
