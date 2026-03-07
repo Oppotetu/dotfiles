@@ -12,7 +12,3 @@ source = ~/.config/hypr/hypr.conf.d/bindings.conf
 source = ~/.config/hypr/hypr.conf.d/windowRules.conf
 
 
-
-
-monitor=eDP-2,2880x1800@120.00,2656x608,2.00
-monitor=HDMI-A-1,2560x1440@144.00,0x0,1.00

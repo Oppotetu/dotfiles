@@ -5,4 +5,4 @@
       force: true
 
 - link:
-    ~/.config/hypr: config/hypr
+    ~/.config/Thunar/uca.xml: config/thunar-uca.xml

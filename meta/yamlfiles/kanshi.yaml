@@ -5,4 +5,4 @@
       force: true
 
 - link:
-    ~/.config/hypr: config/hypr
+    ~/.config/kanshi/config: config/kanshi-config

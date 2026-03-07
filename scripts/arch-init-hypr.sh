@@ -24,8 +24,8 @@ yay -S --needed --noconfirm --disable-download-timeout \
 #######################################
 
 sudo pacman -S --needed --noconfirm --disable-download-timeout \
-    hyprland hyprlock hypridle hyprpaper hyprpolkitagent \
-    mako fuzzel waybar    \
+    hyprland hyprlock hypridle hyprpaper hyprpolkitagent hyprsunset  \
+    mako fuzzel waybar kanshi \
     mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix polkit-gnome \
@@ -36,7 +36,7 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     thunar thunar-volman thunar-archive-plugin file-roller \
     sddm libreoffice-fresh \
     gvfs gvfs-mtp gvfs-gphoto2 gvfs-afc gvfs-smb gvfs-nfs \
-    wtype spotify-player \
+    wtype spotify-player kanshi pavucontrol \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
     xdg-desktop-portal-hyprland xorg-xwayland  
 
@@ -68,20 +68,8 @@ sudo rfkill unblock bluetooth
 
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
-# sudo systemctl enable keyd.service
-# sudo systemctl start keyd.service
-# sudo systemctl disable greetd.service
 sudo systemctl enable sddm.service
 sudo systemctl start sddm.service
-# sudo systemctl enable nvidia-suspend.service
-# sudo systemctl enable nvidia-resume.service
-# sudo systemctl enable nvidia-hibernate.service
-# sudo systemctl enable nvidia-powerd.service
-# sudo systemctl enable iwd.service
-# sudo systemctl enable systemd-networkd.service
-# sudo systemctl enable systemd-resolved.service
-# sudo systemctl disable NetworkManager.service
-# sudo systemctl disable NetworkManager-wait-online.service
 
 #######################################
 # Various
@@ -95,8 +83,8 @@ fi
 
 # way-displays: Add yourself to the input group to monitor events
 sudo usermod -a -G input "${USER}"
-# keyd: user should be in the keyd group
-# sudo usermod -aG keyd "$USER"
+# xremap: add user to input group
+sudo gpasswd -a $USER input
 
 # spotify_player authenticate
 # gh auth login

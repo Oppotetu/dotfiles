@@ -9,15 +9,16 @@
       stderr: true
 
 - link:
-    ~/.shellrc-shared: config/shellrc-shared
+    ~/.shellrc-shared: config/shell/shellrc-shared
+    ~/.inputrc: config/shell/inputrc
 
 - link:
     ~/.bashrc:
       if: "[ `uname` = Linux ]"
-      path: config/bashrc
+      path: config/shell/bashrc
     ~/.zshrc:
       if: "[ `uname` = Darwin ]"
-      path: config/zshrc
+      path: config/shell/zshrc
 
 - shell:
     - description: Sourcing .bashrc (linux)
@@ -30,3 +31,4 @@
         if [ "$(uname)" = "Darwin" ]; then
           source ~/.zshrc
         fi
+    - [bind -f ~/.inputrc, Reload .inputrc]

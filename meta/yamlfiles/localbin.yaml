@@ -3,6 +3,24 @@
       relink: true
       create: true
       force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - link:
     ~/.local/bin/builtin-screen.sh: config/localbin/builtin-screen.sh
+    ~/.local/bin/confirm-action.sh: config/localbin/confirm-action.sh
+    ~/.local/bin/power-menu.sh: config/localbin/power-menu.sh
+    ~/.local/bin/screenshot-display.sh: config/localbin/screenshot-display.sh
+    ~/.local/bin/screenshot-window.sh: config/localbin/screenshot-window.sh
+
+- shell:
+    - description: Sourcing .bashrc (linux)
+      command: |
+        for file in ~/.local/bin/*; do
+            if [[ -f "$file" && ! -x "$file" ]]; then
+                chmod +x "$file"
+                echo "Made executable: $file"
+            fi
+        done

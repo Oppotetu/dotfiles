@@ -12,4 +12,4 @@
     ~/.config/xremap/config.yml: config/xremap-config.yml
 
 - shell:
-    - [swaymsg reload, Reloading Sway]
+    - [hyprctl reload, Reloading Hyprland]

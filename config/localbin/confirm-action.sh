@@ -9,6 +9,6 @@ if [[ "$CONFIRMATION" == "Yes" ]]; then
     case "$ACTION" in
         shutdown) systemctl poweroff ;;
         reboot) systemctl reboot ;;
-        logout) swaymsg exit ;;
+        logout) hyprctl dispatch exit ;;
     esac
 fi
