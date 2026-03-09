@@ -13,7 +13,7 @@ sudo pacman -Syu
 #######################################
 
 yay -S --needed --noconfirm --disable-download-timeout \
-    google-chrome visual-studio-code-bin \
+    google-chrome visual-studio-code-bin cursor-bin \
     zoom joycond-git way-displays \
     lazydocker wezterm-nightly-bin \
     wallust-git xremap-hypr-bin \
@@ -25,7 +25,7 @@ yay -S --needed --noconfirm --disable-download-timeout \
 
 sudo pacman -S --needed --noconfirm --disable-download-timeout \
     hyprland hyprlock hypridle hyprpaper hyprpolkitagent hyprsunset  \
-    mako fuzzel waybar kanshi \
+    mako fuzzel waybar kanshi chromium \
     mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix polkit-gnome \
@@ -33,12 +33,12 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     steam oculante btop brightnessctl \
     godot scons openrct2 wl-clipboard \
     cliphist grim slurp swappy pamixer \
-    thunar thunar-volman thunar-archive-plugin file-roller \
-    sddm libreoffice-fresh \
+    thunar thunar-volman thunar-archive-plugin file-roller tumbler \
+    sddm libreoffice-fresh obs-studio \
     gvfs gvfs-mtp gvfs-gphoto2 gvfs-afc gvfs-smb gvfs-nfs \
     wtype spotify-player kanshi pavucontrol \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
-    xdg-desktop-portal-hyprland xorg-xwayland  
+    xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland  
 
     # linux-headers nvidia-open-dkms nvidia-utils \
     # nvidia-settings egl-wayland libva-nvidia-driver \

@@ -2,7 +2,6 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1",
   },
-  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.editor.wrapTabs": true,
@@ -54,6 +53,8 @@
     "vscodevim.vim": 1,
   },
 
+  "vim.surround": false,
+
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": true,
@@ -75,7 +76,6 @@
     "<C-b>": false,
   },
 
-  "vim.surround": false,
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["s"], "after": ["h"] },
     { "before": ["d"], "after": ["g", "j"] },
@@ -153,10 +153,10 @@
     { "before": ["D"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["E"], "commands": ["editor.action.moveLinesUpAction"] },
 
-    { "before": ["x"], "commands": ["surround-advanced.remove-surround"] },
-    { "before": ["n"], "commands": ["surround-advanced.surround"] },
-    { "before": ["m"], "commands": ["surround-advanced.replace-surround"] },
-    { "before": ["<"], "commands": ["extension.surroundWithTag"] },
+    // { "before": ["x"], "commands": ["surround-advanced.remove-surround"] },
+    // { "before": ["n"], "commands": ["surround-advanced.surround"] },
+    // { "before": ["m"], "commands": ["surround-advanced.replace-surround"] },
+    // { "before": ["t"], "commands": ["extension.surroundWithTag"] },
   ],
 
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
@@ -174,4 +174,7 @@
     { "before": ["L"], "after": ["F"] },
   ],
   "editor.tabSize": 2,
+  "update.mode": "start",
+  "editor.linkedEditing": true,
+  "workbench.colorTheme": "Wallust Bordered",
 }

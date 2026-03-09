@@ -5,26 +5,6 @@ OUTPUT="eDP-2"
 CONFIRMATION="$(printf "Off\nOn\nCancel" | \
 fuzzel --dmenu  -l 4 -w 25 -p "Toggle builtin screen")"
 
-# if [[ "$CONFIRMATION" == "Yes" ]]; then
-#     case "$ACTION" in
-#         shutdown) systemctl poweroff ;;
-#         reboot) systemctl reboot ;;
-#         logout) hyprctl dispatch exit ;;
-#         builtin-screen-off) builtin-screen.sh off ;;
-#         builtin-screen-on) builtin-screen.sh on ;;
-#     esac
-# fi
-
-
-
-
-# if [[ -z "$1" ]]; then
-#     echo "Usage: $0 on|off"
-#     exit 1
-# fi
-
-# ACTION="$1"
-
 # Detect compositor
 if [[ "$XDG_CURRENT_DESKTOP" == *"Hyprland"* ]] ; then
     ENV="hyprland"

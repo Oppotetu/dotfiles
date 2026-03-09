@@ -1,0 +1,184 @@
+
+@import "../../.cache/wallust/colors-waybar.css";
+
+* {
+  transition: none;
+  box-shadow: none;
+}
+
+/* transparent bar background */
+#waybar {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #000000;
+  background: transparent;
+}
+
+/* islands */
+
+#modules-left,
+#modules-center,
+#modules-right {
+  background-color: @background;
+  border-radius: 8px;
+  margin: 4px 6px;
+  padding: 0 6px;
+}
+
+/* modules inside islands */
+
+#modules-left > *,
+#modules-center > *,
+#modules-right > * {
+  padding: 0 6px;
+  margin: 4px 0;
+}
+
+/* workspaces */
+
+#workspaces {
+  margin: 0 4px;
+}
+
+#workspaces button {
+  margin: 4px 0;
+  padding: 0 4px;
+  color: @foreground;
+}
+
+#workspaces button.active {
+  border-radius: 4px;
+  color: @foreground;
+  background-color: @color0;
+}
+
+#workspaces button.urgent {
+  color: rgba(238, 46, 36, 1);
+}
+
+/* tray */
+
+#tray * {
+  padding: 0 6px;
+  border-left: 1px solid @color0;
+}
+
+#tray *:first-child {
+  border-left: none;
+}
+
+/* module styling (no backgrounds now) */
+
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#custom-storage,
+#custom-updates,
+#custom-weather,
+#custom-mail,
+#clock,
+#temperature,
+#language {
+  min-width: 20px;
+}
+
+/* states */
+
+#pulseaudio.muted {
+  color: @color1;
+}
+
+#pulseaudio.bluetooth {
+  color: @color6;
+}
+
+#temperature.critical {
+  color: @color1;
+}
+
+/* text tweaks */
+
+#window {
+  font-size: 0.9em;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+#language {
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+/* wallust palette */
+
+#custom-color0 {
+  background: @color0;
+  min-width: 10px;
+}
+#custom-color1 {
+  background: @color1;
+  min-width: 10px;
+}
+#custom-color2 {
+  background: @color2;
+  min-width: 10px;
+}
+#custom-color3 {
+  background: @color3;
+  min-width: 10px;
+}
+#custom-color4 {
+  background: @color4;
+  min-width: 10px;
+}
+#custom-color5 {
+  background: @color5;
+  min-width: 10px;
+}
+#custom-color6 {
+  background: @color6;
+  min-width: 10px;
+}
+#custom-color7 {
+  background: @color7;
+  min-width: 10px;
+}
+#custom-color8 {
+  background: @color8;
+  min-width: 10px;
+}
+#custom-color9 {
+  background: @color9;
+  min-width: 10px;
+}
+#custom-color10 {
+  background: @color10;
+  min-width: 10px;
+}
+#custom-color11 {
+  background: @color11;
+  min-width: 10px;
+}
+#custom-color12 {
+  background: @color12;
+  min-width: 10px;
+}
+#custom-color13 {
+  background: @color13;
+  min-width: 10px;
+}
+#custom-color14 {
+  background: @color14;
+  min-width: 10px;
+}
+#custom-color15 {
+  background: @color15;
+  min-width: 10px;
+}

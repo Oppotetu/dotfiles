@@ -4,19 +4,18 @@ local act = wezterm.action
 require("theme")(config)
 require("keymaps")(config)
 
+
 -- This is where you actually apply your config choices.
 
 -- For example, changing the initial geometry for new windows:
-config.initial_cols = 120
-config.initial_rows = 28
+-- config.initial_cols = 120
+-- config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font_size = 11
-config.window_background_opacity = 0.93
-config.inactive_pane_hsb = {
-  saturation = 0.24,
-  brightness = 0.5
-}
+-- config.font_size = 11
+
+
+
 
 config.enable_tab_bar = true
 config.tab_bar_at_bottom = true

@@ -1,15 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-<action>
-	<icon>utilities-terminal</icon>
-	<name>Open Terminal Here</name>
-	<submenu></submenu>
-	<unique-id>1772740320765892-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Example for a custom action</description>
-	<range></range>
-	<patterns>*</patterns>
-	<startup-notify/>
-	<directories/>
-</action>
+	<action>
+		<icon>clipboard</icon>
+		<name>Copy File / Folder Path</name>
+		<submenu></submenu>
+		<unique-id>1653335357081852-1</unique-id>
+		<command>echo -n %f | wl-copy</command>
+		<description></description>
+		<range>*</range>
+		<patterns>*</patterns>
+		<directories />
+		<audio-files />
+		<image-files />
+		<other-files />
+		<text-files />
+		<video-files />
+	</action>
+	<action>
+		<icon>org.wezfurlong.wezterm</icon>
+		<name>Open terminal here</name>
+		<submenu></submenu>
+		<unique-id>1715763119333224-2</unique-id>
+		<command>wezterm start --cwd %d</command>
+		<description></description>
+		<range>*</range>
+		<patterns>*</patterns>
+		<directories />
+	</action>
+	<action>
+		<icon>nvim</icon>
+		<name>Edit in Terminal</name>
+		<submenu></submenu>
+		<unique-id>1715762765914315-1</unique-id>
+		<command>wezterm start -- nvim %F</command>
+		<description></description>
+		<range>*</range>
+		<patterns>*</patterns>
+		<other-files />
+		<text-files />
+	</action>
+	<action>
+		<icon>pinentry</icon>
+		<name>Edit as root</name>
+		<submenu></submenu>
+		<unique-id>1716201472079277-1</unique-id>
+		<command>wezterm start -- sudoedit %f</command>
+		<description></description>
+		<range>*</range>
+		<patterns>*</patterns>
+		<other-files />
+		<text-files />
+	</action>
+	<action>
+		<icon>package-x-generic</icon>
+		<name>Extract archive here</name>
+		<submenu></submenu>
+		<unique-id>1741356000000000-1</unique-id>
+		<command>wezterm start --cwd "%d" -- tar -xf "%f"</command>
+		<description>Extract archive in this folder</description>
+		<range>*</range>
+		<patterns>*.tar;*.tar.gz;*.tgz;*.tar.xz;*.tar.zst</patterns>
+		<other-files />
+	</action>
+	<action>
+		<icon>x-package-repository</icon>
+		<name>Compress to tar.zst</name>
+		<submenu></submenu>
+		<unique-id>1741356000000000-2</unique-id>
+		<command>tar -I zstd -cf "%n.tar.zst" "%f"</command>
+		<description>Create a tar.zst archive</description>
+		<range>*</range>
+		<patterns>*</patterns>
+		<directories />
+		<other-files />
+	</action>
+	<action>
+		<icon>application-x-executable</icon>
+		<name>Make executable</name>
+		<submenu></submenu>
+		<unique-id>1741356000000000-3</unique-id>
+		<command>chmod +x %f</command>
+		<description>Make file executable</description>
+		<range>*</range>
+		<patterns>*.sh;*.py;*.pl</patterns>
+		<other-files />
+		<text-files />
+	</action>
 </actions>

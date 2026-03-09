@@ -14,6 +14,7 @@
     ~/.local/bin/power-menu.sh: config/localbin/power-menu.sh
     ~/.local/bin/screenshot-display.sh: config/localbin/screenshot-display.sh
     ~/.local/bin/screenshot-window.sh: config/localbin/screenshot-window.sh
+    ~/.local/bin/wallpaper-picker.sh: config/localbin/wallpaper-picker.sh
 
 - shell:
     - description: Sourcing .bashrc (linux)

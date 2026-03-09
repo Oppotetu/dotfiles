@@ -1,93 +1,153 @@
 {
-  "layer": "top", // Waybar at top layer
-  "position": "top", // Waybar position (top|bottom|left|right)
-  // "height": 30, // Auto-height is used when commented
-  // "width": 1280, // Full screen width when commented
-  "spacing": 12, // Gaps between modules (in px)
-  // See `man waybar` for more configuration options
-
-  // Configuration - modules-left
-
+  "layer": "bottom",
+  "position": "top",
+  "height": 40,
+  "margin": "3, 4, 0, 4",
   "modules-left": [
-    "custom/launcher",
-    "sway/workspaces",
-    "sway/mode",
-    "sway/window",
+    "custom/icon",
+    "hyprland/workspaces",
+    "mpris",
+    "custom/color0",
+    "custom/color1",
+    "custom/color2",
+    "custom/color3",
+    "custom/color4",
+    "custom/color5",
+    "custom/color6",
+    "custom/color7",
+    "custom/color8",
+    "custom/color9",
+    "custom/color10",
+    "custom/color11",
+    "custom/color12",
+    "custom/color13",
+    "custom/color14",
+    "custom/color15",
   ],
-
-  "custom/launcher": {
-    "format": "<span size='x-large'></span>",
-    "on-click": "exec fuzzel",
-    "tooltip": false,
-  },
-
-  "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10",
-    },
-  },
-
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>",
-    "tooltip": false,
-  },
-
-  "sway/window": {
-    "format": "{}",
-    //"all-outputs": true, // Active window shows only on active display when commented
-    "max-length": 120,
-  },
-
-  // Configuration - modules-center
-
-  "modules-center": ["network"],
-
-  "network": {
-    "format-disabled": " Disabled",
-    "format-wifi": " {bandwidthDownBits:>} 󰶡 {bandwidthUpBits:>} 󰶣",
-    "tooltip-format-wifi": "{essid}",
-    "format-ethernet": "󰈀 {bandwidthDownBits:>} 󰶡 {bandwidthUpBits:>} 󰶣",
-    "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
-    "format-disconnected": " Disconnected",
-    // "on-click": "footclient -T waybar_nmtui -e nmtui",
-    "on-click": "wezterm start --class floating_gazelle -- /bin/bash -c 'gazelle'",
-    // "on-click": "wezterm start --class FloatingImpala --title Impala -e impala",
-    "interval": 2,
-  },
-
-  // Configuration - modules-right
-
+  "modules-center": ["hyprland/window"],
   "modules-right": [
-    "custom/keyboard-layout",
     "idle_inhibitor",
-    "cpu",
     "memory",
-    "backlight",
+    "cpu",
     "pulseaudio",
+    "network",
     "battery",
     "clock",
-    "tray",
-    "custom/power",
   ],
+  "reload_style_on_change": true,
 
-  "custom/keyboard-layout": {
-    "exec": "i=$(swaymsg -t get_inputs); echo \"\"; echo \"$i\" | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
-    "format": "",
-    // Interval set only as a fallback; use signal to update the module more immediately
-    "interval": 30,
-    // See example config for sending signal to Waybar in ~/.config/sway/config.d/input
-    "signal": 1,
-    "on-click": "~/.config/waybar/scripts/keyhint.sh",
+  "custom/color0": { "format": " 0" },
+  "custom/color1": { "format": " 1" },
+  "custom/color2": { "format": " 2" },
+  "custom/color3": { "format": " 3" },
+  "custom/color4": { "format": " 4" },
+  "custom/color5": { "format": " 5" },
+  "custom/color6": { "format": " 6" },
+  "custom/color7": { "format": " 7" },
+  "custom/color8": { "format": " 8" },
+  "custom/color9": { "format": " 9" },
+  "custom/color10": { "format": "10" },
+  "custom/color11": { "format": "11" },
+  "custom/color12": { "format": "12" },
+  "custom/color13": { "format": "13" },
+  "custom/color14": { "format": "14" },
+  "custom/color15": { "format": "15" },
+
+  "hyprland/workspaces": {
+    // "format": "{icon}",
+    // "format-icons": {
+    //   "1": "一",
+    //   "2": "二",
+    //   "3": "三",
+    //   "4": "四",
+    //   "5": "五",
+    //   "6": "六",
+    //   "7": "七",
+    //   "8": "八",
+    //   "9": "九",
+    //   "10": "十",
+    // },
+  },
+
+  // "custom/icon": {
+  //   "format": "",
+  // },
+
+  "mpris": {
+    "interval": 1,
+    "format": " {player_icon} {title} - {artist}",
+    "format-paused": " {status_icon} <i>{title} - {artist}</i>",
+    "player-icons": {
+      "default": "▶",
+    },
+    "status-icons": {
+      "paused": "⏸",
+    },
+    "max-length": 20,
+    "ignored-players": ["firefox"],
+  },
+
+  "hyprland/window": {
+    "format": "{title}",
+    "separate-outputs": true,
+    "icon": true,
+    "max-length": 25,
+    // "rewrite": {
+    //   "(.*) - Google Chrome": "Chrome",
+    //   "(.*) - Visual Studio Code": "VS Code",
+    //   "(.*) - Wezterm": "Wezterm",
+    //   "": "",
+    // },
+  },
+
+  "clock": {
+    "rotate": 0,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "format": " {:%I:%M %p}",
+    "format-alt": " {:%a, %b %d}",
+    "calendar": {
+      "format": {
+        "today": "<span color='#ffffff'><b>{}</b></span>",
+      },
+    },
+    "on-click-right": "wezterm start calcurse",
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "format-alt": "{time}",
+  },
+
+  "network": {
+    "format": "{icon} ",
+    "format-alt-click": "click-right",
+    "format-wifi": "{icon} ",
+    "format-disconnected": "{icon} Disconnected",
+    "format-icons": {
+      "wifi": ["󰖩"],
+      "disconnected": ["󰖪"],
+    },
+    "on-click": "wezterm start nmtui",
+    "tooltip-format": "{ifname}: {ipaddr}",
+  },
+
+  "pulseaudio": {
+    "format": "{icon}{volume}%",
+    "format-muted": " ",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "default": [" ", " ", " "],
+    },
+    "on-click": "pavucontrol",
   },
 
   "idle_inhibitor": {
@@ -96,91 +156,15 @@
       "activated": "",
       "deactivated": "",
     },
-    "tooltip-format-activated": "Idle Inhibitor Activated",
-    "tooltip-format-deactivated": "Idle Inhibitor Deactivated",
-  },
-
-  "cpu": {
-    "interval": 5,
-    "format": "{usage:>3}%",
-    "states": {
-      "warning": 70,
-      "critical": 90,
-    },
-    "on-click": "footclient -T waybar_htop -e htop",
   },
 
   "memory": {
-    "interval": 5,
-    "format": "{:>3}%",
-    "on-click": "footclient -T waybar_htop -e htop",
-    "states": {
-      "warning": 70,
-      "critical": 90,
-    },
+    "interval": 30,
+    "format": " {used:0.1f}G/{total:0.1f}G",
   },
-
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
-    "tooltip-format": "Backlight (Scroll): {percent:}%",
-    "on-scroll-down": "brightnessctl -c backlight set 5%-",
-    "on-scroll-up": "brightnessctl -c backlight set +5%",
-  },
-
-  "pulseaudio": {
-    "scroll-step": 2,
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟 muted",
-    "format-icons": {
-      "headphones": "",
-      "handsfree": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["󰕿", "󰖀", "󰕾"],
-    },
-    "on-click": "pavucontrol",
-  },
-
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15,
-    },
-    "format": "{icon} {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-  },
-
-  "clock": {
-    "format": "󰅐 {:%H:%M}",
-    "format-alt": "󰅐 {:%OI:%M %p}",
-    "tooltip-format": " {:%A %m/%d}\n\n<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
-      },
-    },
-    "actions": {
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down",
-    },
-  },
-
-  "tray": {
-    "icon-size": 16,
-    "spacing": 10,
-  },
-
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "exec ~/.config/sway/scripts/power_menu.sh",
-    "tooltip": false,
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "format-alt": " {avg_frequency}",
   },
 }

@@ -1,6 +1,6 @@
 return {
-  foreground = "{{foreground}}",
-  background = "{{background}}",
+  background = "{{color0}}",
+  foreground = "{{color7}}",
 
   ansi = {
     "{{color0}}",
