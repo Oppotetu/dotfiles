@@ -1,12 +1,12 @@
 modmap:
   - name: Swap Ctrl to CapsLock
     device:
-      not: ["MoErgo Go60 Left Keyboard"]
+      not: ["MoErgo Go60 Left Keyboard", "Go60 Keyboard"]
     remap:
       LeftCtrl: CapsLock
   - name: CapsLock dual-role
     device:
-      not: ["MoErgo Go60 Left Keyboard"]
+      not: ["MoErgo Go60 Left Keyboard", "Go60 Keyboard"]
     remap:
       CapsLock:
         held: LeftCtrl
