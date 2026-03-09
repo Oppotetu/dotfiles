@@ -81,7 +81,7 @@
     "command": "-editor.action.toggleTabFocusMode",
   },
   {
-    "key": "ctrl+shift+l",
+    "key": "ctrl+m",
     "command": "workbench.action.nextEditor",
   },
   {
@@ -89,7 +89,7 @@
     "command": "-workbench.action.nextEditor",
   },
   {
-    "key": "ctrl+shift+h",
+    "key": "ctrl+n",
     "command": "workbench.action.previousEditor",
   },
   {

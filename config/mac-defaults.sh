@@ -4,8 +4,8 @@ defaults write com.google.Chrome NSUserKeyEquivalents -dict \
     'New Tab' '^t' \
     'New Tab to the Right' '^g' \
     'Close Tab' '^w' \
-    'Select Next Tab' '$^l' \
-    'Select Previous Tab' '$^h' \
+    'Select Next Tab' '^m' \
+    'Select Previous Tab' '^n' \
     'Reopen Closed Tab' '^b' \
     'Select All' '^a' \
     'Print…' '^p' \

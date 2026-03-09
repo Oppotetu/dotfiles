@@ -18,8 +18,8 @@ keymap:
       only: [google-chrome, chromium]
     remap:
       Ctrl-b: Ctrl-Shift-t
-      Ctrl-Shift-l: Ctrl-Tab
-      Ctrl-Shift-h: Ctrl-Shift-Tab
+      Ctrl-m: Ctrl-Tab
+      Ctrl-n: Ctrl-Shift-Tab
       Ctrl-Shift-h: Ctrl-Shift-Tab
       Ctrl-Shift-p: Alt-left
       Ctrl-Shift-n: Alt-right
