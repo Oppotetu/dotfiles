@@ -10,25 +10,27 @@
 
 - link:
     ~/.shellrc-shared: config/shell/shellrc-shared
-    ~/.inputrc: config/shell/inputrc
 
 - link:
     ~/.bashrc:
       if: "[ `uname` = Linux ]"
       path: config/shell/bashrc
+    ~/.inputrc:
+      if: "[ `uname` = Linux ]"
+      path: config/shell/inputrc
     ~/.zshrc:
       if: "[ `uname` = Darwin ]"
       path: config/shell/zshrc
 
 - shell:
-    - description: Sourcing .bashrc (linux)
+    - description: Sourcing .bashrc and .inputrc (linux)
       command: |
         if [ "$(uname)" = "Linux" ]; then
           source ~/.bashrc
+          bind -f ~/.inputrc
         fi
     - description: Sourcing .zshrc (mac)
       command: |
         if [ "$(uname)" = "Darwin" ]; then
           source ~/.zshrc
         fi
-    - [bind -f ~/.inputrc, Reload .inputrc]
