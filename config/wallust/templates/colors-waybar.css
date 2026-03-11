@@ -1,8 +1,8 @@
 /* @define-color background {{background | darken(0.3)}};
 @define-color foreground {{foreground | lighten(0.3)}}; */
 
-@define-color background {{color0}};
-@define-color foreground {{color7}};
+@define-color background {{background | darken(0.3)}};
+@define-color foreground {{foreground}};
 
 
 /* Accent and other colors (still from Wallust) */

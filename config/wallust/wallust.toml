@@ -28,7 +28,7 @@ color_space = "lch"
 # saliencedark - saliencedarkbalanced - saliencedarkdistributed - saliencedarklow (each has the 16 variations)
 # salienceligh - saliencelightbalanced - saliencelightdistributed - saliencelightlow (each has the 16 variations)
 # palette = "harddark16"
-palette = "ansidark16"
+palette = "saliencedark16"
 
 generation = "interpolate"
 
@@ -43,7 +43,7 @@ check_contrast = true
 # saturation = 35
 
 # Alpha value for templating, by default 100 (no other use whatsoever)
-#alpha = 100
+# alpha = 100
 
 # Disables hooks completly
 #no_hooks = true

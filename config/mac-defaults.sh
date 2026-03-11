@@ -16,8 +16,8 @@ defaults write com.google.Chrome NSUserKeyEquivalents -dict \
     'Extensions' '$^e' \
     'Downloads' '^j' \
     'Show Full History' '^h' \
-    'Back' '$^p' \
-    'Forward' '$^n' \
+    'Back' '^\U007F' \
+    'Forward' '$^\U007F'
     'Developer Tools' '$^i' \
     'JavaScript Console' '$^j'
 

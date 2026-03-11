@@ -4,8 +4,8 @@
   "alpha": "100",
 
   "special": {
-    "background": "{{color0}}",
-    "foreground": "{{color7}}",
+    "background": "{{background | darken(0.3)}}",
+    "foreground": "{{foreground}}",
     "cursor": "{{cursor}}"
   },
   "colors": {

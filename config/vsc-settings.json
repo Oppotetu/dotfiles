@@ -176,5 +176,5 @@
   "editor.tabSize": 2,
   "update.mode": "start",
   "editor.linkedEditing": true,
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Wallust Bordered",
 }
