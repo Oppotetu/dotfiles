@@ -4,6 +4,8 @@ export VAULT_ADDR="https://vault.uio.no:8200"
 # Homebrew env (keep if you use Homebrew)
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+eval "$(mise activate zsh)"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # load nvm

@@ -3,6 +3,7 @@ node = "latest"
 zig = "latest"
 zls = "latest"
 go = "latest"
+gopls = "latest"
 # lua = "latest"
 shfmt = "latest"
 
