@@ -4,7 +4,7 @@
   "height": 40,
   "margin": "3, 4, 0, 4",
   "modules-left": ["custom/icon", "hyprland/workspaces", "mpris"],
-  // "modules-center": [],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "idle_inhibitor",
     "memory",

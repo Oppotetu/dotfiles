@@ -6,3 +6,4 @@
 
 - link:
     ~/.config/btop/btop.conf: config/btop.conf
+    ~/.config/btop/themes/mutagen.theme: config/btop-mutagen.theme

@@ -29,7 +29,7 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix polkit-gnome \
-    bluetui swayosd autotiling-rs \
+    bluetui swayosd matugen \
     steam oculante btop brightnessctl \
     godot scons openrct2 wl-clipboard \
     cliphist grim slurp swappy pamixer \
