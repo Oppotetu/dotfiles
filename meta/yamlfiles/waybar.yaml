@@ -5,6 +5,6 @@
       force: true
 
 - link:
-    ~/.config/waybar/config: config/waybar/config.jsonc
-    ~/.config/waybar/style.css: config/waybar/style.css
+    ~/.config/waybar/modules.jsonc: config/waybar/modules.jsonc
+    ~/.config/waybar/themes: config/waybar/themes
     ~/.config/waybar/scripts: config/waybar/scripts
