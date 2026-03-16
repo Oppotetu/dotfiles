@@ -19,7 +19,7 @@ window#waybar {
   background: transparent;
 }
 
-.modules-left {
+/* .modules-left {
   background-color: @surface;
   border-radius: 12px;
   background:
@@ -30,13 +30,15 @@ window#waybar {
       )
       padding-box,
     linear-gradient(@primary, @on_primary) border-box;
-  border: 2px solid @secondary;
-  opacity: 0.8;
-  padding: 0px;
-  margin: 10px;
-  box-shadow: inset 1px 2px 2px rgba(255, 255, 255, 0.2);
-}
+   border: 2px solid @secondary; 
+   opacity: 0.8; 
+   padding: 0px; 
+   margin: 10px; 
+   box-shadow: inset 1px 2px 2px rgba(255, 255, 255, 0.2); 
+} */
 
+.modules-left,
+.modules-center,
 .modules-right {
   background-color: @surface;
   border-radius: 12px;
@@ -48,14 +50,20 @@ window#waybar {
       )
       padding-box,
     linear-gradient(@primary, @on_primary) border-box;
-  border: 1px solid transparent;
-  opacity: 0.8;
-  padding: 0px;
-  margin: 10px;
-  box-shadow: inset 1px 2px 2px rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  margin-top: 5px;
+  border: 2px solid @primary;
 }
 
-.modules-center {
+.modules-left {
+  margin-left: 10px;
+}
+
+.modules-right {
+  margin-right: 10px;
+}
+
+/* .modules-right {
   background-color: @surface;
   border-radius: 12px;
   background:
@@ -66,11 +74,29 @@ window#waybar {
       )
       padding-box,
     linear-gradient(@primary, @on_primary) border-box;
-  border: 1px solid transparent;
-  opacity: 0.8;
-  margin: 10px;
-  box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.2);
-}
+   border: 1px solid transparent; 
+   opacity: 0.8; 
+   padding: 0px; 
+   margin: 10px; 
+   box-shadow: inset 1px 2px 2px rgba(255, 255, 255, 0.3); 
+} */
+
+/* .modules-center {
+  background-color: @surface;
+  border-radius: 12px;
+  background:
+    radial-gradient(
+        circle at 50% 250%,
+        alpha(darker(@surface), 0.9),
+        alpha(@surface_dim, 0.9)
+      )
+      padding-box,
+    linear-gradient(@primary, @on_primary) border-box;
+   border: 1px solid transparent; 
+   opacity: 0.8; 
+   margin: 10px; 
+   box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.2); 
+} */
 
 label.module {
   font-size: 14px;
@@ -98,12 +124,9 @@ label.module {
 #tools,
 #tray,
 #cpu {
-  color: @foreground;
-  /* margin: 4px 4px; */
-  /* padding: 0 6px; */
-  border-radius: 20px;
+  color: @on_surface;
+  padding: 0 6px;
   min-width: 10px;
-  background-color: transparent;
 }
 
 /*
@@ -127,15 +150,15 @@ label.module:hover {
  * ----------------------------------------------------- */
 
 #workspaces {
-  padding: 5px 3px 5px 3px;
+  /* padding: 5px 5px; */
   min-width: 176px;
 }
 
 #workspaces button {
   color: @on_surface;
   border-radius: 3px;
-  padding: 0px 5px 0px 5px;
-  margin: 0px 2px 0px 2px;
+  /* padding: 0px 5px 0px 5px; */
+  /* margin: 0px 2px 0px 2px; */
   transition: all 0.3s ease-in-out;
   border: 1px solid transparent;
 }
@@ -206,92 +229,6 @@ window#waybar.empty #window {
 }
 
 #taskbar.empty {
-}
-
-/* -----------------------------------------------------
- * ML4W Icon
- * ----------------------------------------------------- */
-
-#custom-ml4w-welcome {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background-image: url("../assets/ml4w-icon.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-right: 20px;
-}
-
-/* -----------------------------------------------------
- * Idle Inhibitor
- * ----------------------------------------------------- */
-
-#idle_inhibitor {
-}
-
-#idle_inhibitor.activated {
-}
-
-/* -----------------------------------------------------
- * App Launcher
- * ----------------------------------------------------- */
-
-#custom-appmenu {
-  padding-right: 3px;
-  padding-left: 5px;
-}
-
-#custom-appmenu:hover {
-}
-
-/* -----------------------------------------------------
- * Custom Now Playing
- * ----------------------------------------------------- */
-
-#custom-nowplaying {
-}
-
-#custom-nowplaying.playing {
-}
-
-#custom-nowplaying.paused {
-}
-
-/* -----------------------------------------------------
- * Custom Notification
- * ----------------------------------------------------- */
-
-#custom-notification {
-  font-size: 20px;
-  font-family: "Material Icons";
-  color: @icon_color;
-}
-
-/* -----------------------------------------------------
- * Custom Exit
- * ----------------------------------------------------- */
-
-#custom-exit {
-}
-
-/* -----------------------------------------------------
- * Custom Updates
- * ----------------------------------------------------- */
-
-#custom-updates.yellow {
-  border-radius: 8px;
-  margin: 5px 0px 5px 5px;
-  padding: 0px 6px 0px 6px;
-  background-color: @secondary;
-  color: @on_secondary;
-}
-
-#custom-updates.red {
-  border-radius: 8px;
-  margin: 6px 0px 6px 7px;
-  padding: 0px 6px 0px 6px;
-  background-color: @error;
-  color: @on_error;
 }
 
 /* -----------------------------------------------------
@@ -410,9 +347,9 @@ window#waybar.empty #window {
  * Tray
  * ----------------------------------------------------- */
 
-#tray {
+/* #tray {
   padding: 0px 5px 0px 10px;
-}
+} */
 
 #tray > .passive {
   -gtk-icon-effect: dim;

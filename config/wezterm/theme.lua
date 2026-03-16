@@ -1,12 +1,12 @@
 local wezterm = require("wezterm")
 -- local colors = dofile(os.getenv("HOME") .. "/.cache/wallust/colors-wezterm.lua")
-local act = wezterm.action
-local colors = require("colors-wezterm")
+local colors = require("wezterm-colors")
 return function(config)
     -- config.color_scheme = "Catppuccin Mocha"
     --  config.color_scheme = 'Earthsong'
-    -- config.colors = colors
-    config.color_scheme = 'Ocean (base16)'
+    config.colors = colors.colors
+    config.window_frame = colors.window_frame
+    -- config.color_scheme = 'Ocean (base16)'
 
     -- config.window_background_opacity = 0.93
     -- config.inactive_pane_hsb = {

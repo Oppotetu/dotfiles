@@ -18,3 +18,5 @@ hyprctl hyprpaper wallpaper ", $wallpaper"
 
 # # Auto-reload apps
 # pkill -USR2 waybar
+
+
