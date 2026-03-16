@@ -8,42 +8,31 @@ Template.colors = {
   cursor_border = "{{ colors.primary.default.hex }}",
   cursor_fg = "{{ colors.on_surface.default.hex }}",
 
-  selection_bg = "{{ colors.primary.default.hex }}",
-  selection_fg = "{{ colors.surface.default.hex }}",
+  selection_bg = "{{ colors.secondary.default.hex }}",
+  selection_fg = "{{ colors.on_secondary.default.hex }}",
 
 
   ansi = {
     "{{ colors.shadow.default.hex }}",
-    "{{ colors.error.default.red }}", 
-    "{{ colors.secondary.default.green }}",
-    "{{ colors.tertiary.default.yellow }}",
-    "{{ colors.primary.default.hex }}",
-    "{{ colors.tertiary.default.hex }}",
+    "{{ colors.error.default.hex }}", 
     "{{ colors.secondary.default.hex }}",
+    "#aca98a",
+    "{{ colors.primary.default.hex }}",
+    "{{ colors.error.default.hex }}",
     "{{ colors.on_surface.default.hex }}",
+    "#f0f0f0",
   },
 
   brights = {
-    "{{ colors.shadow.default.hex }}",
-    "{{ colors.error.default.red }}", 
-    "{{ colors.secondary.default.green }}",
-    "{{ colors.tertiary.default.yellow }}",
-    "{{ colors.primary.default.hex }}",
-    "{{ colors.tertiary.default.hex }}",
-    "{{ colors.secondary.default.hex }}",
-    "{{ colors.on_surface.default.hex }}",
+    "#4c4c4c",
+    "#c49ea0", 
+    "#9ec49f",
+    "#c4c19e",
+    "#a39ec4",
+    "#c49ec4",
+    "#9ec3c4",
+    "#e7e7e7",
   },
-
--- ansi = {
---   "{{ colors.shadow.default.hex | to_color | set_lightness: 15 }}",        -- 0 Black
---   "{{ colors.error.default.hex | to_color | set_red: 220 }}",            -- 1 Red  
---   "{{ colors.secondary.default.hex | to_color | set_green: 200 }}",      -- 2 Green
---   "{{ colors.tertiary.default.hex | to_color | set_red: 220 | set_green: 180 }}", -- 3 Yellow
---   "{{ colors.primary.default.hex | to_color | set_blue: 210 }}",         -- 4 Blue
---   "{{ colors.tertiary.default.hex | to_color | set_red: 210 | set_blue: 200 }}", -- 5 Magenta
---   "{{ colors.secondary.default.hex | to_color | set_green: 190 | set_blue: 180 }}", -- 6 Cyan
---   "{{ colors.on_surface.default.hex | to_color | set_lightness: 85 }}",  -- 7 White
--- },
 
 -- brights = {
 --   "{{ colors.shadow.default.hex | to_color | set_lightness: 45 }}",      -- 8 Bright black

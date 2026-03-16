@@ -14,6 +14,7 @@ modmap:
 
 keymap:
   - name: Chrome tab remaps
+    exact_match: true
     application:
       only: [google-chrome, chromium]
     remap:

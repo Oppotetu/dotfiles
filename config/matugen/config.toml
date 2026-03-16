@@ -10,15 +10,24 @@ input_path = '~/.config/matugen/templates/hyprland.conf'
 output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
-[templates.waybar]
+[templates.colors]
 input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/waybar/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar'
+output_path = '~/.config/current/theme/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar && swaync-client -rs'
 
-[templates.swaync]
-input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/swaync/colors.css'
-post_hook = "swaync-client -rs" 
+[templates.wallpaper]
+input_path = '~/.config/matugen/templates/wallpaper.txt'
+output_path = '~/.config/current/theme/wallpaper.txt'
+
+[templates.chromium]
+input_path = '~/.config/matugen/templates/chromium.theme'
+output_path = '~/.config/current/theme/chromium.theme'
+post_hook = '~/.local/bin/theme-set-chromium.sh'
+
+#[templates.swaync]
+#input_path = '~/.config/matugen/templates/colors.css'
+#output_path = '~/.config/swaync/colors.css'
+#post_hook = "swaync-client -rs" 
 
 [templates.fuzzel]
 input_path = '~/.config/matugen/templates/fuzzel.ini'
@@ -27,6 +36,14 @@ output_path = '~/.config/fuzzel/fuzzel-colors.ini'
 [templates.wezterm]
 input_path = '~/.config/matugen/templates/wezterm.lua'
 output_path = '~/.config/wezterm/wezterm-colors.lua'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-3.0.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-4.0.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
 
 #[templates.primary]
 #input_path = '~/.config/matugen/templates/primary'

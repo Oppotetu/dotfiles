@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- link:
+    ~/.config/chromium-flags.conf: config/chromium-flags.conf
+
+- shell:
+    - [sudo mkdir -p /etc/chromium/policies/managed, Make policies folder]
+    - [sudo chmod 777 /etc/chromium/policies/managed, permission]

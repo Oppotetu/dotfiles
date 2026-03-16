@@ -1,4 +1,4 @@
-@import "../../colors.css";
+@import "../../../current/theme/colors.css";
 
 /* -----------------------------------------------------
  * General
@@ -52,15 +52,16 @@ window#waybar {
     linear-gradient(@primary, @on_primary) border-box;
   padding: 5px;
   margin-top: 5px;
+  margin-bottom: 0;
   border: 2px solid @primary;
 }
 
 .modules-left {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .modules-right {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 /* .modules-right {
@@ -106,7 +107,6 @@ label.module {
 }
 
 #mode,
-#battery,
 #bluetooth,
 #network,
 #pulseaudio,
@@ -120,13 +120,14 @@ label.module {
 #custom-power,
 #memory,
 #battery,
+#power-profiles-daemon,
 #hardware,
 #tools,
+#temperature,
 #tray,
 #cpu {
   color: @on_surface;
   padding: 0 6px;
-  min-width: 10px;
 }
 
 /*
@@ -250,7 +251,19 @@ window#waybar.empty #window {
  * Power Profiles Daemon
  * ----------------------------------------------------- */
 
-#power-profiles-daemon {
+#power-profiles-daemon.performance {
+  background-color: @error;
+  color: @on_error;
+}
+
+#power-profiles-daemon.balanced {
+  /* background-color: @secondary; */
+  /* color: @on_surface; */
+}
+
+#power-profiles-daemon.power-saver {
+  background-color: @tertiary;
+  color: @on_tertiary;
 }
 
 /* -----------------------------------------------------
@@ -327,20 +340,32 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #battery {
+  /* background-color: #ffffff;
+  color: #000000; */
 }
 
 #battery.charging,
 #battery.plugged {
+  color: #ffffff;
+  background-color: #26a65b;
 }
 
 @keyframes blink {
   to {
-    background-color: @background;
-    color: @on_surface;
+    background-color: #ffffff;
+    color: #000000;
   }
 }
 
+/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 /* -----------------------------------------------------

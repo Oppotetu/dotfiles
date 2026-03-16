@@ -1,48 +1,60 @@
 local Template = {}
 
 Template.colors = {
-  foreground = "#f1dfda",
-  background = "#1a110f",
+  foreground = "#dfe4dd",
+  background = "#0f1511",
 
-  cursor_bg = "#ffb5a1",
-  cursor_border = "#ffb5a1",
-  cursor_fg = "#f1dfda",
+  cursor_bg = "#91d5ac",
+  cursor_border = "#91d5ac",
+  cursor_fg = "#dfe4dd",
 
-  selection_bg = "#ffb5a1",
-  selection_fg = "#1a110f",
+  selection_bg = "#b5ccbb",
+  selection_fg = "#203529",
 
-ansi = {
-  "#262626",        -- 0 Black
-  "#dcb4ab",            -- 1 Red  
-  "#e7c8b2",      -- 2 Green
-  "#dcb48d", -- 3 Yellow
-  "#ffb5d2",         -- 4 Blue
-  "#d2c5c8", -- 5 Magenta
-  "#e7beb4", -- 6 Cyan
-  "#eacfc7",  -- 7 White
-},
 
-brights = {
-  "#737373",      -- 8 Bright black
-  "#ffb4ab",            -- 9 Bright red
-  "#e7f0b2",      -- 10 Bright green
-  "#fff08d", -- 11 Bright yellow
-  "#ffb5ff",         -- 12 Bright blue
-  "#ffc5f0", -- 13 Bright magenta
-  "#e7f0e6", -- 14 Bright cyan
-  "#fcf9f8",  -- 15 Bright white
-},
+  ansi = {
+    "#000000",
+    "#ffb4ab", 
+    "#b5ccbb",
+    "#aca98a",
+    "#91d5ac",
+    "#ffb4ab",
+    "#dfe4dd",
+    "#f0f0f0",
+  },
+
+  brights = {
+    "#4c4c4c",
+    "#c49ea0", 
+    "#9ec49f",
+    "#c4c19e",
+    "#a39ec4",
+    "#c49ec4",
+    "#9ec3c4",
+    "#e7e7e7",
+  },
+
+-- brights = {
+--   "#737373",      -- 8 Bright black
+--   "#ffb4ab",            -- 9 Bright red
+--   "#b5f0bb",      -- 10 Bright green
+--   "#fff0dc", -- 11 Bright yellow
+--   "#91d5ff",         -- 12 Bright blue
+--   "#ffcdf0", -- 13 Bright magenta
+--   "#b5f0e6", -- 14 Bright cyan
+--   "#fafaf9",  -- 15 Bright white
+-- },
 
 
   -- ansi = {
   --   "#404040",
   --   "#991000", 
-  --   "#9a3319",
-  --   "#c99c1d",
-  --   "#b32600",
-  --   "#c99c1d",
-  --   "#b03b1c",
-  --   "#e6aa99",
+  --   "#377c49",
+  --   "#2398c2",
+  --   "#1f934d",
+  --   "#2398c2",
+  --   "#3f8d53",
+  --   "#b8d0ae",
   -- },
 
   -- brights = {
@@ -50,58 +62,37 @@ brights = {
   --   "#ffffff", 
   --   "#ffffff",
   --   "#ffffff",
-  --   "#ffffff",
+  --   "#ebfbf1",
   --   "#ffffff",
   --   "#ffffff",
   --   "#ffffff",
   -- },
 
 
-  -- ansi = {
-  --   "#000000",
-  --   "#ffb4ab", 
-  --   "#e7bdb2",
-  --   "#d9c58d",
-  --   "#ffb5a1",
-  --   "#d9c58d",
-  --   "#e7bdb2",
-  --   "#f1dfda",
-  -- },
-
-  -- brights = {
-  --   "#000000",
-  --   "#ffb4ab", 
-  --   "#e7bdb2",
-  --   "#d9c58d",
-  --   "#ffb5a1",
-  --   "#d9c58d",
-  --   "#e7bdb2",
-  --   "#f1dfda",
-  -- },
 
   tab_bar = {
 
     active_tab = {
-      bg_color = "#ffb5a1",
-      fg_color = "#561f10",
+      bg_color = "#91d5ac",
+      fg_color = "#003921",
     },
 
     inactive_tab = {
-      bg_color = "#1a110f", 
-      fg_color = "#f1dfda", 
+      bg_color = "#0f1511", 
+      fg_color = "#dfe4dd", 
     },
 
     new_tab = {
-      bg_color = "#1a110f", 
-      fg_color = "#ffb5a1", 
+      bg_color = "#0f1511", 
+      fg_color = "#91d5ac", 
     }
   }
 
 }
 
 Template.window_frame = {
-  active_titlebar_bg = "#1a110f",
-  inactive_titlebar_bg = "#231917",
+  active_titlebar_bg = "#0f1511",
+  inactive_titlebar_bg = "#171d19",
 }
 
 return Template

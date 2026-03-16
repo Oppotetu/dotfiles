@@ -7,6 +7,8 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
+# eval -- "$(/usr/bin/starship init bash --print-full-init)"
+
 # Load shared shell config
 if [ -f "$HOME/.shellrc-shared" ]; then
     . "$HOME/.shellrc-shared"

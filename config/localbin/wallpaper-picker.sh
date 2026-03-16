@@ -1,8 +1,15 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash  
+
+wallpaper=$(find "$HOME/Pictures/wallpapers" -type f \( -iname "*.jpg" -o -iname "*.png" \) | fuzzel --dmenu)
+
+matugen image "$wallpaper" --verbose --show-colors
+
+hyprctl hyprpaper wallpaper ", $wallpaper"
+
 
 
 # Pick wallpaper
-wallpaper=$(find ~/Pictures/wallpapers -type f \( -iname "*.jpg" -o -iname "*.png" \) | fuzzel --dmenu)
+# wallpaper=$(find ~/Pictures/wallpapers -type f \( -iname "*.jpg" -o -iname "*.png" \) | fuzzel --dmenu)
 
 # Pick mode
 # mode=$(echo -e "dark\nlight" | fuzzel --dmenu --prompt "Theme: ")
@@ -12,11 +19,14 @@ wallpaper=$(find ~/Pictures/wallpapers -type f \( -iname "*.jpg" -o -iname "*.pn
 #   light)  wallust run "$wallpaper" --palette ansilight16 ;;
 # esac
 
-matugen image "$wallpaper" --verbose --show-colors
+# matugen image "$wallpaper" --verbose --show-colors
 
-hyprctl hyprpaper wallpaper ", $wallpaper"
+# hyprctl hyprpaper wallpaper ", $wallpaper"
+
 
 # # Auto-reload apps
 # pkill -USR2 waybar
+
+
 
 

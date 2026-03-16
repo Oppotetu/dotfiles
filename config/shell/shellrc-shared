@@ -19,3 +19,11 @@ alias dsf='diff-so-fancy'
 alias nvim='NVIM_APPNAME=nvim-oppotetu nvim'
 alias lazy='NVIM_APPNAME=nvim-lazy nvim'
 
+case $(echo "$0") in
+  -bash)
+    eval "$(starship init bash)"
+    ;;
+  -zsh)
+    eval "$(starship init zsh)"
+    ;;
+esac
