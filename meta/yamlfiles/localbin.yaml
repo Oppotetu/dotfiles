@@ -16,7 +16,8 @@
     ~/.local/bin/screenshot-window.sh: config/localbin/screenshot-window.sh
     ~/.local/bin/wallpaper-picker.sh: config/localbin/wallpaper-picker.sh
     ~/.local/bin/cmd-present.sh: config/localbin/cmd-present.sh
-    ~/.local/bin/theme-set-chromium.sh: config/localbin/theme-set-chromium.sh
+    ~/.local/bin/chromium-set-theme.sh: config/localbin/chromium-set-theme.sh
+    ~/.local/bin/chromium-set-background.sh: config/localbin/chromium-set-background.sh
 
 - shell:
     - description: Sourcing .bashrc (linux)

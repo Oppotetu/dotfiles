@@ -1,5 +1,14 @@
 [config]
 
+[templates.colors]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/current/theme/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar && swaync-client -rs'
+
+[templates.wallpaper]
+input_path = '~/.config/matugen/templates/wallpaper.txt'
+output_path = '~/.config/current/theme/wallpaper.txt'
+
 [templates.btop]
 input_path = '~/.config/matugen/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
@@ -10,24 +19,28 @@ input_path = '~/.config/matugen/templates/hyprland.conf'
 output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
-[templates.colors]
-input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/current/theme/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar && swaync-client -rs'
-
-[templates.wallpaper]
-input_path = '~/.config/matugen/templates/wallpaper.txt'
-output_path = '~/.config/current/theme/wallpaper.txt'
-
 [templates.chromium]
 input_path = '~/.config/matugen/templates/chromium.theme'
 output_path = '~/.config/current/theme/chromium.theme'
-post_hook = '~/.local/bin/theme-set-chromium.sh'
+post_hook = '~/.local/bin/chromium-set-theme.sh && ~/.local/bin/chromium-set-background.sh'
 
 #[templates.swaync]
 #input_path = '~/.config/matugen/templates/colors.css'
 #output_path = '~/.config/swaync/colors.css'
 #post_hook = "swaync-client -rs" 
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship.toml'
+output_path = '~/.config/starship.toml'
+post_hook = "source ~/.bashrc" 
+
+[templates.vscode]
+input_path = '~/.config/matugen/templates/vscode.json'
+output_path = '~/.cache/wallust/colors.json'
+
+[templates.vscode2]
+input_path = '~/.config/matugen/templates/vscode'
+output_path = '~/.cache/wallust/colors'
 
 [templates.fuzzel]
 input_path = '~/.config/matugen/templates/fuzzel.ini'

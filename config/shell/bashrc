@@ -14,3 +14,4 @@ if [ -f "$HOME/.shellrc-shared" ]; then
     . "$HOME/.shellrc-shared"
 fi
 
+eval -- "$(/usr/bin/starship init bash --print-full-init)"

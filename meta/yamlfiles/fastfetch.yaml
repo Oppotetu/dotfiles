@@ -3,11 +3,6 @@
       relink: true
       create: true
       force: true
-    shell:
-      stdin: true
-      stdout: true
-      stderr: true
 
 - link:
-    ~/.config/starship/starship.toml: config/starship/starship.toml
     ~/.config/fastfetch/config.jsonc: config/fastfetch-config.jsonc

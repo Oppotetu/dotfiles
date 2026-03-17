@@ -1,8 +1,8 @@
 local Template = {}
 
 Template.colors = {
-  foreground = "{{ colors.on_surface.default.hex }}",
   background = "{{ colors.surface.default.hex }}",
+  foreground = "{{ colors.on_surface.default.hex }}",
 
   cursor_bg = "{{ colors.primary.default.hex }}",
   cursor_border = "{{ colors.primary.default.hex }}",

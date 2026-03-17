@@ -10,13 +10,11 @@ confirm_action() {
 
 case $SELECTION in
     *"󰌾 Lock"*)
-        # ~/.config/sway/scripts/lock.sh;;
-        hyprlock;;
+        gtklock;;
     *"󰤄 Suspend"*)
         systemctl suspend ;;
     *"󰍃 Log out"*)
         if confirm_action "Log out"; then
-            # swaymsg exit
             hyprctl dispatch exit
         fi;;
     *" Reboot"*)
