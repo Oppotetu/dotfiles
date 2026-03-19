@@ -6,3 +6,4 @@ matugen image "$wallpaper" --verbose --show-colors
 
 hyprctl hyprpaper wallpaper ", $wallpaper"
 
+

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CHROMIUM_THEME="$HOME/.config/current/theme/chromium.themeW"
+CHROMIUM_THEME="$HOME/.config/current/theme/chromium.theme"
 
 if [[ -f $CHROMIUM_THEME ]]; then
   THEME_HEX_COLOR=$(<"$CHROMIUM_THEME")

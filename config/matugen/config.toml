@@ -8,6 +8,7 @@ post_hook = 'pkill -SIGUSR2 waybar && swaync-client -rs'
 [templates.wallpaper]
 input_path = '~/.config/matugen/templates/wallpaper.txt'
 output_path = '~/.config/current/theme/wallpaper.txt'
+post_hook = '~/.local/bin/sync-current-wallpaper.sh'
 
 [templates.btop]
 input_path = '~/.config/matugen/templates/btop.theme'

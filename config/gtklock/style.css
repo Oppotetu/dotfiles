@@ -1,0 +1,12 @@
+window {
+  background-color: black;
+  background-image: url("/home/simon/.config/current/theme/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#clock-label {
+  opacity: 0;
+  font-size: 0;
+}
