@@ -177,4 +177,5 @@
   "update.mode": "start",
   "editor.linkedEditing": true,
   "workbench.colorTheme": "Wallust Bordered",
+  "editor.cursorSurroundingLines": 15,
 }

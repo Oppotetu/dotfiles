@@ -35,6 +35,10 @@ input_path = '~/.config/matugen/templates/starship.toml'
 output_path = '~/.config/starship.toml'
 post_hook = "source ~/.bashrc" 
 
+[templates.gazelle]
+input_path = '~/.config/matugen/templates/gazelle.toml'
+output_path = '~/.config/gazelle/theme.toml'
+
 [templates.vscode]
 input_path = '~/.config/matugen/templates/vscode.json'
 output_path = '~/.cache/wallust/colors.json'
@@ -59,14 +63,3 @@ output_path = '~/.config/gtk-3.0/gtk.css'
 input_path = '~/.config/matugen/templates/gtk-4.0.css'
 output_path = '~/.config/gtk-4.0/gtk.css'
 
-#[templates.primary]
-#input_path = '~/.config/matugen/templates/primary'
-#output_path = '~/.config/ml4w/colors/primary'
-#
-#[templates.secondary]
-#input_path = '~/.config/matugen/templates/secondary'
-#output_path = '~/.config/ml4w/colors/secondary'
-#
-#[templates.on_surface]
-#input_path = '~/.config/matugen/templates/onsurface'
-#output_path = '~/.config/ml4w/colors/onsurface'
