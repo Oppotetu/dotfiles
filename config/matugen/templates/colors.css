@@ -1,5 +1,9 @@
 @define-color blur_background {{colors.surface.default.rgba | set_alpha: 0.3}};
 @define-color blur_background8 {{colors.surface.default.rgba | set_alpha: 0.8}};
+@define-color success {{ colors.primary.default.rgba | to_color | auto_lightness: 45 | set_green: 250 }};
+@define-color primary_inverted {{ colors.primary.default.rgba | to_color | invert }};
+
+
 <* for name, value in colors *>
     @define-color {{name}} {{value.default.hex}};
 <* endfor *>

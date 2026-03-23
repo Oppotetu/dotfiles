@@ -25,3 +25,10 @@
     exec: code
     file: config/vsc/v1/extensions
     uninstall-not-listed: true
+# - shell:
+#     - [npm install @vscode/vsce, install vsce]
+#     - [npx vsce package, package extension]
+#     - [
+#         code --install-extension scroller-power-0.0.1.vsix,
+#         Install scroller-power,
+#       ]

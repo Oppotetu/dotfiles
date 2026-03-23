@@ -18,33 +18,32 @@ yay -S --needed --noconfirm --disable-download-timeout \
     lazydocker wezterm-nightly-bin \
     wallust-git xremap-hypr-bin \
     gazelle-tui insync hyprmon-bin
-    
+
 #######################################
 # pacman
 #######################################
 
 sudo pacman -S --needed --noconfirm --disable-download-timeout \
-    hyprland hyprlock hypridle hyprpaper hyprpolkitagent hyprsunset  \
+    hyprland hyprlock hypridle hyprpaper hyprpolkitagent hyprsunset \
     swaync fuzzel waybar kanshi chromium \
     mise neovim github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix polkit-gnome \
-    bluetui swayosd matugen \
+    bluetui swayosd matugen libvips quickshell \
     steam oculante btop brightnessctl \
     godot scons openrct2 wl-clipboard \
     cliphist grim slurp swappy pamixer \
     thunar thunar-volman thunar-archive-plugin file-roller tumbler \
-    sddm libreoffice-fresh obs-studio \
+    sddm libreoffice-fresh featherpad obs-studio \
     gvfs gvfs-mtp gvfs-gphoto2 gvfs-afc gvfs-smb gvfs-nfs \
     wtype spotify-player kanshi pavucontrol \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
-    xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland  
+    xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland
 
-    # linux-headers nvidia-open-dkms nvidia-utils \
-    # nvidia-settings egl-wayland libva-nvidia-driver \
-    # nvidia-prime vulkan-tools 
+# linux-headers nvidia-open-dkms nvidia-utils \
+# nvidia-settings egl-wayland libva-nvidia-driver \
+# nvidia-prime vulkan-tools
 
-    
 #######################################
 # sway + GPU bits
 #######################################
@@ -88,6 +87,5 @@ sudo gpasswd -a $USER input
 
 # spotify_player authenticate
 # gh auth login
-
 
 echo "Setup complete 🚀"

@@ -3,8 +3,8 @@ node = "latest"
 zig = "latest"
 zls = "latest"
 go = "latest"
-gopls = "latest"
-# lua = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+lua = "latest"
 shfmt = "latest"
 
 [settings]

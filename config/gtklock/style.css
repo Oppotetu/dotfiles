@@ -1,0 +1,61 @@
+@import "../current/theme/colors.css";
+
+window {
+  background-color: black;
+  /* background-image: url("/home/simon/.config/current/theme/wallpaper.jpg"); */
+  /* filter: blur(8px); */
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+}
+
+/* #clock-label {
+  opacity: 0;
+  font-size: 0;
+} */
+
+#window-box {
+  padding: 64px;
+  background-color: @blur_background8;
+  color: @on_surface;
+  border-radius: 8px;
+}
+
+#input-field,
+entry#input-field {
+  background-color: @surface;
+  color: @on_surface;
+  box-shadow: none;
+  /* border: 1px solid @primary; */
+}
+
+/* focused entry */
+#input-field:focus {
+  border: 1px solid @secondary;
+  outline: none;
+}
+
+/* #input-field:focus,
+entry#input-field:focus,
+#input-field:focus .entry,
+entry#input-field:focus .entry {
+  outline: none;
+  border: 0;
+  box-shadow: none;
+  background-image: none;
+} */
+
+#unlock-button {
+  background-image: none;
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 8px;
+  /* padding: 10px 14px; */
+  /* font-weight: 600; */
+  border: none;
+  box-shadow: none;
+}
+
+#unlock-button:hover {
+  background-color: @secondary;
+}

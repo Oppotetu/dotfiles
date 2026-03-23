@@ -1,6 +1,6 @@
 {
   "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1",
+    "FIG_NEW_SESSION": "1"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
@@ -15,21 +15,21 @@
   "editor.minimap.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode",
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
   },
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "Lua.format.defaultConfig": {
     "indent_style": "space",
-    "indent_size": "2",
+    "indent_size": "2"
   },
   "[sql]": {
-    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc",
+    "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
   },
   "SQL-Formatter-VSCode.dialect": "postgresql",
   "SQL-Formatter-VSCode.dataTypeCase": "upper",
@@ -50,7 +50,7 @@
   "vim.leader": "<space>",
   // To improve performance
   "extensions.experimental.affinity": {
-    "vscodevim.vim": 1,
+    "vscodevim.vim": 1
   },
 
   "vim.surround": false,
@@ -73,7 +73,7 @@
     "<C-h>": false,
     "<C-l>": false,
     "<C-u>": false,
-    "<C-b>": false,
+    "<C-b>": false
   },
 
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -104,32 +104,32 @@
     {
       "before": ["<leader>", "o", "i"],
       "commands": ["workbench.action.splitEditor"],
-      "silent": true,
+      "silent": true
     },
     {
       "before": ["<leader>", "o", "p"],
       "commands": ["workbench.action.splitEditorDown"],
-      "silent": true,
+      "silent": true
     },
     {
       "before": ["<leader>", "w"],
-      "commands": ["workbench.action.files.save"],
+      "commands": ["workbench.action.files.save"]
     },
     {
       "before": ["<leader>", "e", "q"],
       "commands": ["workbench.action.closeActiveEditor"],
-      "silent": true,
+      "silent": true
     },
     {
       "before": ["<leader>", "p", "f"],
       "commands": ["workbench.action.quickOpen"],
-      "silent": true,
+      "silent": true
     },
     {
       "before": ["<leader>", "p", "s"],
       "commands": ["workbench.action.findInFiles"],
-      "silent": true,
-    },
+      "silent": true
+    }
   ],
 
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -151,7 +151,7 @@
     // { "before": ["<C-e>"], "after": ["<C-u>"] },
 
     { "before": ["D"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["E"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["E"], "commands": ["editor.action.moveLinesUpAction"] }
 
     // { "before": ["x"], "commands": ["surround-advanced.remove-surround"] },
     // { "before": ["n"], "commands": ["surround-advanced.surround"] },
@@ -171,10 +171,11 @@
     { "before": ["K"], "after": ["S"] },
     { "before": ["J"], "after": ["D"] },
     { "before": ["H"], "after": ["E"] },
-    { "before": ["L"], "after": ["F"] },
+    { "before": ["L"], "after": ["F"] }
   ],
   "editor.tabSize": 2,
   "update.mode": "start",
   "editor.linkedEditing": true,
-  "workbench.colorTheme": "Gruvbox Dark Soft",
+  "workbench.colorTheme": "Wallust Bordered",
+  "editor.cursorSurroundingLines": 15
 }

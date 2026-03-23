@@ -51,17 +51,17 @@ window#waybar {
       padding-box,
     linear-gradient(@primary, @on_primary) border-box;
   padding: 5px;
-  margin-top: 5px;
+  margin-top: 8px;
   margin-bottom: 0;
   border: 2px solid @primary;
 }
 
 .modules-left {
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .modules-right {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 /* .modules-right {
@@ -152,33 +152,26 @@ label.module:hover {
 
 #workspaces {
   /* padding: 5px 5px; */
-  min-width: 176px;
+  /* min-width: 176px; */
 }
 
 #workspaces button {
   color: @on_surface;
   border-radius: 3px;
-  /* padding: 0px 5px 0px 5px; */
-  /* margin: 0px 2px 0px 2px; */
-  transition: all 0.3s ease-in-out;
+  padding: 0px 5px 0px 5px;
+  margin: 0px 2px 0px 2px;
   border: 1px solid transparent;
 }
 
 #workspaces button.active {
-  background: alpha(@tertiary, 0.9);
-  color: @on_tertiary;
-  border: 1px solid transparent;
-  transition: all 0.3s ease-in-out;
-  min-width: 30px;
+  background: alpha(@secondary, 0.9);
+  color: @on_secondary;
   border-radius: 8px;
-  box-shadow:
-    inset 1px 2px 2px rgba(255, 255, 255, 0.5),
-    inset 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 #workspaces button:hover {
-  background: alpha(@secondary, 0.2);
-  border-radius: 15px;
+  background: alpha(@secondary, 0.5);
+  border-radius: 16px;
 }
 
 /* -----------------------------------------------------
@@ -346,24 +339,24 @@ window#waybar.empty #window {
 
 #battery.charging,
 #battery.plugged {
-  color: #ffffff;
-  background-color: #26a65b;
+  background-color: @success;
+  color: @on_primary;
 }
 
 @keyframes blink {
   to {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: @surface_variant;
+    color: @on_surface_variant;
   }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
+  background-color: @error;
+  color: @on_error;
   animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
+  animation-duration: 1s;
+  /* animation-timing-function: steps(12); */
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }

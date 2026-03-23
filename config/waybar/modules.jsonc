@@ -1,4 +1,28 @@
 {
+  // "hyprland/workspaces": {
+  //   "on-click": "activate",
+  //   "format": "{icon}",
+  //   "format-icons": {
+  //     "default": "",
+  //     "1": "1",
+  //     "2": "2",
+  //     "3": "3",
+  //     "4": "4",
+  //     "5": "5",
+  //     "6": "6",
+  //     "7": "7",
+  //     "8": "8",
+  //     "9": "9",
+  //     "10": "0",
+  //     "active": "󱓻",
+  //     "urgent": "",
+  //   },
+  //   //"persistent-workspaces": {
+  //   //  "DP-7": [1, 2, 4, 6, 8, 10],
+  //   //  "DP-8": [3, 5, 7, 9]
+  //   //}
+  // },
+
   // Hyprland Window
   "hyprland/window": {
     "rewrite": {
@@ -177,8 +201,7 @@
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "~/.config/ml4w/settings/networkmanager.sh",
-    "on-click-right": "~/.config/ml4w/scripts/nm-applet.sh toggle",
+    "on-click": "wezterm start --class floating-gazelle gazelle",
   },
 
   // Battery
@@ -234,11 +257,11 @@
   },
   // Bluetooth
   "bluetooth": {
-    "format": " {status}",
+    "format": " {num_connections}",
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
-    "on-click": "sleep 0.1 && ~/.config/ml4w/settings/bluetooth.sh",
+    "on-click": "wezterm start --class floating-bluetui bluetui",
     "tooltip-format-connected": "Connected devices: {num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t| Battery life: {device_battery_percentage}%",
