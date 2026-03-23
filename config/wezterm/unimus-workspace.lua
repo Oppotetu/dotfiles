@@ -42,6 +42,8 @@ wezterm.on("unimus-workspace", function(window, pane)
 
   local top = root
 
+  top:send_text('nvim oppstart.txt\n')
+
   --
   -- TOP ROW: 4 columns
   --
