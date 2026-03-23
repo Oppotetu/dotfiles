@@ -178,4 +178,7 @@
   "editor.linkedEditing": true,
   "workbench.colorTheme": "Wallust Bordered",
   "editor.cursorSurroundingLines": 15,
+  "scrollerPower.linesToScrollMedium": 20,
+  "scrollerPower.linesToScrollLarge": 40,
+  "scrollerPower.linesToScrollSmall": 7,
 }
