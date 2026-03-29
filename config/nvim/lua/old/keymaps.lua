@@ -16,6 +16,7 @@ vim.keymap.set({ 'n', 'v', 's', 'o' }, 'l', 'f')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'L', 'F')
 
 vim.keymap.set('n', '<leader>ae', 'ggVG')
+vim.keymap.set('n', '<leader>ay', 'ggVGy')
 
 vim.keymap.set({ 'v', 'o' }, '<Tab>', '<Esc>')
 vim.keymap.set({ 'i', 'n' }, '<Tab>', '<cmd>noh<cr><esc>', { desc = 'Escape and clear hlsearch' })
@@ -77,6 +78,7 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 -- vim.keymap.set("n", "<leader>nl", ":nohl<CR>", { desc = "Clear search highlights" })
 
 --- window management
+
 vim.keymap.set("n", "<leader>oi", "<C-w>v", { desc = "Split window vertically" })     -- split window vertically
 vim.keymap.set("n", "<leader>op", "<C-w>s", { desc = "Split window horizontally" })   -- split window horizontally
 vim.keymap.set("n", "<leader>oe", "<C-w>=", { desc = "Make splits equal size" })      -- make split windows equal width & height

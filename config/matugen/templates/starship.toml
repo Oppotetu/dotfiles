@@ -6,24 +6,26 @@ $character'''
 palette = 'colors'
 
 [palettes.colors]
-color1 = '{{colors.primary_fixed_dim.default.hex}}'
-color2 = '{{colors.on_primary.default.hex}}'
-color3 = '{{colors.on_surface_variant.default.hex}}'
-color4 = '{{colors.surface_container.default.hex}}'
-color5 = '{{colors.on_primary.default.hex}}'
-color6 = '{{colors.surface_dim.default.hex}}'
-color7 = '{{colors.surface.default.hex}}'
-color8 = '{{colors.primary.default.hex}}'
-color9 = '{{colors.tertiary.default.hex}}'
+primary = '{{colors.primary.default.hex}}'
+secondary = '{{colors.secondary.default.hex}}'
+tertiary = '{{colors.tertiary.default.hex}}'
+primary_fixed_dim = '{{colors.primary_fixed_dim.default.hex}}'
+on_primary = '{{colors.on_primary.default.hex}}'
+on_secondary = '{{colors.on_secondary.default.hex}}'
+on_tertiary = '{{colors.on_tertiary.default.hex}}'
+on_surface_variant = '{{colors.on_surface_variant.default.hex}}'
+surface_container = '{{colors.surface_container.default.hex}}'
+# surface_dim = '{{colors.surface_dim.default.hex}}'
+# surface = '{{colors.surface.default.hex}}'
 
 # Prompt symbols 
 [character]
-success_symbol = "[🞈](color9 bold)"
+success_symbol = "[🞈](tertiary bold)"
 error_symbol = "[🞈](@{error})"
 vicmd_symbol = "[🞈](#f9e2af)"
 
 [directory]
-format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$path ](fg:color3 bg:color4)[ ](fg:color4)"
+format = "[](fg:primary_fixed_dim bg:surface_container)[󰉋](bg:primary_fixed_dim fg:on_primary)[ ](fg:primary_fixed_dim bg:surface_container)[$path ](fg:on_surface_variant bg:surface_container)[ ](fg:surface_container)"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -32,10 +34,10 @@ format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 
 "Pictures" = " "
 
 [git_branch]
-format = "[](fg:color8 bg:color4)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $branch](fg:color3 bg:color4)[](fg:color4) "
+format = "[](fg:tertiary bg:surface_container)[ ](bg:tertiary fg:on_tertiary)[](fg:tertiary bg:surface_container)[(bg:tertiary fg:on_tertiary) $branch](fg:on_surface_variant bg:surface_container)[](fg:surface_container) "
 
 [time]
-format = "[](fg:color8 bg:color4)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $time](fg:color3 bg:color4)[](fg:color4) "
+format = "[](fg:primary bg:surface_container)[ ](bg:primary fg:on_primary)[](fg:primary bg:surface_container)[(bg:primary fg:on_primary) $time](fg:on_surface_variant bg:surface_container)[](fg:surface_container) "
 disabled = false
 time_format = "%R" # Hour:Minute Format
 
@@ -44,3 +46,52 @@ format = '[🌙 $version](bold blue) '
 
 [nodejs]
 format = '[ $version](bold green) '
+
+### ---------------- ###
+
+##format = "$directory$git_branch$nodejs$lua$character"
+#format = '''
+#$directory$git_branch$nodejs$lua
+#$character'''
+#
+#palette = 'colors'
+#
+#[palettes.colors]
+#color1 = '{{colors.primary_fixed_dim.default.hex}}'
+#color2 = '{{colors.on_primary.default.hex}}'
+#color3 = '{{colors.on_surface_variant.default.hex}}'
+#color4 = '{{colors.surface_container.default.hex}}'
+#color5 = '{{colors.on_primary.default.hex}}'
+#color6 = '{{colors.surface_dim.default.hex}}'
+#color7 = '{{colors.surface.default.hex}}'
+#color8 = '{{colors.primary.default.hex}}'
+#color9 = '{{colors.tertiary.default.hex}}'
+#
+## Prompt symbols 
+#[character]
+#success_symbol = "[🞈](color9 bold)"
+#error_symbol = "[🞈](@{error})"
+#vicmd_symbol = "[🞈](#f9e2af)"
+#
+#[directory]
+#format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$path ](fg:color3 bg:color4)[ ](fg:color4)"
+#
+#[directory.substitutions]
+#"Documents" = "󰈙 "
+#"Downloads" = " "
+#"Music" = " "
+#"Pictures" = " "
+#
+#[git_branch]
+#format = "[](fg:color8 bg:color4)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $branch](fg:color3 bg:color4)[](fg:color4) "
+#
+#[time]
+#format = "[](fg:color8 bg:color4)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $time](fg:color3 bg:color4)[](fg:color4) "
+#disabled = false
+#time_format = "%R" # Hour:Minute Format
+#
+#[lua]
+#format = '[🌙 $version](bold blue) '
+#
+#[nodejs]
+#format = '[ $version](bold green) '

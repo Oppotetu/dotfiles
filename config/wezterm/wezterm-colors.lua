@@ -1,25 +1,25 @@
 local Template = {}
 
 Template.colors = {
-  background = "#13140c",
-  foreground = "#e5e3d6",
+  background = "#0f1511",
+  foreground = "#dfe4dd",
 
-  cursor_bg = "#c6cc79",
-  cursor_border = "#c6cc79",
-  cursor_fg = "#e5e3d6",
+  cursor_bg = "#92d5ac",
+  cursor_border = "#92d5ac",
+  cursor_fg = "#dfe4dd",
 
-  selection_bg = "#c8c9a6",
-  selection_fg = "#303219",
+  selection_bg = "#b5ccbb",
+  selection_fg = "#213528",
 
 
   ansi = {
     "#000000",
     "#ffb4ab", 
-    "#c8c9a6",
+    "#b5ccbb",
     "#aca98a",
-    "#c6cc79",
+    "#92d5ac",
     "#ffb4ab",
-    "#e5e3d6",
+    "#dfe4dd",
     "#f0f0f0",
   },
 
@@ -37,34 +37,34 @@ Template.colors = {
 -- brights = {
 --   "#737373",      -- 8 Bright black
 --   "#ffb4ab",            -- 9 Bright red
---   "#c8f0a6",      -- 10 Bright green
---   "#fff0c0", -- 11 Bright yellow
---   "#c6ccff",         -- 12 Bright blue
---   "#ffd0f0", -- 13 Bright magenta
---   "#c8f0e6", -- 14 Bright cyan
---   "#fbfbf9",  -- 15 Bright white
+--   "#b5f0bb",      -- 10 Bright green
+--   "#fff0dc", -- 11 Bright yellow
+--   "#92d5ff",         -- 12 Bright blue
+--   "#ffcdf0", -- 13 Bright magenta
+--   "#b5f0e6", -- 14 Bright cyan
+--   "#fafaf9",  -- 15 Bright white
 -- },
 
 
   -- ansi = {
   --   "#404040",
   --   "#991000", 
-  --   "#7f8132",
-  --   "#31b586",
-  --   "#8b931f",
-  --   "#31b586",
-  --   "#919339",
-  --   "#d7d1a7",
+  --   "#377c49",
+  --   "#2398c2",
+  --   "#20934c",
+  --   "#2398c2",
+  --   "#3f8d53",
+  --   "#b8d0ae",
   -- },
 
   -- brights = {
   --   "#262626",
   --   "#ffffff", 
-  --   "#fafbf4",
   --   "#ffffff",
-  --   "#f2f5d0",
   --   "#ffffff",
-  --   "#fafbf4",
+  --   "#ecfbf2",
+  --   "#ffffff",
+  --   "#ffffff",
   --   "#ffffff",
   -- },
 
@@ -73,26 +73,26 @@ Template.colors = {
   tab_bar = {
 
     active_tab = {
-      bg_color = "#c6cc79",
-      fg_color = "#303300",
+      bg_color = "#92d5ac",
+      fg_color = "#003921",
     },
 
     inactive_tab = {
-      bg_color = "#13140c", 
-      fg_color = "#e5e3d6", 
+      bg_color = "#0f1511", 
+      fg_color = "#dfe4dd", 
     },
 
     new_tab = {
-      bg_color = "#13140c", 
-      fg_color = "#c6cc79", 
+      bg_color = "#0f1511", 
+      fg_color = "#92d5ac", 
     }
   }
 
 }
 
 Template.window_frame = {
-  active_titlebar_bg = "#13140c",
-  inactive_titlebar_bg = "#1c1c14",
+  active_titlebar_bg = "#0f1511",
+  inactive_titlebar_bg = "#171d19",
 }
 
 return Template

@@ -17,7 +17,8 @@ yay -S --needed --noconfirm --disable-download-timeout \
     zoom joycond-git way-displays \
     lazydocker wezterm-nightly-bin \
     wallust-git xremap-hypr-bin \
-    gazelle-tui insync hyprmon-bin
+    gazelle-tui insync hyprmon-bin \
+    cbonsai-git
 
 #######################################
 # pacman

@@ -1,10 +1,12 @@
 [tools]
 node = "latest"
+"npm:typescript" = "latest"
 zig = "latest"
 zls = "latest"
 go = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 lua = "latest"
+"lua-language-server" = "latest"
 shfmt = "latest"
 
 [settings]

@@ -51,6 +51,7 @@
   // To improve performance
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
+    "asvetliakov.vscode-neovim": 1,
   },
 
   "vim.surround": false,
@@ -83,11 +84,11 @@
     { "before": ["f"], "after": ["l"] },
     { "before": ["k"], "after": ["s"] },
     { "before": ["j"], "after": ["d"] },
-    { "before": ["t"], "after": ["e"] },
+    { "before": ["h"], "after": ["e"] },
     { "before": ["l"], "after": ["f"] },
     { "before": ["K"], "after": ["S"] },
     { "before": ["J"], "after": ["D"] },
-    { "before": ["T"], "after": ["E"] },
+    { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] },
 
     { "before": ["<C-f>"], "after": ["<C-e>"] },
@@ -95,7 +96,7 @@
     { "before": ["<C-e>"], "after": ["<C-u>"] },
 
     // { "before": ["Esc"], "commands": [":nohl"] },
-    { "before": ["h"], "after": ["o", "<Esc>"], "silent": true },
+    { "before": ["t"], "after": ["o", "<Esc>"], "silent": true },
     { "before": ["D"], "after": ["m", "z", "J", "`", "z"] },
 
     { "before": ["<leader>", "a", "e"], "after": ["g", "g", "V", "G"] },
@@ -139,11 +140,11 @@
     { "before": ["f"], "after": ["l"] },
     { "before": ["k"], "after": ["s"] },
     { "before": ["j"], "after": ["d"] },
-    { "before": ["t"], "after": ["e"] },
+    { "before": ["h"], "after": ["e"] },
     { "before": ["l"], "after": ["f"] },
     { "before": ["K"], "after": ["S"] },
     { "before": ["J"], "after": ["D"] },
-    { "before": ["T"], "after": ["E"] },
+    { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] },
 
     // { "before": ["<C-e>"], "after": ["<C-s>"] },
@@ -166,11 +167,11 @@
     { "before": ["f"], "after": ["l"] },
     { "before": ["k"], "after": ["s"] },
     { "before": ["j"], "after": ["d"] },
-    { "before": ["t"], "after": ["e"] },
+    { "before": ["h"], "after": ["e"] },
     { "before": ["l"], "after": ["f"] },
     { "before": ["K"], "after": ["S"] },
     { "before": ["J"], "after": ["D"] },
-    { "before": ["T"], "after": ["E"] },
+    { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] },
   ],
   "editor.tabSize": 2,
@@ -181,7 +182,4 @@
   "scrollerPower.linesToScrollMedium": 20,
   "scrollerPower.linesToScrollLarge": 40,
   "scrollerPower.linesToScrollSmall": 7,
-  "[go]": {
-    "editor.defaultFormatter": "golang.go",
-  },
 }
