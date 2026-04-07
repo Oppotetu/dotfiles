@@ -17,6 +17,10 @@ vim.keymap.set({ 'n', 'v', 's', 'o' }, 'T', 'E')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'l', 'f')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'L', 'F')
 
+-- make y and v behave like C/D: from cursor to end of line
+vim.keymap.set('n', 'Y', 'y$', { noremap = true })
+vim.keymap.set('n', 'V', 'v$h', { noremap = true })
+
 vim.keymap.set('n', 'h', 'o<Esc>')
 
 vim.keymap.set('n', '<leader>ae', 'ggVG')

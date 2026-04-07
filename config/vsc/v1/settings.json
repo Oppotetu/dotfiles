@@ -97,6 +97,12 @@
     { "before": ["<C-s>"], "after": ["<C-y>"] },
     { "before": ["<C-e>"], "after": ["<C-u>"] },
 
+    { "before": ["<C-e>"], "after": ["<C-u>"] },
+
+    // make y and v behave like C/D: from cursor to end of line
+    { "before": ["Y"], "after": ["y", "$"], "silent": true },
+    { "before": ["V"], "after": ["v", "$", "h"], "silent": true },
+
     // { "before": ["Esc"], "commands": [":nohl"] },
     { "before": ["t"], "after": ["o", "<Esc>"], "silent": true },
     { "before": ["D"], "after": ["m", "z", "J", "`", "z"] },
@@ -179,7 +185,7 @@
   "editor.tabSize": 2,
   "update.mode": "start",
   "editor.linkedEditing": true,
-  "workbench.colorTheme": "Wallust Bordered",
+  "workbench.colorTheme": "Monokai",
   "editor.cursorSurroundingLines": 15,
   "scrollerPower.linesToScrollMedium": 20,
   "scrollerPower.linesToScrollLarge": 40,
