@@ -35,7 +35,7 @@ enable_notify = true
 enable_cover_image_cache = true
 default_device = "spotify-player"
 notify_streaming_only = false
-seek_duration_secs = 5
+seek_duration_secs = 15
 sort_artist_albums_by_type = false
 
 [notify_format]

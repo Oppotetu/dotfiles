@@ -4,14 +4,11 @@ csstools.postcss
 dbaeumer.vscode-eslint
 docker.docker
 dsznajder.es7-react-js-snippets
-eamodio.gitlens
 esbenp.prettier-vscode
-github.vscode-github-actions
 golang.go
 humao.rest-client
 kevinmcgowan.typescriptimport
 mads-hartmann.bash-ide-vscode
-mhutchie.git-graph
 ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-vscode-remote.remote-containers

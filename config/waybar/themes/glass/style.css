@@ -340,7 +340,7 @@ window#waybar.empty #window {
 #battery.charging,
 #battery.plugged {
   background-color: @success;
-  color: @on_primary;
+  color: @on_surface;
 }
 
 @keyframes blink {
@@ -350,13 +350,11 @@ window#waybar.empty #window {
   }
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
   background-color: @error;
   color: @on_error;
   animation-name: blink;
   animation-duration: 1s;
-  /* animation-timing-function: steps(12); */
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }

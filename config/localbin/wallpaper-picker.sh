@@ -14,6 +14,6 @@ wallpaper=$(find "$HOME/Pictures/wallpapers" -type f \( -iname "*.jpg" \) | fuzz
 
 # wallpaper=$(cd "$HOME/Pictures/wallpapers" && find . -type f \( -iname "*.jpg" \) -printf '%f\n' | fuzzel --dmenu)
 
-matugen image "$wallpaper" --verbose --show-colors
+matugen image "$wallpaper" --verbose --show-colors -m light
 
 hyprctl hyprpaper wallpaper ", $wallpaper"

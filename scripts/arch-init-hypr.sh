@@ -20,6 +20,8 @@ yay -S --needed --noconfirm --disable-download-timeout \
     gazelle-tui insync hyprmon-bin \
     cbonsai-git
 
+# walker elephant elephant-desktopapplications
+
 #######################################
 # pacman
 #######################################
@@ -39,7 +41,10 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     gvfs gvfs-mtp gvfs-gphoto2 gvfs-afc gvfs-smb gvfs-nfs \
     wtype spotify-player kanshi pavucontrol \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
-    xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland
+    xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland \
+    blender
+
+# netcat
 
 # linux-headers nvidia-open-dkms nvidia-utils \
 # nvidia-settings egl-wayland libva-nvidia-driver \
@@ -70,6 +75,9 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl enable sddm.service
 sudo systemctl start sddm.service
+
+elephant service enable
+systemctl --user start elephant.service
 
 #######################################
 # Various
