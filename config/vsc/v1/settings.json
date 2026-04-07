@@ -156,17 +156,11 @@
     { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] },
 
-    // { "before": ["<C-e>"], "after": ["<C-s>"] },
-    // { "before": ["<C-y>"], "after": ["<C-f>"] },
-    // { "before": ["<C-e>"], "after": ["<C-u>"] },
+    // make y and v behave like C/D: from cursor to end of line
+    { "before": ["v"], "after": ["V"], "silent": true },
 
     { "before": ["D"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["E"], "commands": ["editor.action.moveLinesUpAction"] }
-
-    // { "before": ["x"], "commands": ["surround-advanced.remove-surround"] },
-    // { "before": ["n"], "commands": ["surround-advanced.surround"] },
-    // { "before": ["m"], "commands": ["surround-advanced.replace-surround"] },
-    // { "before": ["t"], "commands": ["extension.surroundWithTag"] },
   ],
 
   "vim.operatorPendingModeKeyBindingsNonRecursive": [

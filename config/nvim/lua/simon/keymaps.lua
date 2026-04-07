@@ -21,6 +21,7 @@ vim.keymap.set({ 'n', 'v', 's', 'o' }, 'L', 'F')
 vim.keymap.set('n', 'Y', 'y$')
 vim.keymap.set('n', 'V', 'v$h')
 vim.keymap.set('n', 'vv', 'V')
+vim.keymap.set('v', 'v', 'V')
 
 vim.keymap.set('n', 'h', 'o<Esc>')
 
