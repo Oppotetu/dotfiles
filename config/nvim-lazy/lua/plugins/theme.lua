@@ -1,1 +1,0 @@
-/home/oppotetu/.config/omarchy/current/theme/neovim.lua

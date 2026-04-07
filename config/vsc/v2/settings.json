@@ -31,9 +31,6 @@
   "[sql]": {
     "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
   },
-  "[go]": {
-    "editor.defaultFormatter": "golang.go"
-  },
   "SQL-Formatter-VSCode.dialect": "postgresql",
   "SQL-Formatter-VSCode.dataTypeCase": "upper",
   "SQL-Formatter-VSCode.functionCase": "upper",
@@ -53,7 +50,12 @@
   "vim.leader": "<space>",
   // To improve performance
   "extensions.experimental.affinity": {
+<<<<<<<< HEAD:config/vsc/v1/settings.json
     "vscodevim.vim": 1
+========
+    "vscodevim.vim": 1,
+    "asvetliakov.vscode-neovim": 1,
+>>>>>>>> bf411ee4f2e7162aaef79c64c21d00dc21696877:config/vsc/v2/settings.json
   },
 
   "vim.surround": false,
@@ -180,8 +182,12 @@
   "update.mode": "start",
   "editor.linkedEditing": true,
   "workbench.colorTheme": "Wallust Bordered",
+<<<<<<<< HEAD:config/vsc/v1/settings.json
+  "editor.cursorSurroundingLines": 15
+========
   "editor.cursorSurroundingLines": 15,
   "scrollerPower.linesToScrollMedium": 20,
   "scrollerPower.linesToScrollLarge": 40,
-  "scrollerPower.linesToScrollSmall": 7
+  "scrollerPower.linesToScrollSmall": 7,
+>>>>>>>> bf411ee4f2e7162aaef79c64c21d00dc21696877:config/vsc/v2/settings.json
 }

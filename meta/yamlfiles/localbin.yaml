@@ -20,6 +20,7 @@
     ~/.local/bin/chromium-set-background.sh: config/localbin/chromium-set-background.sh
     ~/.local/bin/sync-current-wallpaper.sh: config/localbin/sync-current-wallpaper.sh
     ~/.local/bin/convert-folder-to-jpg.sh: config/localbin/convert-folder-to-jpg.sh
+    ~/.local/bin/launch-screensaver.sh: config/localbin/launch-screensaver.sh
 
 - shell:
     - description: Sourcing .bashrc (linux)

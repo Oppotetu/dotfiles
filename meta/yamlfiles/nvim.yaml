@@ -9,7 +9,7 @@
       stderr: true
 
 - link:
-    ~/.config/nvim: config/nvim-oppotetu
+    ~/.config/nvim: config/nvim
 
 - shell:
     - command: |

@@ -3,6 +3,10 @@
       relink: true
       create: true
       force: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - link:
     ~/.config/Code/User/settings.json:
