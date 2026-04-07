@@ -102,6 +102,7 @@
     // make y and v behave like C/D: from cursor to end of line
     { "before": ["Y"], "after": ["y", "$"], "silent": true },
     { "before": ["V"], "after": ["v", "$", "h"], "silent": true },
+    { "before": ["v", "v"], "after": ["V"], "silent": true },
 
     // { "before": ["Esc"], "commands": [":nohl"] },
     { "before": ["t"], "after": ["o", "<Esc>"], "silent": true },
