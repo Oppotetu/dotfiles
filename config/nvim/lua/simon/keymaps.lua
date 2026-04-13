@@ -12,8 +12,8 @@ vim.keymap.set({ 'n', 'v', 's', 'o' }, 'k', 's')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'K', 'S')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'j', 'd')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'J', 'D')
-vim.keymap.set({ 'n', 'v', 's', 'o' }, 't', 'e')
-vim.keymap.set({ 'n', 'v', 's', 'o' }, 'T', 'E')
+vim.keymap.set({ 'n', 'v', 's', 'o' }, 'h', 'e')
+vim.keymap.set({ 'n', 'v', 's', 'o' }, 'H', 'E')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'l', 'f')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'L', 'F')
 
@@ -23,7 +23,7 @@ vim.keymap.set('n', 'V', 'v$h')
 vim.keymap.set('n', 'vv', 'V')
 vim.keymap.set('v', 'v', 'V')
 
-vim.keymap.set('n', 'h', 'o<Esc>')
+vim.keymap.set('n', 't', 'o<Esc>')
 
 vim.keymap.set('n', '<leader>ae', 'ggVG')
 vim.keymap.set('n', '<leader>ay', 'ggVGy')
@@ -51,3 +51,9 @@ vim.keymap.set("n", "<leader>of", "<C-w>v", { desc = "Split window vertically" }
 vim.keymap.set("n", "<leader>od", "<C-w>s", { desc = "Split window horizontally" })  
 vim.keymap.set("n", "<leader>oe", "<C-w>=", { desc = "Make splits equal size" })    
 vim.keymap.set("n", "<leader>ox", "<cmd>close<CR>", { desc = "Close current split" }) 
+
+vim.keymap.set('n', '<leader>R', function()
+  local session = vim.fn.stdpath('state') .. '/restart_session.vim'
+  vim.cmd('mksession! ' .. vim.fn.fnameescape(session))
+  vim.cmd('restart source ' .. vim.fn.fnameescape(session))
+end, { desc = 'Restart Neovim' })

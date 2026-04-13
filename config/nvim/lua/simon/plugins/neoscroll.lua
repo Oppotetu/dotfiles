@@ -1,12 +1,14 @@
 vim.pack.add({ "https://github.com/karb94/neoscroll.nvim" }, { confirm = false })
 
-require('neoscroll').setup({
-  mappings = {                 -- Keys to be mapped to their corresponding default scrolling animation
-    '<C-u>', '<C-d>',
-    '<C-b>', '<C-f>',
-    '<C-y>', '<C-e>',
-    'zt', 'zz', 'zb',
-  },
+neoscroll = require('neoscroll')
+
+neoscroll.setup({
+  -- mappings = {                 -- Keys to be mapped to their corresponding default scrolling animation
+  --   '<C-u>', '<C-d>',
+  --   '<C-b>', '<C-f>',
+  --   '<C-y>', '<C-e>',
+  --   'zt', 'zz', 'zb',
+  -- },
   hide_cursor = true,          -- Hide cursor while scrolling
   stop_eof = true,             -- Stop at <EOF> when scrolling downwards
   respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
@@ -20,3 +22,19 @@ require('neoscroll').setup({
       'WinScrolled', 'CursorMoved'
   },
 })
+
+local keymap = {
+  ["<C-e>"] = function() neoscroll.ctrl_u({ duration = 100 }) end;
+  ["<C-d>"] = function() neoscroll.ctrl_d({ duration = 100 }) end;
+  ["<PageUp>"] = function() neoscroll.ctrl_b({ duration = 250 }) end;
+  ["<PageDown>"] = function() neoscroll.ctrl_f({ duration = 250 }) end;
+  ["<C-s>"] = function() neoscroll.scroll(-0.2, { duration = 100 }) end;
+  ["<C-f>"] = function() neoscroll.scroll(0.2, { duration = 100 }) end;
+  ["zt"]    = function() neoscroll.zt({ half_win_duration = 250 }) end;
+  ["zz"]    = function() neoscroll.zz({ half_win_duration = 250 }) end;
+  ["zb"]    = function() neoscroll.zb({ half_win_duration = 250 }) end;
+}
+local modes = { 'n', 'v', 'x' }
+for key, func in pairs(keymap) do
+  vim.keymap.set(modes, key, func)
+end
