@@ -13,7 +13,7 @@ source ~/.bashrc
 brew install --cask \
   visual-studio-code google-chrome docker-desktop \
   spotify zoom raycast wezterm \
-  alt-tab scroll-reverser 
+  alt-tab scroll-reverser blender
 
 brew install neovim
 
@@ -29,6 +29,5 @@ brew install tlrc
 brew install cmatrix
 brew install shellcheck
 brew install lazydock
-
 
 # brew install tmux
