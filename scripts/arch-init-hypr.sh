@@ -29,7 +29,7 @@ yay -S --needed --noconfirm --disable-download-timeout \
 sudo pacman -S --needed --noconfirm --disable-download-timeout \
     hyprland hyprlock hypridle hyprpaper hyprpolkitagent hyprsunset \
     swaync fuzzel waybar kanshi chromium \
-    mise neovim github-cli fzf jq yq \
+    mise neovim tree-sitter-cli github-cli fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix polkit-gnome \
     bluetui swayosd matugen libvips quickshell \

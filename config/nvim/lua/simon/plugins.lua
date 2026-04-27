@@ -6,7 +6,8 @@ vim.pack.add({
   "https://github.com/nvim-tree/nvim-web-devicons",
 }, { confirm = false, })
 
-require("simon.plugins.treesitter")
+-- require("simon.plugins.treesitter")
+require("simon.plugins.treesitter-manager")
 require("simon.plugins.blink")
 require("simon.plugins.lsp")
 require("simon.plugins.telescope")

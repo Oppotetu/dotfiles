@@ -42,6 +42,7 @@ require("onenord").setup({
   custom_colors = {
     fg           = "#C8D0E0",
     fg_light     = "#E5E9F0",
+    -- bg is kept here, but it will NOT be used for Normal/NormalNC
     bg           = "#2E3440",
     gray         = "#646A76",
     light_gray   = "#6C7A96",
@@ -60,6 +61,10 @@ require("onenord").setup({
     purple       = "#B988B0",
     light_purple = "#B48EAD",
     none         = "NONE",
+  },
+  disable = {
+    background = true,  -- main editor background transparent
+    float_background = true,  -- (optional) floating windows transparent too
   },
 })
 
