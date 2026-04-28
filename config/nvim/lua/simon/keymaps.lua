@@ -2,6 +2,7 @@
 -- clear search highlights with <Esc>
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+
 -- Remap hjkl to sdfe in normal mode
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 's', 'h')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'd', 'j')

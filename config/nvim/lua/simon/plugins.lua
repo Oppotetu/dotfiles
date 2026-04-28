@@ -9,12 +9,12 @@ vim.pack.add({
 -- require("simon.plugins.treesitter")
 require("simon.plugins.treesitter-manager")
 require("simon.plugins.blink")
-require("simon.plugins.lsp")
 require("simon.plugins.telescope")
 require("simon.plugins.lualine")
 require("simon.plugins.utility")
 require("simon.plugins.which-key")
 require("simon.plugins.neoscroll")
+require("simon.plugins.oil")
 
 -- require("simon.plugins.editing.completion")
 -- require("simon.plugins.editing.highlight")
