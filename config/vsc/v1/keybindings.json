@@ -301,16 +301,16 @@
       "snippet": "console.log('${1:${TM_SELECTED_TEXT}}: ', ${1:${TM_SELECTED_TEXT}});",
     },
   },
-  {
-    "key": "ctrl+alt+l",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus",
-    "args": {
-      "name": "Print gd",
-      "langId": "godotscript",
-      "snippet": "print('${1:${TM_SELECTED_TEXT}}: ', ${1:${TM_SELECTED_TEXT}});",
-    },
-  },
+  // {
+  //   "key": "ctrl+alt+l",
+  //   "command": "editor.action.insertSnippet",
+  //   "when": "editorTextFocus",
+  //   "args": {
+  //     "name": "Print gd",
+  //     "langId": "godotscript",
+  //     "snippet": "print('${1:${TM_SELECTED_TEXT}}: ', ${1:${TM_SELECTED_TEXT}});",
+  //   },
+  // },
   {
     "key": "ctrl+alt+o",
     "command": "editor.action.insertSnippet",
