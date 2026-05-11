@@ -101,8 +101,8 @@
 
     // make y and v behave like C/D: from cursor to end of line
     { "before": ["Y"], "after": ["y", "$"], "silent": true },
-    { "before": ["V"], "after": ["v", "$", "h"], "silent": true },
-    { "before": ["v", "v"], "after": ["V"], "silent": true },
+    // { "before": ["V"], "after": ["v", "$", "h"], "silent": true },
+    // { "before": ["v", "v"], "after": ["V"], "silent": true },
 
     // { "before": ["Esc"], "commands": [":nohl"] },
     { "before": ["t"], "after": ["o", "<Esc>"], "silent": true },
@@ -110,6 +110,8 @@
 
     { "before": ["<leader>", "a", "e"], "after": ["g", "g", "V", "G"] },
     { "before": ["<leader>", "a", "y"], "after": ["g", "g", "V", "G", "y"] },
+
+    { "before": ["q"], "after": ["<nop>"] },
 
     {
       "before": ["<leader>", "o", "i"],
@@ -156,11 +158,12 @@
     { "before": ["H"], "after": ["E"] },
     { "before": ["L"], "after": ["F"] },
 
-    // make y and v behave like C/D: from cursor to end of line
     { "before": ["v"], "after": ["V"], "silent": true },
 
     { "before": ["D"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["E"], "commands": ["editor.action.moveLinesUpAction"] },
+
+    { "before": ["q"], "after": ["<nop>"] },
   ],
 
   "vim.operatorPendingModeKeyBindingsNonRecursive": [

@@ -1,5 +1,6 @@
 require("simon.opts")    
 require("simon.autocmds") 
+require("simon.lsp") 
 require("simon.keymaps")  
 require("simon.theme") 
 require("simon.plugins") 
