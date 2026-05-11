@@ -8,6 +8,7 @@ go = "latest"
 lua = "latest"
 "lua-language-server" = "latest"
 shfmt = "latest"
+dotnet = "latest"
 
 [settings]
 gpg_verify = true

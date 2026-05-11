@@ -18,10 +18,10 @@ vim.keymap.set({ 'n', 'v', 's', 'o' }, 'H', 'E')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'l', 'f')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'L', 'F')
 
--- make y and v behave like C/D: from cursor to end of line
+-- make y behave like C/D: from cursor to end of line
 vim.keymap.set('n', 'Y', 'y$')
-vim.keymap.set('n', 'V', 'v$h')
-vim.keymap.set('n', 'vv', 'V')
+-- vim.keymap.set('n', 'V', 'v$h')
+-- vim.keymap.set('n', 'vv', 'V')
 vim.keymap.set('v', 'v', 'V')
 
 vim.keymap.set('n', 't', 'o<Esc>')
@@ -45,7 +45,7 @@ vim.keymap.set("n", "D", "mzJ`z")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set({ 'n', 'v' }, "q", "<nop>")
 
 --- window management
 vim.keymap.set("n", "<leader>of", "<C-w>v", { desc = "Split window vertically" })     
