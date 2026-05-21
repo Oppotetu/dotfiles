@@ -34,7 +34,7 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     diff-so-fancy cmatrix polkit-gnome \
     bluetui swayosd matugen libvips openslide quickshell \
     steam oculante btop brightnessctl \
-    godot scons openrct2 wl-clipboard \
+    godot-mono scons openrct2 wl-clipboard \
     cliphist grim slurp swappy pamixer \
     thunar thunar-volman thunar-archive-plugin file-roller tumbler \
     sddm libreoffice-fresh featherpad obs-studio \

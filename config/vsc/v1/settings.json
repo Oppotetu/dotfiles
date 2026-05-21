@@ -34,6 +34,9 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go",
   },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+  },
   "SQL-Formatter-VSCode.dialect": "postgresql",
   "SQL-Formatter-VSCode.dataTypeCase": "upper",
   "SQL-Formatter-VSCode.functionCase": "upper",
