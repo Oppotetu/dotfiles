@@ -4,7 +4,9 @@ csstools.postcss
 dbaeumer.vscode-eslint
 docker.docker
 dsznajder.es7-react-js-snippets
+eamodio.gitlens
 esbenp.prettier-vscode
+geequlim.godot-tools
 golang.go
 humao.rest-client
 kevinmcgowan.typescriptimport
@@ -23,4 +25,3 @@ undefined_publisher.scroller-power
 vscodevim.vim
 yoavbls.pretty-ts-errors
 ziglang.vscode-zig
-geequlim.godot-tools

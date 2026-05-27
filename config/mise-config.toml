@@ -9,6 +9,7 @@ lua = "latest"
 "lua-language-server" = "latest"
 shfmt = "latest"
 dotnet = "latest"
+python = "latest"
 
 [settings]
 gpg_verify = true
