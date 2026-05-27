@@ -34,6 +34,9 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go",
   },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+  },
   "SQL-Formatter-VSCode.dialect": "postgresql",
   "SQL-Formatter-VSCode.dataTypeCase": "upper",
   "SQL-Formatter-VSCode.functionCase": "upper",
@@ -189,4 +192,5 @@
   "scrollerPower.linesToScrollLarge": 40,
   "scrollerPower.linesToScrollSmall": 7,
   "diffEditor.hideUnchangedRegions.enabled": true,
+  "editor.codeLens": false,
 }

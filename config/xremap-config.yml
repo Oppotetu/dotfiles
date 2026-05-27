@@ -21,6 +21,6 @@ keymap:
       Ctrl-b: Ctrl-Shift-t
       Ctrl-m: Ctrl-Tab
       Ctrl-n: Ctrl-Shift-Tab
-      Ctrl-Shift-h: Ctrl-Shift-Tab
-      Ctrl-Backspace: Alt-left
-      Ctrl-Shift-Backspace: Alt-right
+      # Ctrl-Shift-h: Ctrl-Shift-Tab
+      # Ctrl-Backspace: Alt-left
+      # Ctrl-Shift-Backspace: Alt-right
