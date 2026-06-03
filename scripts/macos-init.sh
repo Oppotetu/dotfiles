@@ -12,7 +12,7 @@ source ~/.bashrc
 
 brew install --cask \
   visual-studio-code google-chrome docker-desktop \
-  spotify zoom raycast wezterm \
+  spotify zoom raycast wezterm zed \
   alt-tab scroll-reverser blender godot
 
 brew install neovim tree-sitter-cli
