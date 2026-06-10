@@ -5,8 +5,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Remap hjkl to sdfe in normal mode
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 's', 'h')
-vim.keymap.set({ 'n', 'v', 's', 'o' }, 'd', 'j')
-vim.keymap.set({ 'n', 'v', 's', 'o' }, 'e', 'k')
+vim.keymap.set({ 'n', 'v', 's', 'o' }, 'd', 'gj')
+vim.keymap.set({ 'n', 'v', 's', 'o' }, 'e', 'gk')
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'f', 'l')
 
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'k', 's')
