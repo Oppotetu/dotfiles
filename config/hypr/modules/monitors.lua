@@ -8,14 +8,6 @@ hl.workspace_rule({ workspace = "3", monitor = "eDP-2" })
 hl.workspace_rule({ workspace = "4", monitor = "eDP-2" })
 hl.workspace_rule({ workspace = "5", monitor = "eDP-2" })
 
-hl.monitor({
-    output   = "eDP-2",
-    mode     = "2880x1800@120.00",
-    position = "2624x544",
-    scale    = 2.00,
-})
-
--- hl.monitor({ output = "eDP-2", disabled = true })
 
 hl.monitor({
     output   = "HDMI-A-1",
@@ -23,3 +15,22 @@ hl.monitor({
     position = "0x0",
     scale    = 1.00,
 })
+
+hl.monitor({
+    output   = "DP-1",
+    mode     = "1920x1080@60.00",
+    position = "2560x0",
+    scale    = 1.00,
+})
+
+hl.monitor({
+    output   = "eDP-2",
+    mode     = "2880x1800@120.00",
+    position = "2624x544",
+    scale    = 2.00,
+    disabled = true
+})
+
+
+
+

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+  "theme_name": "Matugen Generated",
+  "author": "Matugen",
+  "appearance": "dark",
+  "style": {
+    "colors": {
+      "canvas.default": "{{colors.surface.default.hex}}",
+      "canvas.subtle": "{{colors.surface_container.default.hex}}",
+      "editor.background": "{{colors.surface.default.hex}}",
+      "editor.foreground": "{{colors.on_surface.default.hex}}",
+      "editor.line_number": "{{colors.outline_variant.default.hex}}",
+      "editor.active_line_number": "{{colors.on_surface.default.hex}}",
+      "editor.selection.background": "{{colors.secondary_container.default.hex}}",
+      "syntax": {
+        "keyword": "{{colors.primary.default.hex}}",
+        "function": "{{colors.tertiary.default.hex}}",
+        "string": "{{colors.secondary.default.hex}}",
+        "type": "{{colors.primary_container.default.hex}}",
+        "comment": "{{colors.outline_variant.default.hex}}",
+        "variable": "{{colors.on_surface_variant.default.hex}}"
+      }
+    }
+  }
+}

@@ -18,7 +18,8 @@ yay -S --needed --noconfirm --disable-download-timeout \
     lazydocker wezterm-nightly-bin \
     wallust-git xremap-hypr-bin \
     gazelle-tui insync hyprmon-bin \
-    cbonsai-git terminal-rain-lightning
+    cbonsai-git terminal-rain-lightning \
+    skwd-daemon-bin skwd-wall
 
 # walker elephant elephant-desktopapplications
 
@@ -75,9 +76,10 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl enable sddm.service
 sudo systemctl start sddm.service
+systemctl --user enable --now skwd-daemon.service
 
-elephant service enable
-systemctl --user start elephant.service
+# elephant service enable
+# systemctl --user start elephant.service
 
 #######################################
 # Various

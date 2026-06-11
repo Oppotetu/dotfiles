@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+
+- link:
+    ~/.config/skwd-wall/config.json: config/skwd-config.json

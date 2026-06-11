@@ -3,7 +3,7 @@
 [templates.colors]
 input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/current/theme/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar && swaync-client -rs' 
+post_hook = 'pkill -SIGUSR2 waybar && swaync-client -rs'
 #&& pkill walker && walker --gapplication-service'
 
 [templates.wallpaper]
@@ -14,7 +14,7 @@ post_hook = '~/.local/bin/sync-current-wallpaper.sh'
 [templates.btop]
 input_path = '~/.config/matugen/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
-post_hook = 'pkill -USR2 btop'
+post_hook = '(pgrep btop && pkill -USR2 btop) || true'
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland.conf'
@@ -29,12 +29,12 @@ post_hook = '~/.local/bin/chromium-set-theme.sh && ~/.local/bin/chromium-set-bac
 #[templates.swaync]
 #input_path = '~/.config/matugen/templates/colors.css'
 #output_path = '~/.config/swaync/colors.css'
-#post_hook = "swaync-client -rs" 
+#post_hook = "swaync-client -rs"
 
 [templates.starship]
 input_path = '~/.config/matugen/templates/starship.toml'
 output_path = '~/.config/starship.toml'
-post_hook = "source ~/.bashrc" 
+post_hook = "source ~/.bashrc"
 
 [templates.gazelle]
 input_path = '~/.config/matugen/templates/gazelle.toml'
@@ -51,6 +51,15 @@ output_path = '~/.cache/wallust/colors.json'
 [templates.vscode2]
 input_path = '~/.config/matugen/templates/vscode'
 output_path = '~/.cache/wallust/colors'
+
+[templates.godot]
+input_path = '~/.config/matugen/templates/godot.theme'
+output_path = '~/.config/godot/matugen_theme.tres'
+# post_hook = '(pgrep godot && pkill -HUP godot) || true'
+
+# [templates.zed]
+# input_path = "~/.config/matugen/templates/zed.json"
+# output_path = "~/.config/zed/themes/matugen.json"
 
 [templates.fuzzel]
 input_path = '~/.config/matugen/templates/fuzzel.ini'

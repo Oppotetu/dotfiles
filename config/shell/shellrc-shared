@@ -8,6 +8,7 @@
 export TERM=xterm-256color
 export WEZTERM_CONFIG_FILE="$HOME/.config/wezterm/wezterm.lua"
 # export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+# export EDITOR="zed --wait"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
@@ -16,5 +17,6 @@ export PATH="$HOME/.local/bin:$PATH"
 alias ls='ls -lah --color=auto'
 alias grep='grep --color=auto'
 alias dsf='diff-so-fancy'
+alias zed='zeditor'
 # alias nvim='NVIM_APPNAME=nvim-oppotetu nvim'
 # alias lazy='NVIM_APPNAME=nvim-lazy nvim'

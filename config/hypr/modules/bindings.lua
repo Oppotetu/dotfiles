@@ -4,6 +4,7 @@
 
 hl.bind(mod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mod .. " + Return", hl.dsp.exec_cmd(terminal))
+hl.bind(mod .. " + Y", hl.dsp.exec_cmd("ghostty --gtk-single-instance=true"))
 hl.bind(mod .. " + Q", hl.dsp.window.close())
 hl.bind(mod .. " + N", hl.dsp.exec_cmd(fileManager))
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser))
@@ -20,7 +21,12 @@ hl.bind(mod .. " + CTRL + SHIFT + L", hl.dsp.exec_cmd("~/.local/bin/confirm-acti
 hl.bind(mod .. " + O", hl.dsp.exec_cmd("gtklock"))
 
 hl.bind(mod .. " + CTRL + SHIFT + O", hl.dsp.exec_cmd("~/.local/bin/builtin-screen.sh"))
-hl.bind(mod .. " + CTRL + I", hl.dsp.exec_cmd("~/.local/bin/wallpaper-picker.sh"))
+hl.bind(mod .. " + CTRL + I", hl.dsp.exec_cmd("skwd wall toggle"))
+-- hl.bind(mod .. " + CTRL + I", hl.dsp.exec_cmd("waypaper"))
+
+-- gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+
+-- matugen image $wallpaper -m "dark" --source-color-index 1
 
 -- Popup TUIs
 hl.bind(mod .. " + M", hl.dsp.exec_cmd("wezterm start spotify_player"))
@@ -32,7 +38,7 @@ hl.bind(mod .. " + CTRL + A", hl.dsp.exec_cmd("pavucontrol"))
 hl.bind(mod .. " + CTRL + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 -- Universal copy, paste, cut and undo
-hl.bind(mod .. " + C", hl.dsp.send_shortcut({ mods = "CTRL", key = "INSERT" }), { description = "Universal copy" })
+hl.bind(mod .. " + C", hl.dsp.send_shortcut({ mods = "CTRL", key = "INSERT" }), {})
 hl.bind(mod .. " + V", hl.dsp.send_shortcut({ mods = "SHIFT", key = "INSERT" }), { description = "Universal paste" })
 hl.bind(mod .. " + X", hl.dsp.send_shortcut({ mods = "CTRL", key = "X" }), { description = "Universal cut" })
 hl.bind(mod .. " + Z", hl.dsp.send_shortcut({ mods = "CTRL", key = "Z" }), { description = "Universal undo" })
