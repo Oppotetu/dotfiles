@@ -38,11 +38,11 @@ hl.bind(mod .. " + CTRL + A", hl.dsp.exec_cmd("pavucontrol"))
 hl.bind(mod .. " + CTRL + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 -- Universal copy, paste, cut and undo
-hl.bind(mod .. " + C", hl.dsp.send_shortcut({ mods = "CTRL", key = "INSERT" }), {})
+hl.bind(mod .. " + C", hl.dsp.send_shortcut({ mods = "CTRL", key = "INSERT" }), { description = "Universal copy"})
 hl.bind(mod .. " + V", hl.dsp.send_shortcut({ mods = "SHIFT", key = "INSERT" }), { description = "Universal paste" })
 hl.bind(mod .. " + X", hl.dsp.send_shortcut({ mods = "CTRL", key = "X" }), { description = "Universal cut" })
 hl.bind(mod .. " + Z", hl.dsp.send_shortcut({ mods = "CTRL", key = "Z" }), { description = "Universal undo" })
-hl.bind(mod .. " + CTRL + V", hl.dsp.exec_cmd("omarchy-launch-walker -m clipboard"), { description = "Clipboard manager" })
+-- hl.bind(mod .. " + CTRL + V", hl.dsp.exec_cmd("omarchy-launch-walker -m clipboard"), { description = "Clipboard manager" })
 
 -- Screenshot
 hl.bind("Print", hl.dsp.exec_cmd("bash -lc 'grim -g \"$(slurp)\" - | swappy -f -'"))

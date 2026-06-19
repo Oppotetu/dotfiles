@@ -91,8 +91,8 @@ if ! sudo test -f /etc/sudoers.d/env_keep_xdg; then
     sudo chmod 0440 /etc/sudoers.d/env_keep_xdg
 fi
 
-# way-displays: Add yourself to the input group to monitor events
-sudo usermod -a -G input "${USER}"
+# # way-displays: Add yourself to the input group to monitor events
+# sudo usermod -a -G input "${USER}"
 # xremap: add user to input group
 sudo gpasswd -a $USER input
 
