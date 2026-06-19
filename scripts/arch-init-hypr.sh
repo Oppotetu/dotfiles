@@ -14,12 +14,11 @@ sudo pacman -Syu
 
 yay -S --needed --noconfirm --disable-download-timeout \
     google-chrome visual-studio-code-bin cursor-bin \
-    zoom joycond-git way-displays \
-    lazydocker wezterm-nightly-bin \
+    zoom joycond-git lazydocker wezterm-nightly-bin \
     wallust-git xremap-hypr-bin \
-    gazelle-tui insync hyprmon-bin \
+    gazelle-tui insync \
     cbonsai-git terminal-rain-lightning \
-    skwd-daemon-bin skwd-wall
+    skwd-daemon-bin skwd-wall hyprdynamicmonitors-bin
 
 # walker elephant elephant-desktopapplications
 
@@ -40,7 +39,7 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     thunar thunar-volman thunar-archive-plugin file-roller tumbler \
     sddm libreoffice-fresh featherpad obs-studio \
     gvfs gvfs-mtp gvfs-gphoto2 gvfs-afc gvfs-smb gvfs-nfs \
-    wtype spotify-player kanshi pavucontrol \
+    wtype spotify-player pavucontrol \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
     xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland \
     blender dotnet-sdk
@@ -72,11 +71,12 @@ fi
 
 sudo rfkill unblock bluetooth
 
+sudo systemctl --user enable hyprdynamicmonitors-prepare.service
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl enable sddm.service
 sudo systemctl start sddm.service
-systemctl --user enable --now skwd-daemon.service
+sudo systemctl --user enable --now skwd-daemon.service
 
 # elephant service enable
 # systemctl --user start elephant.service

@@ -53,9 +53,9 @@ input_path = '~/.config/matugen/templates/vscode'
 output_path = '~/.cache/wallust/colors'
 
 [templates.godot]
-input_path = '~/.config/matugen/templates/godot.theme'
-output_path = '~/.config/godot/matugen_theme.tres'
-# post_hook = '(pgrep godot && pkill -HUP godot) || true'
+input_path = "~/.config/matugen/templates/godot-colors.theme"
+output_path = "~/.config/godot/colors.sh"
+post_hook = "~/.config/godot/colors-apply.sh"
 
 # [templates.zed]
 # input_path = "~/.config/matugen/templates/zed.json"

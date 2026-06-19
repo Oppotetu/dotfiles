@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+BASE_R="{{ {{ colors.surface.default.red }} / 255 }}"
+BASE_G="{{ {{ colors.surface.default.green }} / 255 }}"
+BASE_B="{{ {{ colors.surface.default.blue }} / 255 }}"
+BASE_A="1"
+
+ACCENT_R="{{ {{ colors.primary.default.red }} / 255 }}"
+ACCENT_G="{{ {{ colors.primary.default.green }} / 255 }}"
+ACCENT_B="{{ {{ colors.primary.default.blue }} / 255 }}"
+ACCENT_A="1"

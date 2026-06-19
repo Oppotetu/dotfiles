@@ -186,7 +186,7 @@
   "editor.tabSize": 2,
   "update.mode": "start",
   "editor.linkedEditing": true,
-  "workbench.colorTheme": "Wallust Bordered",
+  "workbench.colorTheme": "Monokai",
   "editor.cursorSurroundingLines": 15,
   "scrollerPower.linesToScrollMedium": 20,
   "scrollerPower.linesToScrollLarge": 40,

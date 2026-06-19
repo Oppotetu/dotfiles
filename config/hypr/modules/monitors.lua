@@ -1,36 +1,23 @@
-----------------
----- MONITORS ----
-----------------
-
 hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-1" })
 hl.workspace_rule({ workspace = "2", monitor = "HDMI-A-1" })
 hl.workspace_rule({ workspace = "3", monitor = "eDP-2" })
 hl.workspace_rule({ workspace = "4", monitor = "eDP-2" })
 hl.workspace_rule({ workspace = "5", monitor = "eDP-2" })
 
-
 hl.monitor({
-    output   = "HDMI-A-1",
-    mode     = "2560x1440@144.00",
-    position = "0x0",
-    scale    = 1.00,
+    output    = "desc:Samsung Display Corp. 0x4188",
+    mode      = "2880x1800@120.00100",
+    position  = "4100x470",
+    scale     = 2.0,
+    transform = 0,
+    vrr       = 0,
 })
 
 hl.monitor({
-    output   = "DP-1",
-    mode     = "1920x1080@60.00",
-    position = "2560x0",
-    scale    = 1.00,
+    output    = "desc:AOC Q27G42ZE 2RMR7HA032805",
+    mode      = "2560x1440@60.00000",
+    position  = "1440x0",
+    scale     = 1.0,
+    transform = 0,
+    vrr       = 0,
 })
-
-hl.monitor({
-    output   = "eDP-2",
-    mode     = "2880x1800@120.00",
-    position = "2624x544",
-    scale    = 2.00,
-    disabled = true
-})
-
-
-
-

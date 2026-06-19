@@ -33,7 +33,7 @@ hl.bind(mod .. " + M", hl.dsp.exec_cmd("wezterm start spotify_player"))
 hl.bind(mod .. " + CTRL + W", hl.dsp.exec_cmd("wezterm start --class floating-gazelle gazelle"))
 hl.bind(mod .. " + CTRL + B", hl.dsp.exec_cmd("wezterm start --class floating-bluetui bluetui"))
 hl.bind(mod .. " + CTRL + P", hl.dsp.exec_cmd("wezterm start --class floating-btop btop"))
-hl.bind(mod .. " + CTRL + M", hl.dsp.exec_cmd("wezterm start --class floating-hyprmon hyprmon"))
+hl.bind(mod .. " + CTRL + M", hl.dsp.exec_cmd("wezterm start --class floating-hyprdynamicmonitors hyprdynamicmonitors tui"))
 hl.bind(mod .. " + CTRL + A", hl.dsp.exec_cmd("pavucontrol"))
 hl.bind(mod .. " + CTRL + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 

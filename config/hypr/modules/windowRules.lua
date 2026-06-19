@@ -75,10 +75,11 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name   = "floating-hyprmon",
+    name   = "floating-hyprdynamicmonitors",
     float  = true,
     center = true,
-    match  = { class = "floating-hyprmon" },
+    size   = "1400 900",
+    match  = { class = "floating-hyprdynamicmonitors" },
 })
 
 hl.window_rule({
@@ -113,6 +114,13 @@ hl.window_rule({
     float  = true,
     center = true,
     match  = { class = "thunar", title = "File Operation Progress" },
+})
+
+hl.window_rule({
+    name   = "floating-thunar-rename",
+    float  = true,
+    center = true,
+    match  = { class = "thunar", title = "^Rename.*"},
 })
 
 hl.window_rule({
