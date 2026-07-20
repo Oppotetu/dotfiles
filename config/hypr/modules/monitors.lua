@@ -12,17 +12,3 @@ hl.monitor({
     transform = 0,
     vrr       = 0,
 })
-
-hl.monitor({
-    output    = "desc:AOC Q27G42ZE 2RMR7HA032805",
-    mode      = "2560x1440@60.00000",
-    position  = "1440x0",
-    scale     = 1.0,
-    transform = 0,
-    vrr       = 0,
-})
-
-
-
-
-

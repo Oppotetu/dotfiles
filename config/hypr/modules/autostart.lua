@@ -5,7 +5,7 @@
 hl.on("hyprland.start", function()
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
 
-    hl.exec_cmd("hyprdynamicmonitors run")
+    -- hl.exec_cmd("hyprdynamicmonitors run")
     hl.exec_cmd("hypridle")
 
     -- hl.exec_cmd("ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false")

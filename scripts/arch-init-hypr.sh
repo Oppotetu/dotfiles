@@ -16,7 +16,7 @@ yay -S --needed --noconfirm --disable-download-timeout \
     google-chrome visual-studio-code-bin cursor-bin \
     zoom joycond-git lazydocker wezterm-nightly-bin \
     wallust-git xremap-hypr-bin \
-    gazelle-tui insync \
+    gazelle-tui insync linktui \
     cbonsai-git terminal-rain-lightning \
     skwd-daemon-bin skwd-wall hyprdynamicmonitors-bin
 
@@ -28,8 +28,8 @@ yay -S --needed --noconfirm --disable-download-timeout \
 
 sudo pacman -S --needed --noconfirm --disable-download-timeout \
     hyprland hyprlock hypridle hyprpaper hyprpolkitagent hyprsunset \
-    swaync fuzzel waybar kanshi chromium zed \
-    mise neovim tree-sitter-cli github-cli git-lfs fzf jq yq \
+    swaync fuzzel waybar chromium zed \
+    mise neovim tree-sitter-cli github-cli git-lfs git-filter-repo fzf jq yq \
     starship fastfetch wget curl tldr \
     diff-so-fancy cmatrix polkit-gnome \
     bluetui swayosd matugen libvips openslide quickshell \
@@ -42,9 +42,9 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     wtype spotify-player pavucontrol \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
     xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland \
-    blender dotnet-sdk
+    blender dotnet-sdk gimp
 
-# netcat
+# netcat kanshi
 
 # linux-headers nvidia-open-dkms nvidia-utils \
 # nvidia-settings egl-wayland libva-nvidia-driver \
@@ -71,7 +71,7 @@ fi
 
 sudo rfkill unblock bluetooth
 
-sudo systemctl --user enable hyprdynamicmonitors-prepare.service
+# sudo systemctl --user enable hyprdynamicmonitors-prepare.service
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl enable sddm.service

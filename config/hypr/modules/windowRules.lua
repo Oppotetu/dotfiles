@@ -62,9 +62,18 @@ hl.window_rule({
     name   = "floating-bluetui",
     float  = true,
     center = true,
-    size   = "800 800",
+    size   = "805 650",
     match  = { class = "floating-bluetui" },
 })
+
+-- -- ### LINKTUI TOP RIGHT WINDOW RULE ###
+-- hl.window_rule({
+--     name  = "linktui-top-right",
+--     match = { title = "^(linktui)$" },
+--     float = true,
+--     size  = "630 520",
+--     move  = { "monitor_w - window_w - 10", 50 },
+-- })
 
 hl.window_rule({
     name   = "floating-btop",
@@ -153,6 +162,6 @@ hl.window_rule({
 hl.window_rule({
     name   = "floating-blender-file-view",
     center = true,
-    size   = "850 750",
-    match  = { class = "blender", title = "Blender File View" },
+    size   = "1150 750",
+    match  = { class = "blender", initial_title = "File Browser" },
 })

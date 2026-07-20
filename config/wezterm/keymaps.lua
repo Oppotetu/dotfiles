@@ -17,8 +17,8 @@ return function(config)
     -- Tab (similar to window in Tmux)
     { key = "w",          mods = "LEADER",      action = act.ShowTabNavigator },
     { key = "c",          mods = "LEADER",      action = act.SpawnTab("CurrentPaneDomain") },
-    { key = 'n', mods = 'CTRL', action = wezterm.action.ActivateTabRelative(-1), },
-    { key = 'm', mods = 'CTRL', action = wezterm.action.ActivateTabRelative(1), },
+    -- { key = 'n', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(-1), },
+    -- { key = 'm', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(1), },
 
     -- Pane
     { key = "d",          mods = "LEADER",      action = act.SplitVertical { domain = "CurrentPaneDomain" } },
