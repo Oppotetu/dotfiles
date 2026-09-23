@@ -13,7 +13,7 @@ sudo pacman -Syu
 #######################################
 
 yay -S --needed --noconfirm --disable-download-timeout \
-    google-chrome visual-studio-code-bin \
+    google-chrome vscodium-bin \
     zoom joycond-git way-displays \
     lazydocker swaylock-effects-git \
     wallust-git xremap-wlroots-bin \

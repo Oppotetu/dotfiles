@@ -16,7 +16,7 @@ sudo pacman -Syu
 #######################################
 
 yay -S --needed --noconfirm \
-    google-chrome visual-studio-code-bin \
+    google-chrome vscodium-bin \
     zoom joycond-git \
     lazydocker xremap-wlroots-bin \
     

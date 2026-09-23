@@ -13,13 +13,13 @@ sudo pacman -Syu
 #######################################
 
 yay -S --needed --noconfirm --disable-download-timeout \
-    google-chrome visual-studio-code-bin cursor-bin \
+    google-chrome vscodium-bin cursor-bin \
     xremap-hypr-bin gazelle-tui insync \
     skwd-daemon-bin skwd-wall
 
 # removed: linktui, lazydocker, joycond-git, zoom, wallust-git, cbonsai-git, terminal-rain-lightning, hyprdynamicmonitors-bin
 
-# walker elephant elephant-desktopapplications
+# walker elephant elephant-desktopapplications visual-studio-code-bin
 
 #######################################
 # pacman
