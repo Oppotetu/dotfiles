@@ -165,3 +165,13 @@ hl.window_rule({
     size   = "1150 750",
     match  = { class = "blender", initial_title = "File Browser" },
 })
+
+hl.window_rule({
+    name   = "aow4-fullscreen",
+    fullscreen = true,
+    -- center = true,
+    -- size   = "1150 750",
+    match  = { class = "^(AoW4.exe)$" },
+})
+
+-- windowrulev2 = fullscreen, class:^(AoW4.exe)$

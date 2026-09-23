@@ -1,25 +1,25 @@
 local Template = {}
 
 Template.colors = {
-  background = "#121317",
-  foreground = "#e2e2e7",
+  background = "#101416",
+  foreground = "#e0e3e6",
 
-  cursor_bg = "#a5c8ff",
-  cursor_border = "#a5c8ff",
-  cursor_fg = "#e2e2e7",
+  cursor_bg = "#89cff7",
+  cursor_border = "#89cff7",
+  cursor_fg = "#e0e3e6",
 
-  selection_bg = "#b9c7e1",
-  selection_fg = "#233145",
+  selection_bg = "#b0cadc",
+  selection_fg = "#1a3341",
 
 
   ansi = {
     "#000000",
     "#ffb4ab", 
-    "#b9c7e1",
+    "#b0cadc",
     "#aca98a",
-    "#a5c8ff",
+    "#89cff7",
     "#ffb4ab",
-    "#e2e2e7",
+    "#e0e3e6",
     "#f0f0f0",
   },
 
@@ -37,24 +37,24 @@ Template.colors = {
 -- brights = {
 --   "#737373",      -- 8 Bright black
 --   "#ffb4ab",            -- 9 Bright red
---   "#b9f0e1",      -- 10 Bright green
---   "#fff082", -- 11 Bright yellow
---   "#a5c8ff",         -- 12 Bright blue
---   "#ffb7f0", -- 13 Bright magenta
---   "#b9f0e6", -- 14 Bright cyan
---   "#f9f9fa",  -- 15 Bright white
+--   "#b0f0dc",      -- 10 Bright green
+--   "#fff06d", -- 11 Bright yellow
+--   "#89cfff",         -- 12 Bright blue
+--   "#ffb9f0", -- 13 Bright magenta
+--   "#b0f0e6", -- 14 Bright cyan
+--   "#f9fafa",  -- 15 Bright white
 -- },
 
 
   -- ansi = {
   --   "#404040",
   --   "#991000", 
-  --   "#24498f",
-  --   "#e66100",
-  --   "#0045b3",
-  --   "#e66100",
-  --   "#2954a3",
-  --   "#b0b0cf",
+  --   "#25638e",
+  --   "#e67800",
+  --   "#0072b3",
+  --   "#e67800",
+  --   "#2a71a2",
+  --   "#afbfd0",
   -- },
 
   -- brights = {
@@ -73,26 +73,26 @@ Template.colors = {
   tab_bar = {
 
     active_tab = {
-      bg_color = "#a5c8ff",
-      fg_color = "#00315e",
+      bg_color = "#89cff7",
+      fg_color = "#003549",
     },
 
     inactive_tab = {
-      bg_color = "#121317", 
-      fg_color = "#e2e2e7", 
+      bg_color = "#101416", 
+      fg_color = "#e0e3e6", 
     },
 
     new_tab = {
-      bg_color = "#121317", 
-      fg_color = "#a5c8ff", 
+      bg_color = "#101416", 
+      fg_color = "#89cff7", 
     }
   }
 
 }
 
 Template.window_frame = {
-  active_titlebar_bg = "#121317",
-  inactive_titlebar_bg = "#1a1c1f",
+  active_titlebar_bg = "#101416",
+  inactive_titlebar_bg = "#191c1e",
 }
 
 return Template

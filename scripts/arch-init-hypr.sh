@@ -41,7 +41,7 @@ sudo pacman -S --needed --noconfirm --disable-download-timeout \
     wtype spotify-player pavucontrol \
     otf-font-awesome ttf-nerd-fonts-symbols-mono \
     xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland \
-    blender dotnet-sdk gimp
+    blender dotnet-sdk gimp xournalpp
 
 # netcat kanshi
 

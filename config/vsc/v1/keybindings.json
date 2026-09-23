@@ -441,16 +441,6 @@
     "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/",
   },
   {
-    "key": "ctrl+-",
-    "command": "workbench.view.extensions",
-    "when": "viewContainer.workbench.view.extensions.enabled",
-  },
-  {
-    "key": "shift+cmd+x",
-    "command": "-workbench.view.extensions",
-    "when": "viewContainer.workbench.view.extensions.enabled",
-  },
-  {
     "key": "ctrl+j",
     "command": "workbench.action.focusBelowGroup",
   },
