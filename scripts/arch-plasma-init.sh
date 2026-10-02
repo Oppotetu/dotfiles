@@ -1,4 +1,3 @@
-
 #!/bin/bash
 set -e
 
@@ -18,8 +17,8 @@ sudo pacman -Syu
 yay -S --needed --noconfirm \
     google-chrome vscodium-bin \
     zoom joycond-git \
-    lazydocker xremap-wlroots-bin \
-    
+    lazydocker xremap-wlroots-bin
+
 #######################################
 # pacman
 #######################################
@@ -31,9 +30,7 @@ sudo pacman -S --needed --noconfirm \
     steam oculante btop openrct-2 \
     libreoffice-fresh \
     wtype wezterm spotify-player \
-    otf-font-awesome ttf-nerd-fonts-symbols-mono \
-
-
+    otf-font-awesome ttf-nerd-fonts-symbols-mono
 
 #######################################
 # sway + GPU bits
@@ -78,6 +75,5 @@ sudo usermod -aG keyd "$USER"
 
 # spotify_player authenticate
 # gh auth login
-
 
 echo "Setup complete 🚀"
