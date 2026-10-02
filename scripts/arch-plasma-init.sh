@@ -62,12 +62,6 @@ sudo systemctl start keyd.service
 # Various
 #######################################
 
-# nvim: Ensure XDG_CONFIG_HOME preserved in sudo
-if ! sudo test -f /etc/sudoers.d/env_keep_xdg; then
-    echo 'Defaults env_keep += "XDG_CONFIG_HOME"' | sudo EDITOR='tee -a' visudo -f /etc/sudoers.d/env_keep_xdg
-    sudo chmod 0440 /etc/sudoers.d/env_keep_xdg
-fi
-
 # way-displays: Add yourself to the input group to monitor events
 sudo usermod -a -G input "${USER}"
 # keyd: user should be in the keyd group

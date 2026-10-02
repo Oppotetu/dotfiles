@@ -15,8 +15,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Aliases
 alias ls='ls -lah --color=auto'
+alias svim='SUDO_EDITOR=nvim sudoedit'
 alias grep='grep --color=auto'
 alias dsf='diff-so-fancy'
-alias zed='zeditor'
-# alias nvim='NVIM_APPNAME=nvim-oppotetu nvim'
-# alias lazy='NVIM_APPNAME=nvim-lazy nvim'
