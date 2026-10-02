@@ -33,6 +33,8 @@ flatpak remote-delete fedora
 # only from Flatpaks verified developers
 flatpak remote-add --if-not-exists --subset=verified flathub https://flathub.org/repo/flathub.flatpakrepo
 
+flatpak install org.onlyoffice.desktopeditors
+
 # vscodium
 sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
 printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h\n" |
@@ -47,9 +49,6 @@ curl -fsSL https://vicinae.com/install | bash
 # starship
 curl -sS https://starship.rs/install.sh | sh
 
-# onlyoffice
-sudo dnf install -y https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
-
 # copr
 sudo dnf copr enable -y piixini/skwd-wall-v2
 sudo dnf copr enable -y fuddlesworth/PlasmaZones
@@ -63,8 +62,8 @@ sudo dnf install -y \
     skwd-wall-v2 skwd-lens skwd-paper-plasma \
     mise neovim tree-sitter-cli gcc gh git-lfs git-filter-repo fzf jq yq \
     fastfetch curl tldr diff-so-fancy 7zip \
-    steam btop wl-clipboard \
-    blender gimp dotnet-sdk-10.0 \
+    steam lutris mangohud btop wl-clipboard \
+    blender gimp audacity vlc dotnet-sdk-10.0 \
     onlyoffice-desktopeditors
 
 #######################################
@@ -113,6 +112,7 @@ sudo dnf update -y @multimedia --setopt="install_weak_deps=False" --exclude=Pack
 sudo dnf group install -y sound-and-video
 # Helps decrease load on the CPU when watching videos online by alloting the rendering to the dGPU/iGPU. Quite helpful in increasing battery backup on laptops
 sudo dnf install -y ffmpeg-libs libva libva-utils
+sudo dnf install -y libva-nvidia-driver
 
 #######################################
 # Various
@@ -140,6 +140,15 @@ EOF
 
 if lspci | grep -iE 'vga|3d' | grep -qi nvidia; then
     echo "NVIDIA GPU detected"
+
+    # unsigned akmods module won't load with secure boot on (black screen / 800x600)
+    if mokutil --sb-state | grep -qi enabled; then
+        echo "Secure Boot is enabled, disable it in BIOS/UEFI and rerun"
+        exit 1
+    fi
+
+    # open kernel module (recommended for RTX 2000+, required for RTX 5000), must be set before install
+    echo "%_with_kmod_nvidia_open 1" | sudo tee /etc/rpm/macros.nvidia-kmod >/dev/null
     sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
 
     # the kernel module builds in the background after install, wait for it (max 20 min)
@@ -162,3 +171,4 @@ echo "Setup complete 🚀 Do manually:"
 echo "  - Download Godot mono: https://godotengine.org/download/linux/"
 echo "  - gh auth login"
 echo "  - reboot (for input group, uinput and nvidia to take effect)"
+echo "  - run nvidia-smi after reboot to verify driver is working"
