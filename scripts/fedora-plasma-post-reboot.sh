@@ -6,18 +6,32 @@ mkdir -p ~/Downloads
 mkdir -p ~/Documents
 mkdir -p ~/Pictures
 
+# temp directory
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 
-# rpmfusion and system update are done in fedora-plasma-init.sh
-sudo dnf install -y dnf5-plugins flatpak
+#######################################
+# Firmware updates
+#######################################
+
+# Refresh the firmware database
+sudo fwupdmgr refresh --force
+# See what can be updated
+sudo fwupdmgr get-devices
+# Check for updates
+sudo fwupdmgr get-updates
+# Apply them
+sudo fwupdmgr update
 
 #######################################
 # Repos
 #######################################
 
 # flathub
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+# Remove the limited Fedora repo to prevent conflicts
+flatpak remote-delete fedora
+# only from Flatpaks verified developers
+flatpak remote-add --if-not-exists --subset=verified flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # vscodium
 sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
@@ -34,7 +48,7 @@ curl -fsSL https://vicinae.com/install | bash
 curl -sS https://starship.rs/install.sh | sh
 
 # onlyoffice
-sudo dnf install https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
+sudo dnf install -y https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
 
 # copr
 sudo dnf copr enable -y piixini/skwd-wall-v2
@@ -52,12 +66,6 @@ sudo dnf install -y \
     steam btop wl-clipboard \
     blender gimp dotnet-sdk-10.0 \
     onlyoffice-desktopeditors
-
-#######################################
-# flatpak
-#######################################
-
-flatpak install flathub org.onlyoffice.desktopeditors
 
 #######################################
 # Manual installs
@@ -98,20 +106,20 @@ sudo systemctl disable NetworkManager-wait-online.service
 #######################################
 
 # Switch to full FFMPEG
-sudo dnf swap 'ffmpeg-free' 'ffmpeg' --allowerasing
+sudo dnf swap -y 'ffmpeg-free' 'ffmpeg' --allowerasing
 # Update multimedia/GStreamer components while excluding currently broken broken packages
-sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin --exclude=libheif-freeworld --exclude=obs-studio-freeworld
+sudo dnf update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin --exclude=libheif-freeworld --exclude=obs-studio-freeworld
 # Installs useful Sound and Video complementary packages
 sudo dnf group install -y sound-and-video
 # Helps decrease load on the CPU when watching videos online by alloting the rendering to the dGPU/iGPU. Quite helpful in increasing battery backup on laptops
-sudo dnf install ffmpeg-libs libva libva-utils
+sudo dnf install -y ffmpeg-libs libva libva-utils
 
 #######################################
 # Various
 #######################################
 
 # xremap: add user to input group and give it access to uinput
-sudo gpasswd -a $USER input
+sudo gpasswd -a "$USER" input
 echo uinput | sudo tee /etc/modules-load.d/uinput.conf >/dev/null
 echo 'KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"' |
     sudo tee /etc/udev/rules.d/99-xremap-uinput.rules >/dev/null
@@ -149,8 +157,8 @@ fi
 #######################################
 # Do manually
 #######################################
-# Download Godot mono: https://godotengine.org/download/linux/
-# gh auth login
-# reboot
 
-echo "Setup complete 🚀 (reboot for input group and uinput to take effect)"
+echo "Setup complete 🚀 Do manually:"
+echo "  - Download Godot mono: https://godotengine.org/download/linux/"
+echo "  - gh auth login"
+echo "  - reboot (for input group, uinput and nvidia to take effect)"
