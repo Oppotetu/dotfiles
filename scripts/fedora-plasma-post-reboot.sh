@@ -24,10 +24,9 @@ sudo fwupdmgr get-updates
 sudo fwupdmgr update
 
 #######################################
-# Repos
+# Flathub
 #######################################
 
-# flathub
 # Remove the limited Fedora repo to prevent conflicts
 flatpak remote-delete fedora
 # only from Flatpaks verified developers
@@ -35,10 +34,17 @@ flatpak remote-add --if-not-exists --subset=verified flathub https://flathub.org
 
 flatpak install org.onlyoffice.desktopeditors
 
+#######################################
+# Repos
+#######################################
+
 # vscodium
 sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
 printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h\n" |
     sudo tee /etc/yum.repos.d/vscodium.repo >/dev/null
+
+# brave
+sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
 # mise
 sudo dnf config-manager addrepo --overwrite --from-repofile=https://mise.jdx.dev/rpm/mise.repo
@@ -58,13 +64,12 @@ sudo dnf copr enable -y fuddlesworth/PlasmaZones
 #######################################
 
 sudo dnf install -y \
-    codium chromium kitty plasmazones \
+    codium chromium brave-browser kitty plasmazones \
     skwd-wall-v2 skwd-lens skwd-paper-plasma \
     mise neovim tree-sitter-cli gcc gh git-lfs git-filter-repo fzf jq yq \
     fastfetch curl tldr diff-so-fancy 7zip \
     steam lutris mangohud btop wl-clipboard \
-    blender gimp audacity vlc dotnet-sdk-10.0 \
-    onlyoffice-desktopeditors
+    blender gimp audacity vlc dotnet-sdk-10.0
 
 #######################################
 # Manual installs

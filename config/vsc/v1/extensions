@@ -29,4 +29,5 @@ vscodevim.vim
 yoavbls.pretty-ts-errors
 ziglang.vscode-zig
 dotnetdev-kr-custom.csharp
+sumneko.lua
 

@@ -6,15 +6,15 @@ vim.pack.add({
   "https://github.com/nvim-tree/nvim-web-devicons",
 }, { confirm = false, })
 
--- require("simon.plugins.treesitter")
-require("simon.plugins.treesitter-manager")
+require("simon.plugins.treesitter")
 require("simon.plugins.blink")
 require("simon.plugins.telescope")
 require("simon.plugins.lualine")
 require("simon.plugins.utility")
 require("simon.plugins.which-key")
 require("simon.plugins.neoscroll")
-require("simon.plugins.oil")
+require("simon.plugins.fyler")
+-- require("simon.plugins.oil")
 
 -- require("simon.plugins.editing.completion")
 -- require("simon.plugins.editing.highlight")
